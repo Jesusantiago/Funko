@@ -1,0 +1,26 @@
+$c-fondo: #30343F !default;
+$c-font: #FFF;
+$c-border: #DFE3E8;
+$c-gray: #333;
+
+$w-400: 400;
+$w-500: 500;
+$w-700: 700;
+
+$fs-12: 12px;
+$fs-14: 14px;
+$fs-16: 16px;
+$fs-18: 18px;
+$fs-20: 20px;
+$fs-24: 24px;
+$fs-38: 38px;
+$fs-46: 46px;
+
+$ff-r: 'Raleway', sans-serif;
+$ff-i: 'Inter', sans-serif;
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    // font-size: calc(15px + 0.390625vw)
+}

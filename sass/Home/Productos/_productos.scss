@@ -1,0 +1,61 @@
+@use "../../variables";
+@use "../../minfux";
+
+.firstProduct,
+.secondProduct,
+.thirdProduct{
+    @include minfux.pageProduct(black);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+};
+
+.home__product__text{
+    @include minfux.productText
+}
+
+.home__product__text_title{
+    @include minfux.productInfo(variables.$fs-46, variables.$w-500, 54px, variables.$ff-r);
+}
+
+.home__product__text_paragraph{
+    @include minfux.productInfo(variables.$fs-24, variables.$w-400, 28.18px, variables.$ff-r);
+}
+
+.home__product__text_line{
+@include minfux.lineInfo;
+}
+
+.home__product__btn{
+    @include minfux.btnInfo;
+}
+
+.home__product__img{
+    @include minfux.homeimgProduct(1);
+    background: {
+        image: url(../../../img/productos/baby-yoda-1.png);
+        repeat: no-repeat;
+        position: center;
+        size: contain;
+    }
+}
+
+.home__product__img_second{
+    @include minfux.homeimgProduct(-1);
+    background: {
+        image: url(../../../img/productos/vulpix-1.png);
+        repeat: no-repeat;
+        position: center;
+        size: contain;
+    }
+}
+
+.home__product__img_third{
+    @include minfux.homeimgProduct(1);
+    background: {
+        image: url(../../../img/productos/snape-patronus-1.png);
+        repeat: no-repeat;
+        position: center;
+        size: contain;
+    }
+}

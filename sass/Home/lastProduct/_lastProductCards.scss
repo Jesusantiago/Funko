@@ -1,0 +1,78 @@
+@use "../../variables";
+@use "../../minfux";
+
+
+.product__card{
+    @include minfux.productCard(277px);
+}
+
+.starWars__img{
+    @include minfux.imgCardHome;
+    background: {
+        image: url(../../../img/productos/lighsaber-1.png);
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+    };
+
+}
+
+.pokemon__img{
+    @include minfux.imgCardHome;
+    background: {
+        image: url(../../../img/productos/pidgeotto-1.png);
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+    }
+}
+
+.harryPotter__img{
+    @include minfux.imgCardHome;
+    background: {
+        image: url(../../../img/productos/luna-1.png);
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+    }
+}
+
+.background__red{
+    width: max(60px, 7vw);
+    // max-width: 97px;
+    height: 30px;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 0;
+    left: calc(100% - 97px);
+
+    .background__span{
+        color: variables.$c-font;
+        font: {
+            size: variables.$fs-14;
+            family: variables.$ff-i;
+            weight: variables.$w-500;
+        }
+    }
+}
+
+.last__product_title{
+    @include minfux.textCardHome(variables.$fs-14, variables.$w-500, 16.94px);
+    overflow-wrap:break-word
+}
+
+.last__product_title_description{
+    @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px)
+}
+
+.last__product__price{
+    @include minfux.textCardHome(variables.$fs-16, variables.$w-400, 19.36px)   
+}
+
+.last__product_fees{
+    @include minfux.textCardHome(variables.$fs-12, variables.$w-700, 14.52px);
+    color: #1D84B5;
+}

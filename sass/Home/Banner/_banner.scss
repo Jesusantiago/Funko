@@ -1,0 +1,74 @@
+@use "../../variables";
+
+.banner{
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 max(40px, 7.5vw);
+    font-family: variables.$ff-r;
+}
+
+
+.banner_img{
+    position: absolute;
+    top:max(80px, 11vw);
+    left: 0;
+    z-index: -100000;
+    min-width: 100%;
+    height: 70vh;
+    background: {
+        image: url(../../../img/desktop/banner.png);
+        repeat: no-repeat;
+        size: cover;
+        position: center;
+    };
+}
+
+.banner__text{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    color: variables.$c-font;
+
+    .banner__text_title{
+        font-size: variables.$fs-38;
+        line-height: 44.61px;
+        font-weight: variables.$w-700;
+        margin-bottom: .4em;
+    }
+
+    .banner__text_span{
+        font-size: variables.$fs-18;
+        line-height: 21.13px;
+        font-weight: variables.$w-400;
+    }
+
+    .banner__text_btn{
+        position: relative;
+        top: 60px;
+        max-width: 211px;
+        height: 47px;
+
+        font: {
+            size: variables.$fs-20;
+            weight: variables.$w-500;
+            family: variables.$ff-i;
+        }
+
+        line-height: 24.2px;
+
+        border: none;
+        border-radius: 2em;
+
+        background-color: variables.$c-font;
+        color: black;
+        cursor:pointer;
+
+        text-align: center;
+        text-decoration: none;
+        padding-top: .5em;
+        
+    }
+}
+

@@ -1,0 +1,242 @@
+@use "../variables";
+@use "../minfux";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modal__medios{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.127);
+
+}
+.div__medios{
+    max-width: 750px;
+    max-height: 75vh;
+    padding: 50px 70px;
+    border: 1px solid black;
+    
+    overflow-y: scroll
+}
+
+.x__close{
+    position: relative;
+    top: -20px;
+    left: 620px;
+    width: 15px;
+    height: 15px;
+    background: {
+        image: url(../img/x.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.medios__title{
+    @include mixfun.productInfo(variables.$fs-24, variables.$w-500, 40px, variables.$ff-i);
+    margin-bottom: 2rem;
+}
+
+.medios__title:nth-child(4){
+    @include mixfun.productInfo(variables.$fs-18, variables.$w-500, 30px, variables.$ff-i);
+    margin-bottom: .5rem;
+}
+
+.medios__title:nth-child(6){
+    @include mixfun.productInfo(variables.$fs-18, variables.$w-500, 30px, variables.$ff-i);
+    margin-bottom: .5rem;
+    color: green;
+}
+
+.medios__title:nth-child(8){
+    @include mixfun.productInfo(variables.$fs-20, variables.$w-500, 30px, variables.$ff-i);
+    margin-bottom: .5rem;
+}
+
+.medios__title:nth-child(10){
+    @include mixfun.productInfo(variables.$fs-20, variables.$w-500, 30px, variables.$ff-i);
+    margin-bottom: .5rem;
+
+}
+
+.medios__paragraph{
+    @include mixfun.textCardHome(variables.$fs-16, variables.$w-400, 22px);
+    margin-left: 0;
+    margin-bottom: 2rem;
+}
+
+.medios__paragraph:nth-child(11){
+    @include mixfun.textCardHome(variables.$fs-16, variables.$w-400, 22px);
+    margin-left: 0;
+    margin-bottom: .5rem;
+}
+
+.medios__paragraph:nth-child(12){
+    @include mixfun.textCardHome(variables.$fs-16, variables.$w-400, 22px);
+    margin-left: 0;
+    margin-bottom: .5rem;
+
+}
+
+.medios__line{
+    @include mixfun.lineInfo;
+    margin-bottom: 2rem;
+}
+
+
+.medios__bancos{
+    max-width: 70%;
+    padding: 0 30px;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medios__bancos:nth-child(16){
+    max-width: 40%;
+    padding: 0 30px;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.santander{
+    width: 70px;
+    height: 40px;
+    background: {
+        image: url(../img/santander.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.icbc{
+    width: 70px;
+    height: 40px;
+    background: {
+        image: url(../img/icbc.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.bbva{
+    width: 70px;
+    height: 40px;
+    background: {
+        image: url(../img/bbva.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.galicia{
+    width: 70px;
+    height: 40px;
+    background: {
+        image: url(../img/galicia.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.mercadoPago{
+    width: 80px;
+    height: 50px;
+    background: {
+        image: url(../img/mercadoPago.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.mastercard{
+    width: 40px;
+    height: 40px;
+    background: {
+        image: url(../img/mastercard.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.visa{
+    width: 40px;
+    height: 40px;
+    background: {
+        image: url(../img/visa.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.paypal{
+    width: 40px;
+    height: 40px;
+    background: {
+        image: url(../img/paypal.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.naranja{
+    width: 40px;
+    height: 40px;
+    background: {
+        image: url(../img/naranja.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.cabal{
+    width: 40px;
+    height: 40px;
+    background: {
+        image: url(../img/cabal.svg);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.pagofacil{
+    width: 40px;
+    height: 40px;
+    background: {
+        image: url(../img/pagofacil.png);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}
+
+.rapipago{
+    width: 70px;
+    height: 40px;
+    background: {
+        image: url(../img/rapipago.png);
+        position: center;
+        size: contain;
+        repeat: no-repeat;
+    };
+}

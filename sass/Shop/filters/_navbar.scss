@@ -1,0 +1,112 @@
+@use "../../variables";
+@use "../../minfux";
+
+.nav__category{
+    min-width: 200px;
+
+    max-width: min(360px,36vw);
+    min-height: 100vh;
+    
+    padding-top: min(68px, 3vw);
+    padding-right: 0px;
+    padding-left: max(7.5%, 20px);
+    position: fixed;
+    top: 144px;
+    left: 0;
+    font-family: variables.$ff-i;
+}
+
+.category__search{
+    width: 100%;
+    
+    .search__input{
+        width: 100%;
+        height: 30px;
+        padding: 10px;
+        @include minfux.borderInput;
+
+        font: {
+            size: variables.$fs-20;
+            weight: variables.$w-500;
+        }
+    }
+}
+
+.search__title{
+    font: {
+        size: variables.$fs-20;
+        weight: variables.$w-500;
+        style: normal;
+    }
+    margin: 10px 0;
+
+}
+
+.div__price{
+    width: 100%;
+    margin-top: 20px;
+
+    .price__list{
+        width: 100%;
+        height: 2em;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .price__list__item{
+            list-style: none;
+            display: inline;
+
+            .price__list__item__imput{
+                width: 60px;
+                height: 30px;
+                margin-left: 10px;
+                padding-left: 25px;
+                @include minfux.borderInput;
+                
+            }
+        }
+    }
+}
+
+.item-max::before{
+    content: "-";
+    position: relative;
+    top: 0;
+    left: -10px;
+}
+
+.filter{
+    width: 100%;
+    margin-top: 10px;
+
+    .filter__list{
+        margin: 0;
+        padding: 0;
+
+        .filter__list_item{
+            display: flex;
+            align-items: center;
+            list-style: none;
+
+            font: {
+                size: variables.$fs-18;
+                weight: variables.$w-500
+            }
+            line-height: 27.78px;
+        }
+    }
+}
+
+.filter__list_item{
+
+    .filter__list__item__imput{
+        appearance: none;
+        @include minfux.borderInput;
+        margin-right: 5px;
+        width: 24px;
+        height: 24px;
+    }
+}

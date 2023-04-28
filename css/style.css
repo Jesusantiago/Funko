@@ -1,0 +1,986 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.banner {
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 max(40px, 7.5vw);
+  font-family: "Raleway", sans-serif;
+}
+
+.banner_img {
+  position: absolute;
+  top: max(80px, 11vw);
+  left: 0;
+  z-index: -100000;
+  min-width: 100%;
+  height: 70vh;
+  background-image: url(../../../img/desktop/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner__text {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  color: #FFF;
+}
+.banner__text .banner__text_title {
+  font-size: 38px;
+  line-height: 44.61px;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+.banner__text .banner__text_span {
+  font-size: 18px;
+  line-height: 21.13px;
+  font-weight: 400;
+}
+.banner__text .banner__text_btn {
+  position: relative;
+  top: 60px;
+  max-width: 211px;
+  height: 47px;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  line-height: 24.2px;
+  border: none;
+  border-radius: 2em;
+  background-color: #FFF;
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  padding-top: 0.5em;
+}
+
+.header {
+  min-width: 100%;
+  height: max(80px, 11vw);
+  background-color: #30343F;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 max(40px, 7.5vw);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  backdrop-filter: blur(20px);
+  font-family: "Raleway", sans-serif;
+}
+
+.header__a {
+  width: 100%;
+  min-width: 80px;
+  max-width: 372px;
+  height: 66px;
+}
+
+.header__title {
+  background-image: url(../../../img/desktop/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 66px;
+  max-width: 372px;
+  max-height: 66px;
+}
+
+.header__nav {
+  width: 406px;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  height: 50px;
+}
+@media (max-width: 980px) {
+  .header__nav {
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+.nav__li {
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 980px) {
+  .nav__li {
+    display: none;
+  }
+}
+.nav__li a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 23.48px;
+  font-weight: 500;
+}
+.nav__li:nth-child(3) a {
+  background-color: #FFF;
+  color: #30343F;
+  padding: 5px 30px;
+  border-radius: 50px;
+}
+.nav__li .bx {
+  width: 30px;
+  height: 30px;
+  scale: 1.2;
+  transition: all ease-in 0.5s;
+  display: block;
+}
+.nav__li .bx:hover {
+  scale: 1.6;
+}
+
+@media (max-width: 980px) {
+  .a .header__nav {
+    background-color: rgba(48, 52, 63, 0.942);
+    position: absolute;
+    top: max(80px, 11vw);
+    left: 0;
+    min-width: 100vw;
+    height: calc(100vh - max(80px, 11vw));
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .a .header__nav .nav__li {
+    display: inline-block;
+  }
+  .a .header__nav .nav__li a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 38px;
+    line-height: 23.48px;
+    font-weight: 500;
+  }
+  .a .header__nav .nav__li a .bx {
+    width: 40px;
+    height: 40px;
+    scale: 1.2;
+    transition: all ease-in 0.5s;
+    display: block;
+  }
+  .a .header__nav .nav__li a .bx:hover {
+    scale: 2;
+  }
+  .a .header__nav .nav__li:nth-child(3) a {
+    background-color: #FFF;
+    color: #30343F;
+    padding: 5px 30px;
+    border-radius: 50px;
+  }
+}
+
+.firstProduct,
+.secondProduct,
+.thirdProduct {
+  width: 100%;
+  min-height: calc(100vh - max(80px, 11vw));
+  padding: 0 max(40px, 7.5vw);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (max-width: 980px) {
+  .firstProduct,
+  .secondProduct,
+  .thirdProduct {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3em;
+  }
+}
+
+.home__product__text {
+  min-width: 200px;
+  max-width: 645px;
+  min-height: 297px;
+  max-height: 400px;
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  gap: 20px;
+}
+@media (max-width: 980px) {
+  .home__product__text {
+    min-width: 200px;
+    max-width: 100vw;
+    min-height: 200px;
+    max-height: 15vh;
+    font-family: "Raleway", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0;
+  }
+}
+
+.home__product__text_title {
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 54px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+.home__product__text_paragraph {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.18px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+.home__product__text_line {
+  width: 100%;
+  height: 2px;
+  background-color: red;
+}
+
+.home__product__btn {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.5px;
+  padding: 18px 48px;
+  background-color: #30343F;
+  color: #FFF;
+  font-family: "Inter", sans-serif;
+  border-radius: 2em;
+  cursor: pointer;
+  text-decoration: none;
+}
+@media (max-width: 980px) {
+  .home__product__btn {
+    font-size: 16px;
+    padding: 12px 32px;
+  }
+}
+
+.home__product__img {
+  min-width: 300px;
+  max-width: 100%;
+  min-height: 300px;
+  height: 100%;
+  order: 1;
+  background-image: url(../../../img/productos/baby-yoda-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 980px) {
+  .home__product__img {
+    min-width: 200px;
+    max-width: 100%;
+    height: 50vh;
+  }
+}
+
+.home__product__img_second {
+  min-width: 300px;
+  max-width: 100%;
+  min-height: 300px;
+  height: 100%;
+  order: -1;
+  background-image: url(../../../img/productos/vulpix-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 980px) {
+  .home__product__img_second {
+    min-width: 200px;
+    max-width: 100%;
+    height: 50vh;
+  }
+}
+
+.home__product__img_third {
+  min-width: 300px;
+  max-width: 100%;
+  min-height: 300px;
+  height: 100%;
+  order: 1;
+  background-image: url(../../../img/productos/snape-patronus-1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+@media (max-width: 980px) {
+  .home__product__img_third {
+    min-width: 200px;
+    max-width: 100%;
+    height: 50vh;
+  }
+}
+
+.lastProduct {
+  width: 100%;
+  max-height: calc(100vh - max(80px, 11vw));
+  padding: 0 max(40px, 7.5vw) 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.lastProduct__title {
+  font-size: 46px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  line-height: 54px;
+  color: black;
+  width: 100%;
+  text-align: left;
+}
+
+.lastProduct_cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+
+.product__card {
+  max-width: 277px;
+  min-width: 144px;
+  height: 80%;
+  cursor: pointer;
+}
+
+.starWars__img {
+  min-width: 144px;
+  width: 300px;
+  max-width: 374px;
+  height: max(200px, 25vw);
+  background-image: url(../../../img/productos/lighsaber-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pokemon__img {
+  min-width: 144px;
+  width: 300px;
+  max-width: 374px;
+  height: max(200px, 25vw);
+  background-image: url(../../../img/productos/pidgeotto-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.harryPotter__img {
+  min-width: 144px;
+  width: 300px;
+  max-width: 374px;
+  height: max(200px, 25vw);
+  background-image: url(../../../img/productos/luna-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.background__red {
+  width: max(60px, 7vw);
+  height: 30px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: calc(100% - 97px);
+}
+.background__red .background__span {
+  color: #FFF;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.last__product_title {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  line-height: 16.94px;
+  margin-left: 15px;
+  overflow-wrap: break-word;
+}
+
+.last__product_title_description {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 21.78px;
+  margin-left: 15px;
+}
+
+.last__product__price {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 19.36px;
+  margin-left: 15px;
+}
+
+.last__product_fees {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 14.52px;
+  margin-left: 15px;
+  color: #1D84B5;
+}
+
+.footer {
+  width: 100%;
+  max-height: 303px;
+  padding: 50px max(40px, 7.5vw) 20px;
+  background-color: #30343F;
+}
+.footer .footer__div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__nav {
+  width: 50%;
+  height: auto;
+  list-style: none;
+}
+.footer__nav li {
+  margin-bottom: 10px;
+}
+.footer__nav a {
+  text-decoration: none;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Raleway", sans-serif;
+  line-height: 23.48px;
+}
+
+.footer__logo {
+  width: max(20vw, 50px);
+  height: 117px;
+  background-image: url(../../../img/desktop/logo-footer.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer__copy_text {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  color: #FFF;
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 23.48px;
+}
+
+.footer__shop {
+  position: relative;
+  bottom: -150px;
+}
+
+.shop__list_product {
+  position: relative;
+  top: 144px;
+  left: 0;
+  right: 0;
+  max-width: 100vw;
+  padding: min(68px, 3vw) 110px 68px 110px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+}
+
+.shop__list_product_nav {
+  position: relative;
+  top: 144px;
+  left: 368px;
+  max-width: calc(100vw - 368px);
+  padding: min(68px, 3vw) 110px 68px 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+}
+
+.shop__product__card {
+  max-width: 305px;
+  min-width: 144px;
+  height: 80%;
+  cursor: pointer;
+  justify-self: center;
+}
+
+.product__card {
+  max-width: 277px;
+  min-width: 144px;
+  height: 80%;
+  cursor: pointer;
+}
+
+.starWars__img {
+  min-width: 144px;
+  width: 300px;
+  max-width: 374px;
+  height: max(200px, 25vw);
+  background-image: url(../../../img/productos/lighsaber-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.pokemon__img {
+  min-width: 144px;
+  width: 300px;
+  max-width: 374px;
+  height: max(200px, 25vw);
+  background-image: url(../../../img/productos/pidgeotto-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.harryPotter__img {
+  min-width: 144px;
+  width: 300px;
+  max-width: 374px;
+  height: max(200px, 25vw);
+  background-image: url(../../../img/productos/luna-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.background__red {
+  width: max(60px, 7vw);
+  height: 30px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: calc(100% - 97px);
+}
+.background__red .background__span {
+  color: #FFF;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.last__product_title {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  line-height: 16.94px;
+  margin-left: 15px;
+  overflow-wrap: break-word;
+}
+
+.last__product_title_description {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 21.78px;
+  margin-left: 15px;
+}
+
+.last__product__price {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 19.36px;
+  margin-left: 15px;
+}
+
+.last__product_fees {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 14.52px;
+  margin-left: 15px;
+  color: #1D84B5;
+}
+
+.nav__category {
+  min-width: 200px;
+  max-width: min(360px, 36vw);
+  min-height: 100vh;
+  padding-top: min(68px, 3vw);
+  padding-right: 0px;
+  padding-left: max(7.5%, 20px);
+  position: fixed;
+  top: 144px;
+  left: 0;
+  font-family: "Inter", sans-serif;
+}
+
+.category__search {
+  width: 100%;
+}
+.category__search .search__input {
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.search__title {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  margin: 10px 0;
+}
+
+.div__price {
+  width: 100%;
+  margin-top: 20px;
+}
+.div__price .price__list {
+  width: 100%;
+  height: 2em;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.div__price .price__list .price__list__item {
+  list-style: none;
+  display: inline;
+}
+.div__price .price__list .price__list__item .price__list__item__imput {
+  width: 60px;
+  height: 30px;
+  margin-left: 10px;
+  padding-left: 25px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.item-max::before {
+  content: "-";
+  position: relative;
+  top: 0;
+  left: -10px;
+}
+
+.filter {
+  width: 100%;
+  margin-top: 10px;
+}
+.filter .filter__list {
+  margin: 0;
+  padding: 0;
+}
+.filter .filter__list .filter__list_item {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27.78px;
+}
+
+.filter__list_item .filter__list__item__imput {
+  appearance: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+}
+
+.container__number_up {
+  width: 100%;
+  grid-column: 1/4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__number {
+  width: 356px;
+  height: 44px;
+  margin-top: 73px;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container__number .container__item {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #DFE3E8;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+}
+
+.container__item:first-child {
+  background-color: #919EAB;
+  opacity: 0.5;
+  color: white;
+}
+
+.container__item:nth-child(2) {
+  border: 1px solid red;
+  color: red;
+}
+
+.container__item:nth-child(7) {
+  color: #919EAB;
+  opacity: 0.5;
+}
+
+.product__main {
+  position: relative;
+  top: min(144px, 11vw);
+  left: 0;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.product__section__product {
+  width: 100%;
+  min-height: calc(100vh - min(144px, 11vw));
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 40px;
+  padding: 0 max(40px, 7.5vw);
+}
+
+.product__img {
+  min-width: 250px;
+  min-height: 250px;
+  height: 550px;
+  max-width: 550px;
+  max-height: 550px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(../../img/productos/baby-yoda-1.png);
+}
+
+.product__text {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.product__text__titleLower {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #333;
+  margin-bottom: 11px;
+}
+
+.product__text__titleSuperior {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45.99px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.product__text_paragraph {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 29.05px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.product__text_price {
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 45.99px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.product__btn {
+  width: 100%;
+  height: 38.5px;
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
+.product__btn__lower,
+.product__btn__superior {
+  width: 38.5px;
+  height: 38.5px;
+  background-color: #4f4f4f;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 45.99px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.product__btn__zero {
+  width: 38.5px;
+  height: 32.49px;
+  background-color: #FFF;
+  color: #c9c9c9;
+  border: 0.5px solid #c9c9c9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 13px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 45.99px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.product__btn__car {
+  width: 181px;
+  height: 38px;
+  background-color: #FF3333;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 13px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 45.99px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.producto__medios__pago {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.94px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #1d84b5;
+  text-decoration: underline;
+}
+
+.product__medios__fees {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16.94px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #1d84b5;
+}
+
+.burger {
+  display: none;
+}
+@media (max-width: 980px) {
+  .burger {
+    position: absolute;
+    top: 4vh;
+    right: 5vw;
+    width: 45px;
+    height: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+  }
+  .burger::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-10px);
+    transition: 0.5s;
+    box-shadow: 0 10px #fff;
+  }
+  .burger::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: translateY(10px);
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 980px) {
+  .header.a .burger::before {
+    transform: translateY(0) rotate(45deg);
+    box-shadow: 0 0 #fff;
+  }
+  .header.a .burger::after {
+    transform: translateY(0) rotate(315deg);
+    box-shadow: 0 0 #fff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

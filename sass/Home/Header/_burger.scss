@@ -1,0 +1,59 @@
+@use "../../variables";
+@use "../../minfux";
+
+
+
+.burger{
+    display: none;
+
+    @include minfux.media(980px){
+
+    position: absolute;
+    top: 4vh;
+    right: 5vw;
+    width: 45px;
+    height: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: translateY(-10px);
+            transition: 0.5s;
+            box-shadow: 0 10px #fff;
+        }
+
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transform: translateY(10px);
+            transition: 0.5s;
+        }
+}
+
+        
+}
+
+.header.a{
+
+    @include minfux.media(980px){
+        .burger::before{
+            transform: translateY(0) rotate(45deg);
+            box-shadow: 0 0 #fff;
+        }
+
+        .burger::after{
+            transform: translateY(0) rotate(315deg);
+            box-shadow: 0 0 #fff;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use "../../variables";
+@use "../../minfux";
+
+.shop__list_product{
+    position: relative;
+    top: 144px;
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    
+    padding: min(68px, 3vw) 110px 68px 110px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    
+}
+
+.shop__list_product_nav{
+    position: relative;
+    top: 144px;
+    left: 368px;
+    max-width: calc(100vw - 368px);
+    
+    padding: min(68px, 3vw) 110px 68px 10px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px
+}
+
+.shop__product__card{
+    @include minfux.productCard(305px);
+    // margin-top: 36px
+    justify-self: center;
+}

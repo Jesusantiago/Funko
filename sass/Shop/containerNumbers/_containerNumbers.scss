@@ -1,0 +1,54 @@
+@use "../../variables";
+
+.container__number_up{
+    width: 100%;
+    grid-column: 1/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container__number{
+    width: 356px;
+    height: 44px;
+    margin-top: 73px;
+    align-items: center;
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .container__item{
+        width: 44px;
+        height: 44px;
+        border: 1px solid variables.$c-border;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        font: {
+            size: variables.$fs-16;
+            weight: variables.$w-700;
+            family: variables.$ff-i
+        }
+    }
+}
+
+.container__item:first-child{
+    background-color: #919EAB;
+    opacity: 0.5;
+    color: white;
+}
+
+.container__item:nth-child(2){
+    border: 1px solid red;
+    color: red;
+}
+
+.container__item:nth-child(7){
+    color:  #919EAB;
+    opacity: 0.5;
+}

@@ -1,0 +1,159 @@
+@use "../../variables";
+@use "../../minfux";
+
+.header{
+    min-width: 100%;
+    height: max(80px, 11vw);
+    background-color: variables.$c-fondo;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 max(40px, 7.5vw);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    font-family: variables.$ff-r;
+}
+
+    
+
+.header__a{    
+    width: 100%;
+    min-width: 80px;
+    max-width: 372px;
+    height: 66px;
+}
+
+.header__title{
+    background-image: url(../../../img/desktop/logo.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 66px;
+    max-width: 372px;
+    max-height: 66px;
+}
+
+
+.header__nav{
+    width: 406px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    height: 50px;
+
+    @include minfux.media(980px){
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+
+ 
+}
+
+.nav__li{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include minfux.media(980px){
+       display: none;
+    }
+    
+    a{
+        text-decoration: none;
+        color: variables.$c-font;
+        font-size: 20px;
+        line-height: 23.48px;
+        font-weight: variables.$w-500;
+    }
+
+    &:nth-child(3){
+        a{
+            background-color: variables.$c-font;
+            color: variables.$c-fondo;
+            padding: 5px 30px;
+            border-radius: 50px;
+
+        }
+    }
+
+    .bx{
+        width: 30px;
+        height: 30px;
+        scale: 1.2;
+        transition: all ease-in .5s;
+        display: block;
+    
+        &:hover{
+            scale: 1.6;
+        }
+    }
+}
+
+
+//active burger
+
+.a{
+    
+    .header__nav{
+        @include minfux.media(980px){
+            background-color: rgba(48, 52, 63, 0.942);
+            position: absolute;
+            top:  max(80px, 11vw);
+            left: 0;
+            min-width: 100vw;
+            height: calc(100vh - max(80px, 11vw));
+            padding: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+    
+            .nav__li{
+                display: inline-block;   
+    
+                a{
+                    text-decoration: none;
+                    color: variables.$c-font;
+                    font-size: variables.$fs-38;
+                    line-height: 23.48px;
+                    font-weight: variables.$w-500;
+                    
+    
+                    .bx{
+                        width: 40px;
+                        height: 40px;
+                        scale: 1.2;
+                        transition: all ease-in .5s;
+                        display: block;
+    
+                        &:hover{
+                            scale: 2;
+                        }
+                    }
+                }
+
+                &:nth-child(3){
+                    a{
+                        background-color: variables.$c-font;
+                        color: variables.$c-fondo;
+                        padding: 5px 30px;
+                        border-radius: 50px;
+            
+                    }
+                }
+            }
+    
+        }
+}
+}

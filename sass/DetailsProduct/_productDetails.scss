@@ -1,0 +1,129 @@
+@use "../variables";
+@use ".././minfux";
+
+
+.product__main{
+    position: relative;
+    top: min(144px, 11vw);
+    left: 0;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.product__section__product{
+    width: 100%;
+    min-height: calc(100vh - min(144px, 11vw));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 40px;
+    padding: 0 max(40px, 7.5vw);
+}
+
+.product__img{
+    @include minfux.productimg;
+    background: {
+        image: url(../../img/productos/baby-yoda-1.png);
+    }
+}
+
+.product__text{
+    max-width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.product__text__titleLower{
+    @include minfux.productInfo(variables.$fs-16, variables.$w-500, 19.36px, variables.$ff-i);
+    color: variables.$c-gray;
+    margin-bottom: 11px;
+}
+
+.product__text__titleSuperior{
+    @include minfux.productInfo(variables.$fs-38, variables.$w-700, 45.99px, variables.$ff-i);
+    margin-bottom: 15px;
+}
+
+.product__text_paragraph{
+    @include minfux.productInfo(variables.$fs-24, variables.$w-400, 29.05px, variables.$ff-i);
+    color: variables.$c-gray;
+    margin-bottom: 15px;
+}
+
+.product__text_price{
+    @include minfux.productInfo(variables.$fs-38, variables.$w-400, 45.99px, variables.$ff-i);
+    color: variables.$c-gray;
+    margin-bottom: 15px;
+}
+
+.product__btn{
+    width: 100%;
+    height: 38.5px;
+
+    display: flex;
+    gap: 13px;
+    align-items: center;
+    margin-bottom: 26px;
+
+}
+
+.product__btn__lower,
+.product__btn__superior{
+    width: 38.5px;
+    height: 38.5px;
+    background-color: #4f4f4f;
+    color: variables.$c-font;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include minfux.productInfo(variables.$fs-38, variables.$w-700, 45.99px, variables.$ff-i);
+
+}
+
+.product__btn__zero{
+    width: 38.5px;
+    height: 32.49px;
+    background-color: variables.$c-font;
+    color: #c9c9c9;
+    border: .5px solid #c9c9c9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 13px;
+
+    @include minfux.productInfo(variables.$fs-24, variables.$w-500, 45.99px, variables.$ff-i);
+
+}
+
+.product__btn__car{
+    width: 181px;
+    height: 38px;
+    background-color: #FF3333;
+    color: variables.$c-font;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 13px;
+
+    @include minfux.productInfo(variables.$fs-18, variables.$w-500, 45.99px, variables.$ff-i);
+}
+
+.producto__medios__pago{
+    @include minfux.productInfo(variables.$fs-14, variables.$w-700, 16.94px, variables.$ff-i);
+    color: #1d84b5;
+    text-decoration: underline;
+}
+
+.product__medios__fees{
+    @include minfux.productInfo(variables.$fs-14, variables.$w-700, 16.94px, variables.$ff-i);
+    color: #1d84b5;
+}
