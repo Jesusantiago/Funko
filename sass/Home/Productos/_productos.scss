@@ -33,7 +33,7 @@
 .home__product__img{
     @include minfux.homeimgProduct(1);
     background: {
-        image: url(../../../img/productos/baby-yoda-1.png);
+        image: url(.../../../img/productos/baby-yoda-1.png);
         repeat: no-repeat;
         position: center;
         size: contain;
@@ -43,7 +43,7 @@
 .home__product__img_second{
     @include minfux.homeimgProduct(-1);
     background: {
-        image: url(../../../img/productos/vulpix-1.png);
+        image: url(.../../../img/productos/vulpix-1.png);
         repeat: no-repeat;
         position: center;
         size: contain;
@@ -53,7 +53,7 @@
 .home__product__img_third{
     @include minfux.homeimgProduct(1);
     background: {
-        image: url(../../../img/productos/snape-patronus-1.png);
+        image: url(.../../../img/productos/snape-patronus-1.png);
         repeat: no-repeat;
         position: center;
         size: contain;

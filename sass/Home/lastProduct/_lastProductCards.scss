@@ -9,7 +9,7 @@
 .starWars__img{
     @include minfux.imgCardHome;
     background: {
-        image: url(../../../img/productos/lighsaber-1.png);
+        image: url(.../../../img/productos/lighsaber-1.png);
         position: center;
         repeat: no-repeat;
         size: contain;
@@ -20,7 +20,7 @@
 .pokemon__img{
     @include minfux.imgCardHome;
     background: {
-        image: url(../../../img/productos/pidgeotto-1.png);
+        image: url(.../../../img/productos/pidgeotto-1.png);
         position: center;
         repeat: no-repeat;
         size: contain;
@@ -30,7 +30,7 @@
 .harryPotter__img{
     @include minfux.imgCardHome;
     background: {
-        image: url(../../../img/productos/luna-1.png);
+        image: url(.../../../img/productos/luna-1.png);
         position: center;
         repeat: no-repeat;
         size: contain;
