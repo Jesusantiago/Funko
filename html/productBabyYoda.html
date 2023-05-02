@@ -27,21 +27,25 @@
 
 <body>
 
-    <header class="header">
+    < <header class="header" id="header">
         
-        <a href="./../index.html" class="header__a"><div class="header__title header__title_other"></div></a>
+        <a href="../index.html" class="header__a">
+            <div class="header__title"></div>
+        </a>
+            
+        <nav class="header__nav" id="nav">
+                <li class="nav__li"><a href="./pageShop.html">SHOP</a></li>
+                <li class="nav__li"><a href="#">CONTACT</a></li>
+                <li class="nav__li"><a href="#">LOGIN</a></li>
+                <li class="nav__li">
+                    <a href="#">
         
-        <nav class="header__nav">
-            <li class="nav__li"><a href="pageShop.html">SHOP</a></li>
-            <li class="nav__li"><a href="#">CONTACT</a></li>
-            <li class="nav__li"><a href="#">LOGIN</a></li>
-            <li class="nav__li">
-                <a href="#">
-                    <box-icon name='cart' color='#00ff26' class="bx" ></box-icon>
-                </a>
-            </li>
-        </nav>
-
+                        <box-icon name='cart' color='#f96301' class="bx"></box-icon>
+                    </a>
+                </li>
+            </nav>
+            
+            <div class="burger" id="burger"></div>
     </header>
 
     <main class="product__main">

@@ -30,6 +30,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 30px;
+    column-gap: 30px;
+
+    @include minfux.media(980px){
+        overflow-x: auto;
+    }
+}
+
+
+.lastProduct_cards::-webkit-scrollbar{
+    display: none;
 }

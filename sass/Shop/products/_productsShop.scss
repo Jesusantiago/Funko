@@ -14,6 +14,10 @@
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
     
+
+    @include minfux.media(980px){
+        padding: min(68px, 3vw) 40px 68px 40px; 
+    }
 }
 
 .shop__list_product_nav{
@@ -31,6 +35,15 @@
 
 .shop__product__card{
     @include minfux.productCard(305px);
-    // margin-top: 36px
     justify-self: center;
+
+    @include minfux.media(980px){
+        min-width: 140px;
+        max-width: 220px;
+    }
+
+    // @include minfux.media(860px){
+    //     max-width: 150px;
+
+    // }
 }

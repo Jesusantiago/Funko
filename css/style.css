@@ -214,6 +214,22 @@
     padding-bottom: 3em;
   }
 }
+@media (max-width: 980px) {
+  .firstProduct,
+  .secondProduct,
+  .thirdProduct {
+    padding-bottom: 50px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 980px) {
+  .firstProduct .home__product__text {
+    min-height: 300px;
+  }
+}
 
 .home__product__text {
   min-width: 200px;
@@ -229,8 +245,7 @@
 }
 @media (max-width: 980px) {
   .home__product__text {
-    min-width: 200px;
-    max-width: 100vw;
+    width: 70vw;
     min-height: 200px;
     max-height: 15vh;
     font-family: "Raleway", sans-serif;
@@ -249,6 +264,11 @@
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
+@media (max-width: 980px) {
+  .home__product__text_title {
+    text-align: center;
+  }
+}
 
 .home__product__text_paragraph {
   font-size: 24px;
@@ -256,6 +276,11 @@
   line-height: 28.18px;
   font-family: "Raleway", sans-serif;
   margin: 0;
+}
+@media (max-width: 980px) {
+  .home__product__text_paragraph {
+    text-align: center;
+  }
 }
 
 .home__product__text_line {
@@ -296,9 +321,10 @@
 }
 @media (max-width: 980px) {
   .home__product__img {
-    min-width: 200px;
-    max-width: 100%;
-    height: 50vh;
+    background-position: center;
+    min-width: 80%;
+    height: 100%;
+    order: -1;
   }
 }
 
@@ -315,9 +341,9 @@
 }
 @media (max-width: 980px) {
   .home__product__img_second {
-    min-width: 200px;
-    max-width: 100%;
-    height: 50vh;
+    background-position: center;
+    min-width: 80%;
+    height: 100%;
   }
 }
 
@@ -334,9 +360,10 @@
 }
 @media (max-width: 980px) {
   .home__product__img_third {
-    min-width: 200px;
-    max-width: 100%;
-    height: 50vh;
+    background-position: center;
+    min-width: 80%;
+    height: 100%;
+    order: -1;
   }
 }
 
@@ -366,31 +393,37 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-  row-gap: 30px;
+  column-gap: 30px;
+}
+@media (max-width: 980px) {
+  .lastProduct_cards {
+    overflow-x: auto;
+  }
+}
+
+.lastProduct_cards::-webkit-scrollbar {
+  display: none;
 }
 
 .product__card {
-  max-width: 277px;
+  width: 277px;
   min-width: 144px;
-  height: 80%;
+  height: 100%;
   cursor: pointer;
 }
 
 .starWars__img {
-  min-width: 144px;
-  width: 300px;
+  width: 100%;
   max-width: 374px;
   height: max(200px, 25vw);
   background-image: url(.../../../img/productos/lighsaber-1.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 277px;
 }
 
 .pokemon__img {
-  min-width: 144px;
-  width: 300px;
+  width: 100%;
   max-width: 374px;
   height: max(200px, 25vw);
   background-image: url(.../../../img/productos/pidgeotto-1.png);
@@ -400,8 +433,7 @@
 }
 
 .harryPotter__img {
-  min-width: 144px;
-  width: 300px;
+  width: 100%;
   max-width: 374px;
   height: max(200px, 25vw);
   background-image: url(.../../../img/productos/luna-1.png);
@@ -528,6 +560,11 @@
   grid-template-columns: repeat(3, 1fr);
   row-gap: 40px;
 }
+@media (max-width: 980px) {
+  .shop__list_product {
+    padding: min(68px, 3vw) 40px 68px 40px;
+  }
+}
 
 .shop__list_product_nav {
   position: relative;
@@ -541,23 +578,39 @@
 }
 
 .shop__product__card {
-  max-width: 305px;
+  width: 305px;
   min-width: 144px;
-  height: 80%;
+  height: 100%;
   cursor: pointer;
   justify-self: center;
 }
+@media (max-width: 980px) {
+  .shop__product__card {
+    min-width: 140px;
+    max-width: 220px;
+  }
+}
 
 .product__card {
-  max-width: 277px;
+  width: 277px;
   min-width: 144px;
-  height: 80%;
+  height: 100%;
   cursor: pointer;
+}
+@media (max-width: 980px) {
+  .product__card {
+    border: 1px solid black;
+    min-width: 250px;
+    width: 300px;
+    height: 100%;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+  }
 }
 
 .starWars__img {
-  min-width: 144px;
-  width: 300px;
+  width: 100%;
   max-width: 374px;
   height: max(200px, 25vw);
   background-image: url(.../../../img/productos/lighsaber-1.png);
@@ -567,8 +620,7 @@
 }
 
 .pokemon__img {
-  min-width: 144px;
-  width: 300px;
+  width: 100%;
   max-width: 374px;
   height: max(200px, 25vw);
   background-image: url(.../../../img/productos/pidgeotto-1.png);
@@ -578,8 +630,7 @@
 }
 
 .harryPotter__img {
-  min-width: 144px;
-  width: 300px;
+  width: 100%;
   max-width: 374px;
   height: max(200px, 25vw);
   background-image: url(.../../../img/productos/luna-1.png);
@@ -622,6 +673,11 @@
   line-height: 21.78px;
   margin-left: 15px;
 }
+@media (max-width: 980px) {
+  .last__product_title_description {
+    height: 43px;
+  }
+}
 
 .last__product__price {
   font-size: 16px;
@@ -641,6 +697,7 @@
 }
 
 .nav__category {
+  display: none;
   min-width: 200px;
   max-width: min(360px, 36vw);
   min-height: 100vh;
@@ -808,7 +865,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  background-image: url(.../../img/productos/baby-yoda-1.png);
+  background-image: url(../../img/productos/baby-yoda-1.png);
+}
+@media (max-width: 980px) {
+  .product__img {
+    min-width: 300px;
+    gap: 10px;
+  }
 }
 
 .product__text {
@@ -838,6 +901,11 @@
   margin: 0;
   margin-bottom: 15px;
 }
+@media (max-width: 980px) {
+  .product__text__titleSuperior {
+    font-size: 24px;
+  }
+}
 
 .product__text_paragraph {
   font-size: 24px;
@@ -847,6 +915,11 @@
   margin: 0;
   color: #333;
   margin-bottom: 15px;
+}
+@media (max-width: 980px) {
+  .product__text_paragraph {
+    font-size: 20px;
+  }
 }
 
 .product__text_price {
@@ -858,13 +931,19 @@
   color: #333;
   margin-bottom: 15px;
 }
+@media (max-width: 980px) {
+  .product__text_price {
+    font-size: 24px;
+  }
+}
 
 .product__btn {
   width: 100%;
   height: 38.5px;
   display: flex;
-  gap: 13px;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 13px;
   margin-bottom: 26px;
 }
 
@@ -916,6 +995,18 @@
   font-family: "Inter", sans-serif;
   margin: 0;
 }
+@media (max-width: 980px) {
+  .product__btn__car {
+    font-size: 14px;
+    width: 140px;
+  }
+}
+
+@media (max-width: 750px) {
+  .medios {
+    margin-top: 25px;
+  }
+}
 
 .producto__medios__pago {
   font-size: 14px;
@@ -926,6 +1017,11 @@
   color: #1d84b5;
   text-decoration: underline;
 }
+@media (max-width: 980px) {
+  .producto__medios__pago {
+    font-size: 12px;
+  }
+}
 
 .product__medios__fees {
   font-size: 14px;
@@ -934,6 +1030,11 @@
   font-family: "Inter", sans-serif;
   margin: 0;
   color: #1d84b5;
+}
+@media (max-width: 980px) {
+  .product__medios__fees {
+    font-size: 12px;
+  }
 }
 
 .burger {

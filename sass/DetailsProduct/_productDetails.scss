@@ -25,7 +25,12 @@
 .product__img{
     @include minfux.productimg;
     background: {
-        image: url(.../../img/productos/baby-yoda-1.png);
+        image: url(../../img/productos/baby-yoda-1.png);
+    }
+
+    @include minfux.media(980px){
+        min-width: 300px;
+        gap: 10px;
     }
 }
 
@@ -47,18 +52,30 @@
 .product__text__titleSuperior{
     @include minfux.productInfo(variables.$fs-38, variables.$w-700, 45.99px, variables.$ff-i);
     margin-bottom: 15px;
+
+    @include minfux.media(980px){
+        font-size: variables.$fs-24;
+    }
 }
 
 .product__text_paragraph{
     @include minfux.productInfo(variables.$fs-24, variables.$w-400, 29.05px, variables.$ff-i);
     color: variables.$c-gray;
     margin-bottom: 15px;
+
+    @include minfux.media(980px){
+        font-size: variables.$fs-20;
+    }
 }
 
 .product__text_price{
     @include minfux.productInfo(variables.$fs-38, variables.$w-400, 45.99px, variables.$ff-i);
     color: variables.$c-gray;
     margin-bottom: 15px;
+
+    @include minfux.media(980px){
+        font-size: variables.$fs-24;
+    }
 }
 
 .product__btn{
@@ -66,8 +83,9 @@
     height: 38.5px;
 
     display: flex;
-    gap: 13px;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 13px;
     margin-bottom: 26px;
 
 }
@@ -115,15 +133,36 @@
     margin-left: 13px;
 
     @include minfux.productInfo(variables.$fs-18, variables.$w-500, 45.99px, variables.$ff-i);
+
+    @include minfux.media(980px){
+        font-size: variables.$fs-14;
+        width: 140px;
+    }
+}
+
+.medios{
+    @include minfux.media(750px){
+        margin-top: 25px;
+    }
 }
 
 .producto__medios__pago{
     @include minfux.productInfo(variables.$fs-14, variables.$w-700, 16.94px, variables.$ff-i);
     color: #1d84b5;
     text-decoration: underline;
+
+    @include minfux.media(980px){
+        font-size: variables.$fs-12;
+    }
+
+
 }
 
 .product__medios__fees{
     @include minfux.productInfo(variables.$fs-14, variables.$w-700, 16.94px, variables.$ff-i);
     color: #1d84b5;
+
+    @include minfux.media(980px){
+        font-size: variables.$fs-12;
+    }
 }

@@ -2,6 +2,8 @@
 @use "../../minfux";
 
 .nav__category{
+    display: none;
+
     min-width: 200px;
 
     max-width: min(360px,36vw);

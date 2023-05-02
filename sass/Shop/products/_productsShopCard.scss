@@ -4,7 +4,19 @@
 
 .product__card{
     @include minfux.productCard(277px);
+    
+
+    @include minfux.media(980px){
+        border: 1px solid black;
+        min-width: 250px;
+        width: 300px;
+        height: 100%;
+        position: relative;
+        left: 0;
+        transition: 0.5s;
+    }
 }
+
 
 .starWars__img{
     @include minfux.imgCardHome;
@@ -65,7 +77,10 @@
 }
 
 .last__product_title_description{
-    @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px)
+    @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px);
+    @include minfux.media(980px){
+        height: 43px;
+    }
 }
 
 .last__product__price{

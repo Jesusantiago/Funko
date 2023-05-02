@@ -23,7 +23,6 @@
     max-width: 645px;
     min-height: 297px;
     max-height: 400px;
-    // max-width: ;
     font-family: variables.$ff-r;
     display: flex;
     flex-direction: column;
@@ -31,18 +30,6 @@
     justify-content: space-between;
     gap: 20px;
 
-    @media (max-width: 980px) {
-        min-width: 200px;
-        max-width: 100vw;
-        min-height: 200px;
-        max-height: 15vh;
-        font-family: variables.$ff-r;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0;
-    }
 }
 
 @mixin productInfo($fsize, $fweight, $line, $ffamily){    
@@ -84,26 +71,19 @@
     min-height: 300px;
     height: 100%;
     order: $order;
-
-    @media (max-width:980px){
-        min-width: 200px;
-        max-width: 100%;
-        height: 50vh;
-    }
 }
 
 @mixin productCard($width){
-    max-width: $width;
+    width: $width;
     min-width: 144px;
-    height: 80%;
+    height: 100%;
     cursor: pointer;
 }
 
 @mixin imgCardHome{
-    min-width: 144px;
-    width: 300px;
+    // min-width: 144px;
+    width: 100%;
     max-width: 374px;
-    // height: 352px;
     height: max(200px, 25vw);
 }
 
