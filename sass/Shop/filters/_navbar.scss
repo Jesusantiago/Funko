@@ -1,21 +1,49 @@
 @use "../../variables";
 @use "../../minfux";
 
+.filter__icon{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 300;
+    top: max(80px, 11vw);
+    left: 0;
+    margin-top: 10px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+
+//avtive filter
+.activeFilter{
+
+    .nav__category{
+        display: inline-block;
+        position: absolute;
+        top: max(80px, 12vw);
+        left: 5px;
+        z-index: 200;
+    
+        min-width: 200px;
+        max-width: min(360px,36vw);
+        min-height: auto;
+        
+        padding-top: min(68px, 3vw);
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: max(7.5%, 20px);
+    
+        font-family: variables.$ff-i;
+    
+        background-color: #fff;
+        border: 1px solid black;
+        border-radius: 10px;
+
+    }
+}
+
 .nav__category{
     display: none;
-
-    min-width: 200px;
-
-    max-width: min(360px,36vw);
-    min-height: 100vh;
-    
-    padding-top: min(68px, 3vw);
-    padding-right: 0px;
-    padding-left: max(7.5%, 20px);
-    position: fixed;
-    top: 144px;
-    left: 0;
-    font-family: variables.$ff-i;
 }
 
 .category__search{
@@ -105,7 +133,7 @@
 .filter__list_item{
 
     .filter__list__item__imput{
-        appearance: none;
+        accent-color: #30343F;
         @include minfux.borderInput;
         margin-right: 5px;
         width: 24px;

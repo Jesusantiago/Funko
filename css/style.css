@@ -400,14 +400,14 @@
 }
 
 .product__card {
-  width: 277px;
-  min-width: 250px;
+  min-width: 200px;
+  width: 100%;
+  max-width: 277px;
   height: 100%;
   cursor: pointer;
 }
 @media (max-width: 980px) {
   .product__card {
-    border: 1px solid black;
     min-width: 200px;
     width: 300px;
     height: 100%;
@@ -556,7 +556,7 @@
 
 .shop__list_product {
   position: relative;
-  top: 144px;
+  top: max(80px, 11vw);
   left: 0;
   right: 0;
   max-width: 100vw;
@@ -583,8 +583,9 @@
 }
 
 .shop__product__card {
-  width: 305px;
-  min-width: 250px;
+  min-width: 200px;
+  width: 100%;
+  max-width: 305px;
   height: 100%;
   cursor: pointer;
   justify-self: center;
@@ -597,8 +598,9 @@
 }
 
 .product__card {
-  width: 350px;
-  min-width: 250px;
+  min-width: 200px;
+  width: 100%;
+  max-width: 350px;
   height: 100%;
   cursor: pointer;
 }
@@ -700,18 +702,39 @@
   color: #1D84B5;
 }
 
-.nav__category {
-  display: none;
+.filter__icon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  z-index: 300;
+  top: max(80px, 11vw);
+  left: 0;
+  margin-top: 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.activeFilter .nav__category {
+  display: inline-block;
+  position: absolute;
+  top: max(80px, 12vw);
+  left: 5px;
+  z-index: 200;
   min-width: 200px;
   max-width: min(360px, 36vw);
-  min-height: 100vh;
+  min-height: auto;
   padding-top: min(68px, 3vw);
-  padding-right: 0px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   padding-left: max(7.5%, 20px);
-  position: fixed;
-  top: 144px;
-  left: 0;
   font-family: "Inter", sans-serif;
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.nav__category {
+  display: none;
 }
 
 .category__search {
@@ -785,7 +808,7 @@
 }
 
 .filter__list_item .filter__list__item__imput {
-  appearance: none;
+  accent-color: #30343F;
   border: 1px solid black;
   border-radius: 5px;
   margin-right: 5px;
@@ -873,7 +896,7 @@
 }
 @media (max-width: 980px) {
   .product__img {
-    min-width: 300px;
+    min-width: 400px;
     gap: 10px;
   }
 }
@@ -1006,6 +1029,11 @@
   }
 }
 
+@media (max-width: 868px) {
+  .medios {
+    margin-top: 25px;
+  }
+}
 @media (max-width: 750px) {
   .medios {
     margin-top: 25px;

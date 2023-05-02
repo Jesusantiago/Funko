@@ -29,7 +29,7 @@
     }
 
     @include minfux.media(980px){
-        min-width: 300px;
+        min-width: 400px;
         gap: 10px;
     }
 }
@@ -141,6 +141,10 @@
 }
 
 .medios{
+    @include minfux.media(868px){
+        margin-top: 25px;
+    }
+
     @include minfux.media(750px){
         margin-top: 25px;
     }
