@@ -4,6 +4,15 @@
 
 .product__card{
     @include minfux.productCard(277px);
+    @include minfux.media(980px){
+        border: 1px solid black;
+        min-width: 200px;
+        width: 300px;
+        height: 100%;
+        position: relative;
+        left: 0;
+        transition: 0.5s;
+    }
 }
 
 .starWars__img{
@@ -37,7 +46,7 @@
 }
 
 .background__red{
-    width: max(60px, 7vw);
+    width: 97px;
     // max-width: 97px;
     height: 30px;
     background-color: red;
@@ -47,6 +56,10 @@
     position: relative;
     top: 0;
     left: calc(100% - 97px);
+
+    // @include minfux.media(980px){
+    //     right: calc(0px - 97px);
+    // }
 
     .background__span{
         color: variables.$c-font;

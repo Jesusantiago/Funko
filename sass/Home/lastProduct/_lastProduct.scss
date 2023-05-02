@@ -4,6 +4,7 @@
 
 .lastProduct{
     width: 100%;
+    // width: calc(100vw
     max-height: calc(100vh - max(80px, 11vw));
     padding: 0 max(40px, 7.5vw) 80px;
     display: flex;
@@ -31,9 +32,12 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 30px;
+    // height: 515px;
 
     @include minfux.media(980px){
-        overflow-x: auto;
+        // overflow-x:auto;
+        
+
     }
 }
 

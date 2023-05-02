@@ -75,13 +75,13 @@
 
 @mixin productCard($width){
     width: $width;
-    min-width: 144px;
+    min-width: 250px;
     height: 100%;
     cursor: pointer;
 }
 
 @mixin imgCardHome{
-    // min-width: 144px;
+    // min-width: 200px;
     width: 100%;
     max-width: 374px;
     height: max(200px, 25vw);
