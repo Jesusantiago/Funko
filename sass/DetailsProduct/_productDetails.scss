@@ -25,7 +25,7 @@
 .product__img{
     @include minfux.productimg;
     background: {
-        image: url(../../img/productos/baby-yoda-1.png);
+        image: url(./../img/productos/baby-yoda-1.png);
     }
 
     @include minfux.media(980px){

@@ -5,9 +5,8 @@ const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 
 burger.addEventListener("click", (e)=>{
-    console.log(e.target)
+    console.log(e.target.classList)
     header.classList.toggle("a");
-
 })
 
 // Menu Filter
@@ -15,7 +14,7 @@ burger.addEventListener("click", (e)=>{
 const main = document.getElementById("main__Shop");
 const filter = document.getElementById("filter");
 
-
 filter.addEventListener("click", () => {
     main.classList.toggle("activeFilter")
 })
+

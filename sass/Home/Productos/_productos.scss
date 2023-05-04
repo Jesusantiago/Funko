@@ -4,6 +4,7 @@
 .firstProduct,
 .secondProduct,
 .thirdProduct{
+
     @include minfux.pageProduct(black);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
