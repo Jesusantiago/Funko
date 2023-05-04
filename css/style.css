@@ -10,6 +10,9 @@
   align-items: center;
   padding: 0 max(40px, 7.5vw);
   font-family: "Raleway", sans-serif;
+  background-color: #30343F;
+  position: relative;
+  z-index: -1000000000;
 }
 
 .banner_img {
@@ -31,16 +34,31 @@
   max-width: 50%;
   color: #FFF;
 }
+@media (max-width: 600px) {
+  .banner__text {
+    max-width: 70%;
+  }
+}
 .banner__text .banner__text_title {
   font-size: 38px;
   line-height: 44.61px;
   font-weight: 700;
   margin-bottom: 0.4em;
 }
+@media (max-width: 600px) {
+  .banner__text .banner__text_title {
+    font-size: 46px;
+  }
+}
 .banner__text .banner__text_span {
   font-size: 18px;
   line-height: 21.13px;
   font-weight: 400;
+}
+@media (max-width: 600px) {
+  .banner__text .banner__text_span {
+    font-size: 24px;
+  }
 }
 .banner__text .banner__text_btn {
   position: relative;
@@ -59,6 +77,11 @@
   text-align: center;
   text-decoration: none;
   padding-top: 0.5em;
+}
+@media (max-width: 600px) {
+  .banner__text .banner__text_btn {
+    top: 20px;
+  }
 }
 
 .header {
@@ -188,6 +211,11 @@
     color: #30343F;
     padding: 5px 30px;
     border-radius: 50px;
+  }
+}
+@media (max-width: 600px) {
+  .a .header__nav {
+    padding: 200px 150px;
   }
 }
 
@@ -1073,7 +1101,7 @@
   .burger {
     position: absolute;
     top: 4vh;
-    right: 5vw;
+    right: 8vw;
     width: 45px;
     height: 20px;
     display: flex;
@@ -1099,6 +1127,11 @@
     background: #fff;
     transform: translateY(10px);
     transition: 0.5s;
+  }
+}
+@media (max-width: 600px) {
+  .burger {
+    top: 3vh;
   }
 }
 

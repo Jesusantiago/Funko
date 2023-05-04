@@ -156,5 +156,10 @@
             }
     
         }
+        @include minfux.media(600px){
+            padding: 200px 150px;
+        }
 }
+
+
 }

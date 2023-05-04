@@ -1,4 +1,5 @@
 @use "../../variables";
+@use "../../minfux";
 
 .banner{
     min-width: 100%;
@@ -7,6 +8,10 @@
     align-items: center;
     padding: 0 max(40px, 7.5vw);
     font-family: variables.$ff-r;
+    background-color: variables.$c-fondo;
+    position: relative;
+    z-index: -1000000000;
+
 }
 
 
@@ -31,17 +36,29 @@
     max-width: 50%;
     color: variables.$c-font;
 
+    @include minfux.media(600px){
+        max-width: 70%;
+    }
+
     .banner__text_title{
         font-size: variables.$fs-38;
         line-height: 44.61px;
         font-weight: variables.$w-700;
         margin-bottom: .4em;
+
+        @include minfux.media(600px){
+            font-size: variables.$fs-46;
+        }
     }
 
     .banner__text_span{
         font-size: variables.$fs-18;
         line-height: 21.13px;
         font-weight: variables.$w-400;
+
+        @include minfux.media(600px){
+            font-size: variables.$fs-24;
+        }
     }
 
     .banner__text_btn{
@@ -68,6 +85,10 @@
         text-align: center;
         text-decoration: none;
         padding-top: .5em;
+
+        @include minfux.media(600px){
+            top: 20px;
+        }
         
     }
 }

@@ -10,7 +10,7 @@
 
     position: absolute;
     top: 4vh;
-    right: 5vw;
+    right: 8vw;
     width: 45px;
     height: 20px;
     display: flex;
@@ -39,6 +39,10 @@
             transition: 0.5s;
         }
 }
+
+    @include minfux.media(600px){
+        top: 3vh;
+    }
 
         
 }
