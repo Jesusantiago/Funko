@@ -10,7 +10,7 @@
     font-family: variables.$ff-r;
     background-color: variables.$c-fondo;
     position: relative;
-    z-index: -1000000000;
+    z-index: -100000000;
 
 }
 
@@ -20,7 +20,7 @@
     top:max(80px, 11vw);
     left: 0;
     z-index: -100000;
-    min-width: 100%;
+    min-width: 100vw;
     height: 70vh;
     background: {
         image: url(.../../../img/desktop/banner.png);
