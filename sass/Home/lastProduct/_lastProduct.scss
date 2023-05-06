@@ -10,7 +10,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 50px;
+    // gap: 1500px;
 }
 
 .lastProduct__title{
@@ -23,6 +23,11 @@
     color: black;
     width: 100%;
     text-align: left;
+
+    @include minfux.media(680px){
+        font-size: variables.$fs-38;
+
+    }
 }
 
 .lastProduct_cards{
@@ -31,4 +36,9 @@
     align-items: center;
     justify-content: space-between;
     column-gap: 30px;
+
+    @include minfux.media(610px){
+        flex-direction: column;
+        gap: 10px;
+    }
 }

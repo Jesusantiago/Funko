@@ -1,4 +1,6 @@
 @use "../../variables";
+@use "../../minfux";
+
 
 .footer{
     width: 100%;
@@ -33,12 +35,16 @@
             weight: variables.$w-500;
             family: variables.$ff-r;
         };
-        line-height: 23.48px;
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-16;
+        }
+
     }
 }
 
 .footer__logo{
-    width: max(20vw, 50px);
+    width: max(20vw, 100px);
     height: 117px;
 
     background: {
@@ -54,7 +60,7 @@
 
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin-top: 40px;
     color: variables.$c-font;
 
     font: {
@@ -62,7 +68,11 @@
         size: variables.$fs-20;
         weight: variables.$w-500;
     }
-    line-height: 23.48px;
+    
+
+    @include minfux.media(610px){
+        font-size: variables.$fs-12;
+    }
 }
 
 .footer__shop{

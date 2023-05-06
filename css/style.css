@@ -14,6 +14,12 @@
   position: relative;
   z-index: -100000000;
 }
+@media (max-width: 600px) {
+  .banner {
+    align-items: start;
+    padding: 150px max(40px, 7.5vw);
+  }
+}
 
 .banner_img {
   position: absolute;
@@ -36,7 +42,9 @@
 }
 @media (max-width: 600px) {
   .banner__text {
-    max-width: 70%;
+    max-width: 80%;
+    min-height: 200px;
+    justify-content: space-between;
   }
 }
 .banner__text .banner__text_title {
@@ -47,7 +55,8 @@
 }
 @media (max-width: 600px) {
   .banner__text .banner__text_title {
-    font-size: 46px;
+    font-size: 38px;
+    min-font-size: 32px;
   }
 }
 .banner__text .banner__text_span {
@@ -57,7 +66,8 @@
 }
 @media (max-width: 600px) {
   .banner__text .banner__text_span {
-    font-size: 24px;
+    font-size: 20px;
+    width: 80%;
   }
 }
 .banner__text .banner__text_btn {
@@ -246,6 +256,7 @@
   .firstProduct,
   .secondProduct,
   .thirdProduct {
+    padding-top: 50px;
     padding-bottom: 50px;
     grid-template-columns: 1fr;
     justify-items: center;
@@ -255,7 +266,24 @@
 
 @media (max-width: 980px) {
   .firstProduct .home__product__text {
-    min-height: 300px;
+    min-height: 250px;
+  }
+}
+@media (max-width: 630px) {
+  .firstProduct .home__product__text {
+    min-height: 250px;
+  }
+}
+@media (max-width: 630px) {
+  .firstProduct .home__product__text_title {
+    font-size: 38px;
+    line-height: 40px;
+  }
+}
+@media (max-width: 520px) {
+  .firstProduct .home__product__text_title {
+    font-size: 24px;
+    font-weight: 700;
   }
 }
 
@@ -274,7 +302,7 @@
 @media (max-width: 980px) {
   .home__product__text {
     width: 70vw;
-    min-height: 200px;
+    min-height: 250px;
     max-height: 15vh;
     font-family: "Raleway", sans-serif;
     display: flex;
@@ -297,6 +325,12 @@
     text-align: center;
   }
 }
+@media (max-width: 630px) {
+  .home__product__text_title {
+    font-size: 38px;
+    line-height: 30px;
+  }
+}
 
 .home__product__text_paragraph {
   font-size: 24px;
@@ -308,6 +342,12 @@
 @media (max-width: 980px) {
   .home__product__text_paragraph {
     text-align: center;
+  }
+}
+@media (max-width: 630px) {
+  .home__product__text_paragraph {
+    font-size: 18px;
+    font-weight: 500;
   }
 }
 
@@ -353,6 +393,7 @@
     min-width: 80%;
     height: 100%;
     order: -1;
+    transform: translate(-20px, 0);
   }
 }
 
@@ -402,7 +443,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  gap: 50px;
 }
 
 .lastProduct__title {
@@ -414,6 +454,11 @@
   width: 100%;
   text-align: left;
 }
+@media (max-width: 680px) {
+  .lastProduct__title {
+    font-size: 38px;
+  }
+}
 
 .lastProduct_cards {
   width: 100%;
@@ -422,106 +467,11 @@
   justify-content: space-between;
   column-gap: 30px;
 }
-
-.product__card {
-  box-shadow: -1px 0px 16px 6px rgba(133, 133, 133, 0.29);
-  min-width: 200px;
-  width: 100%;
-  max-width: 277px;
-  height: 100%;
-  cursor: pointer;
-}
-@media (max-width: 980px) {
-  .product__card {
-    height: 100%;
-    min-width: 200px;
-    width: 300px;
-    position: relative;
-    left: 0;
-    transition: 0.5s;
+@media (max-width: 610px) {
+  .lastProduct_cards {
+    flex-direction: column;
+    gap: 10px;
   }
-}
-
-.starWars__img {
-  width: 100%;
-  max-width: 374px;
-  height: max(200px, 25vw);
-  background-image: url(.../../../img/productos/lighsaber-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 277px;
-}
-
-.pokemon__img {
-  width: 100%;
-  max-width: 374px;
-  height: max(200px, 25vw);
-  background-image: url(.../../../img/productos/pidgeotto-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.harryPotter__img {
-  width: 100%;
-  max-width: 374px;
-  height: max(200px, 25vw);
-  background-image: url(.../../../img/productos/luna-1.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.background__red {
-  width: 97px;
-  height: 30px;
-  background-color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: 0;
-  left: calc(100% - 97px);
-}
-.background__red .background__span {
-  color: #FFF;
-  font-size: 14px;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-}
-
-.last__product_title {
-  font-size: 14px;
-  font-weight: 500;
-  font-family: "Inter", sans-serif;
-  line-height: 16.94px;
-  margin-left: 15px;
-  overflow-wrap: break-word;
-}
-
-.last__product_title_description {
-  font-size: 18px;
-  font-weight: 700;
-  font-family: "Inter", sans-serif;
-  line-height: 21.78px;
-  margin-left: 15px;
-}
-
-.last__product__price {
-  font-size: 16px;
-  font-weight: 400;
-  font-family: "Inter", sans-serif;
-  line-height: 19.36px;
-  margin-left: 15px;
-}
-
-.last__product_fees {
-  font-size: 12px;
-  font-weight: 700;
-  font-family: "Inter", sans-serif;
-  line-height: 14.52px;
-  margin-left: 15px;
-  color: #1D84B5;
 }
 
 .footer {
@@ -551,11 +501,15 @@
   font-size: 20px;
   font-weight: 500;
   font-family: "Raleway", sans-serif;
-  line-height: 23.48px;
+}
+@media (max-width: 610px) {
+  .footer__nav a {
+    font-size: 16px;
+  }
 }
 
 .footer__logo {
-  width: max(20vw, 50px);
+  width: max(20vw, 100px);
   height: 117px;
   background-image: url(.../../../img/desktop/logo-footer.png);
   background-position: center;
@@ -566,12 +520,16 @@
 .footer__copy_text {
   width: 100%;
   text-align: center;
-  margin: 0;
+  margin-top: 40px;
   color: #FFF;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  line-height: 23.48px;
+}
+@media (max-width: 610px) {
+  .footer__copy_text {
+    font-size: 12px;
+  }
 }
 
 .footer__shop {
@@ -628,6 +586,7 @@
   max-width: 350px;
   height: 100%;
   cursor: pointer;
+  box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.29);
 }
 @media (max-width: 980px) {
   .product__card {
@@ -637,6 +596,22 @@
     position: relative;
     left: 0;
     transition: 0.5s;
+  }
+}
+@media (max-width: 610px) {
+  .product__card {
+    min-width: 100%;
+    display: flex;
+    gap: 10px;
+  }
+}
+@media (max-width: 610px) {
+  .product__card_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    padding: 20px 10px 50px 15px;
   }
 }
 
@@ -670,6 +645,15 @@
   background-size: contain;
 }
 
+@media (max-width: 610px) {
+  .starWars__img,
+  .pokemon__img,
+  .harryPotter__img {
+    max-width: 200px;
+    min-width: 100px;
+  }
+}
+
 .background__red {
   width: max(60px, 7vw);
   height: 30px;
@@ -681,11 +665,21 @@
   top: 0;
   left: calc(100% - max(60px, 7vw));
 }
+@media (max-width: 680px) {
+  .background__red {
+    height: 25px;
+  }
+}
 .background__red .background__span {
   color: #FFF;
   font-size: 14px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
+}
+@media (max-width: 680px) {
+  .background__red .background__span {
+    font-size: 12px;
+  }
 }
 
 .last__product_title {
@@ -695,6 +689,17 @@
   line-height: 16.94px;
   margin-left: 15px;
   overflow-wrap: break-word;
+}
+@media (max-width: 680px) {
+  .last__product_title {
+    font-size: 12px;
+  }
+}
+@media (max-width: 610px) {
+  .last__product_title {
+    font-size: 14px;
+    margin: 0;
+  }
 }
 
 .last__product_title_description {
@@ -709,6 +714,19 @@
     height: 43px;
   }
 }
+@media (max-width: 680px) {
+  .last__product_title_description {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 610px) {
+  .last__product_title_description {
+    font-size: 18px;
+    margin: 0;
+    height: auto;
+  }
+}
 
 .last__product__price {
   font-size: 16px;
@@ -716,6 +734,17 @@
   font-family: "Inter", sans-serif;
   line-height: 19.36px;
   margin-left: 15px;
+}
+@media (max-width: 680px) {
+  .last__product__price {
+    font-size: 18px;
+  }
+}
+@media (max-width: 610px) {
+  .last__product__price {
+    font-size: 16px;
+    margin: 0;
+  }
 }
 
 .last__product_fees {
@@ -725,6 +754,17 @@
   line-height: 14.52px;
   margin-left: 15px;
   color: #1D84B5;
+}
+@media (max-width: 680px) {
+  .last__product_fees {
+    letter-spacing: -0.5px;
+  }
+}
+@media (max-width: 610px) {
+  .last__product_fees {
+    font-size: 12px;
+    margin: 0;
+  }
 }
 
 .filter__icon {

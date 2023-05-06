@@ -10,6 +10,7 @@
     grid-template-columns: repeat(2, 1fr);
 
     @include minfux.media(980px){
+        padding-top: 50px;
         padding-bottom: 50px;
         grid-template-columns: 1fr;
         justify-items: center;
@@ -17,17 +18,34 @@
 
     }
 
+
+
 };
 
 .firstProduct{
     .home__product__text{
         @include minfux.media(980px){
-            min-height: 300px;
+            min-height: 250px;
+        }
+
+        @include minfux.media(630px){
+            min-height: 250px;
+        }
+     
+        &_title{
+            @include minfux.media(630px){
+                font-size: variables.$fs-38;
+                line-height: 40px
+            }
+
+            @include minfux.media(520px){
+                font-size: variables.$fs-24;
+                font-weight: variables.$w-700;
+            }
         }
     }
+
 }
-
-
 
 .home__product__text{
     @include minfux.productText;
@@ -35,23 +53,27 @@
     @include minfux.media(980px){
         // min-width: 530px;
         width: 70vw;
-        min-height: 200px;
+        min-height: 250px;
         max-height: 15vh;
         font-family: variables.$ff-r;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-        gap: 0;
-
-        
+        gap: 0;     
     }
 }
 
 .home__product__text_title{
     @include minfux.productInfo(variables.$fs-46, variables.$w-500, 54px, variables.$ff-r);
+    
     @include minfux.media(980px){
         text-align: center;
+    }
+
+    @include minfux.media(630px){
+        font-size: variables.$fs-38;
+        line-height: 30px;
     }
 }
 
@@ -59,6 +81,11 @@
     @include minfux.productInfo(variables.$fs-24, variables.$w-400, 28.18px, variables.$ff-r);
     @include minfux.media(980px){
         text-align: center;
+    }
+
+    @include minfux.media(630px){
+        font-size: variables.$fs-18;
+        font-weight: variables.$w-500;
     }
 }
 
@@ -83,7 +110,9 @@
         min-width: 80%;
         height: 100%;
         order: -1;
+        transform: translate(-20px, 0);
     }
+
 }
 
 .home__product__img_second{
