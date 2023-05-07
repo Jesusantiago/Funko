@@ -1474,35 +1474,51 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  gap: 40px;
+  justify-items: center;
+  gap: 10px;
   padding: 0 max(40px, 7.5vw);
+}
+@media (max-width: 880px) {
+  .product__section__product {
+    grid-template-columns: repeat(1, 1fr);
+    max-height: 100vh;
+    gap: 0;
+  }
 }
 
 .product__img {
-  min-width: 250px;
-  min-height: 250px;
-  height: 550px;
-  max-width: 550px;
-  max-height: 550px;
+  width: max(400px, 40vw);
+  height: 500px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
   background-image: url(./../img/productos/baby-yoda-1.png);
 }
-@media (max-width: 980px) {
+@media (max-width: 880px) {
   .product__img {
-    min-width: 400px;
-    gap: 10px;
+    width: max(200px, 80vw);
+    height: max(200px, 45vw);
+    translate: -30px;
   }
 }
 
 .product__text {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   align-items: start;
   justify-content: center;
+}
+@media (max-width: 880px) {
+  .product__text {
+    padding: 0 max(40px, 7.5vw);
+  }
+}
+@media (max-width: 600px) {
+  .product__text {
+    padding: 0;
+  }
 }
 
 .product__text__titleLower {
@@ -1541,6 +1557,11 @@
 @media (max-width: 980px) {
   .product__text_paragraph {
     font-size: 20px;
+  }
+}
+@media (max-width: 880px) {
+  .product__text_paragraph {
+    width: 100%;
   }
 }
 
@@ -1643,6 +1664,7 @@
   margin: 0;
   color: #1d84b5;
   text-decoration: underline;
+  cursor: pointer;
 }
 @media (max-width: 980px) {
   .producto__medios__pago {
@@ -1662,6 +1684,227 @@
   .product__medios__fees {
     font-size: 12px;
   }
+}
+
+.modal__medios {
+  display: none;
+}
+
+.product__main__active .modal__medios {
+  background-color: rgba(255, 255, 255, 0.637);
+  position: absolute;
+  top: 0;
+  min-width: 100vw;
+  min-height: calc(100vh - max(80px, 11vw));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product__main__active .div__medios {
+  max-width: 750px;
+  max-height: 75vh;
+  padding: 10px 100px;
+  border: 1px solid rgba(0, 0, 0, 0.425);
+  background-color: #FFF;
+  overflow-y: scroll;
+}
+.product__main__active .x__close {
+  cursor: pointer;
+  position: sticky;
+  top: 30px;
+  left: 550px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../../img/medios/x.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .medios__title {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.product__main__active .medios__title:nth-child(4) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.product__main__active .medios__title:nth-child(6) {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 0.5rem;
+  color: green;
+}
+.product__main__active .medios__title:nth-child(8) {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.product__main__active .medios__title:nth-child(10) {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+.product__main__active .medios__paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 22px;
+  margin-left: 15px;
+  margin-left: 0;
+  margin-bottom: 2rem;
+}
+.product__main__active .medios__paragraph:nth-child(11) {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 22px;
+  margin-left: 15px;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+.product__main__active .medios__paragraph:nth-child(12) {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+  line-height: 22px;
+  margin-left: 15px;
+  margin-left: 0;
+  margin-bottom: 0.5rem;
+}
+.product__main__active .medios__line {
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  margin-bottom: 2rem;
+}
+.product__main__active .medios__bancos {
+  max-width: 70%;
+  padding: 0 30px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product__main__active .medios__bancos:nth-child(16) {
+  max-width: 40%;
+  padding: 0 30px;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product__main__active .santander {
+  width: 70px;
+  height: 40px;
+  background-image: url(../../img/medios/santander.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .icbc {
+  width: 70px;
+  height: 40px;
+  background-image: url(../../img/medios/icbc.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .bbva {
+  width: 70px;
+  height: 40px;
+  background-image: url(../../img/medios/bbva.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .galicia {
+  width: 70px;
+  height: 40px;
+  background-image: url(../../img/medios/galicia.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .mercadoPago {
+  width: 80px;
+  height: 50px;
+  background-image: url(../../img/medios/mercadoPago.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .mastercard {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/medios/mastercard.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .visa {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/medios/visa.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .paypal {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/medios/paypal.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .naranja {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/medios/naranja.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .cabal {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/medios/cabal.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .pagofacil {
+  width: 40px;
+  height: 40px;
+  background-image: url(../../img/medios/pagofacil.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product__main__active .rapipago {
+  width: 70px;
+  height: 40px;
+  background-image: url(../../img/medios/rapipago.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .burger {

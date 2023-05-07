@@ -18,8 +18,15 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 40px;
+    justify-items: center;
+    gap: 10px;
     padding: 0 max(40px, 7.5vw);
+    
+    @include minfux.media(880px){
+        grid-template-columns: repeat(1, 1fr);
+        max-height: 100vh;
+        gap: 0
+    }
 }
 
 .product__img{
@@ -27,20 +34,31 @@
     background: {
         image: url(./../img/productos/baby-yoda-1.png);
     }
-
-    @include minfux.media(980px){
-        min-width: 400px;
-        gap: 10px;
+    
+    @include minfux.media(880px){
+        width: max(200px, 80vw);
+        height: max(200px, 45vw);
+        translate: -30px;
     }
+
+
 }
 
 .product__text{
-    max-width: 100%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+
+    @include minfux.media(880px){
+        padding: 0 max(40px, 7.5vw);
+    }
+
+    @include minfux.media(600px){
+        padding: 0;
+    }
 }
 
 .product__text__titleLower{
@@ -65,6 +83,10 @@
 
     @include minfux.media(980px){
         font-size: variables.$fs-20;
+    }
+
+    @include minfux.media(880px){
+        width: 100%;
     }
 }
 
@@ -141,6 +163,7 @@
 }
 
 .medios{
+
     @include minfux.media(868px){
         margin-top: 25px;
     }
@@ -154,6 +177,7 @@
     @include minfux.productInfo(variables.$fs-14, variables.$w-700, 16.94px, variables.$ff-i);
     color: #1d84b5;
     text-decoration: underline;
+    cursor: pointer;
 
     @include minfux.media(980px){
         font-size: variables.$fs-12;

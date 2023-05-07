@@ -104,12 +104,8 @@
 }
 
 @mixin productimg{
-    min-width: 250px;
-    min-height: 250px;
-    // width: 550px;
-    height: 550px;
-    max-width: 550px;
-    max-height: 550px;
+    width: max(400px, 40vw);
+    height: 500px;
 
     background: {
         repeat: no-repeat;
