@@ -1,0 +1,5 @@
+Falta corregir el error del height del contenedor del texto del card.
+
+falta modificar la linea de separacion
+
+falta modificar los margenes que tienen los elementos dentro del contenedor de texto
