@@ -6,13 +6,12 @@
 @use "./Home/Header/header";
 @use "./Home/Productos/productos";
 @use "./Home/lastProduct/lastProduct";
-@use "./Home/lastProduct/lastProductCards";
+// @use "./Home/lastProduct/lastProductCards";
 @use "./Home/footer/footer";
 
 // SHOP
 
 @use "./Shop/products/productsShop";
-@use "./Shop/products/productsShopCard";
 @use "./Shop/filters/navbar";
 @use "./Shop/containerNumbers/containerNumbers";
 

@@ -11,10 +11,39 @@ burger.addEventListener("click", (e)=>{
 
 // Menu Filter
 
-const main = document.getElementById("main__Shop");
-const filter = document.getElementById("filter");
+const filter = document.getElementById("main__Shop");
+const navFilter = document.getElementById("nav__category");
+const btnFilter = document.getElementById("filter");
 
-filter.addEventListener("click", () => {
-    main.classList.toggle("activeFilter")
+btnFilter.addEventListener("click", () => {
+    navFilter.classList.toggle("nav__category-act")
+    console.log("hola")
 })
 
+
+
+const arrow = document.getElementById("bx_arrow");
+
+arrow.addEventListener("click", ()=>{
+    arrow.setAttribute("animation", "tada");
+    setTimeout(() => {
+        navFilter.classList.toggle("nav__category-act")
+    }, 700);
+})
+
+// Menu grid
+
+const itemBlock = document.getElementById("bx_block");
+const itemInline = document.getElementById("bx_inline");
+const menuBlock = document.getElementById("shop__list_product_grid");
+
+itemBlock.addEventListener("click", () =>{
+    menuBlock.classList.toggle("shop__list_product_flex")
+    menuBlock.classList.toggle("shop__list_product_grid");
+    
+})
+
+itemInline.addEventListener("click", () => {
+    menuBlock.classList.toggle("shop__list_product_flex")
+    menuBlock.classList.toggle("shop__list_product_grid")
+})

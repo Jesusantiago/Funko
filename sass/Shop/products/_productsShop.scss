@@ -1,9 +1,188 @@
 @use "../../variables";
 @use "../../minfux";
 
-.shop__list_product{
+.main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.lastProduct_cards{
     position: relative;
-    top: max(80px, 11vw);
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    
+    // padding: min(68px, 3vw) 110px 68px 110px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    @include minfux.media(980px){
+        // padding: min(68px, 3vw) 40px 68px 40px; 
+        gap: 20px;
+    }
+
+    @include minfux.media(610px){
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .product__card{
+        @include minfux.productCard(305px);
+        justify-self: center;
+        box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.336);
+
+
+        @include minfux.media(610px){
+        max-width: 100%;
+        display: flex;
+        gap: 30px;
+        }
+
+        .starWars__img{
+            @include minfux.imgCardHome(374px);
+            background: {
+                image: url(.../../../img/productos/lighsaber-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            };
+        
+        }
+        
+        .pokemon__img{
+            @include minfux.imgCardHome(374px);
+            background: {
+                image: url(.../../../img/productos/pidgeotto-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+        }
+        
+        .harryPotter__img{
+            @include minfux.imgCardHome(374px);
+            background: {
+                image: url(.../../../img/productos/luna-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+        }
+        
+        .starWars__img,
+        .pokemon__img,
+        .harryPotter__img{
+            @include minfux.media(610px){
+                max-width: 200px;
+                min-width: 100px;
+                
+        
+            }
+        
+        }
+        
+        .background__red{
+            width: max(60px, 7vw);
+            // max-width: 97px;
+            height: 30px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 0;
+            left: calc(100% - max(60px, 7vw));
+        
+            @include minfux.media(680px){
+                height: 25px;
+            }
+        
+            .background__span{
+                color: variables.$c-font;
+                font: {
+                    size: variables.$fs-14;
+                    family: variables.$ff-i;
+                    weight: variables.$w-500;
+                }
+        
+                @include minfux.media(680px){
+                    font-size: variables.$fs-12;
+                        }
+            }
+        }
+    
+
+
+            .last__product_title{
+                @include minfux.textCardHome(variables.$fs-16, variables.$w-500, 16.94px);
+                
+                @include minfux.media(680px){
+                    font-size: variables.$fs-12;
+                }
+    
+                @include minfux.media(610px){
+                    font-size: variables.$fs-14;
+                }
+
+            &_description{
+                @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px);
+            
+                @include minfux.media(980px){
+                    height: 43px;
+                }
+            
+                @include minfux.media(680px){
+                    font-size: variables.$fs-14;
+                    font-weight: 600;   
+                }
+            
+                @include minfux.media(610px){
+                    font-size: variables.$fs-18;   
+                    height: auto;
+                }
+            }
+        }
+            
+            .last__product__price{
+                @include minfux.textCardHome(variables.$fs-16, variables.$w-400, 19.36px);
+
+                @include minfux.media(680px){
+                    font-size: variables.$fs-18;
+                }
+
+                @include minfux.media(610px){
+                    font-size: variables.$fs-18;
+                    margin-bottom: 7px;
+                }
+            }
+
+            .last__product_fees{
+                    @include minfux.textCardHome(variables.$fs-12, variables.$w-700, 14.52px);
+                color: #1D84B5;
+
+                @include minfux.media(680px){
+                    letter-spacing: -0.5px;
+                }
+
+                @include minfux.media(610px){
+                    font-size: variables.$fs-12;
+                }
+}
+
+}
+        
+        }
+
+
+
+
+.shop__list_product_grid{
+    position: relative;
+    top: max(157px, 14.5vw);
     left: 0;
     right: 0;
     max-width: 100vw;
@@ -12,38 +191,302 @@
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px;
-    
+    gap: 40px;
 
     @include minfux.media(980px){
         padding: min(68px, 3vw) 40px 68px 40px; 
     }
-}
 
-.shop__list_product_nav{
-    position: relative;
-    top: 144px;
-    left: 368px;
-    max-width: calc(100vw - 368px);
-    
-    padding: min(68px, 3vw) 110px 68px 10px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 40px
-}
-
-.shop__product__card{
-    @include minfux.productCard(305px);
-    justify-self: center;
-
-    @include minfux.media(980px){
-        min-width: 140px;
-        max-width: 220px;
+    @include minfux.media(610px){
+        grid-template-columns: repeat(2, 1fr);
+        
     }
 
-    // @include minfux.media(860px){
-    //     max-width: 150px;
+    .shop__product__card{
+        @include minfux.productCard(305px);
+        justify-self: center;
+        box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.336);
 
-    // }
+
+        @include minfux.media(980px){
+        min-width: 140px;
+        max-width: 230px;
+        }
+        .starWars__img{
+            @include minfux.imgCardHome(374px);
+            background: {
+                image: url(.../../../img/productos/lighsaber-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            };
+        
+        }
+        
+        .pokemon__img{
+            @include minfux.imgCardHome(374px);
+            background: {
+                image: url(.../../../img/productos/pidgeotto-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+        }
+        
+        .harryPotter__img{
+            @include minfux.imgCardHome(374px);
+            background: {
+                image: url(.../../../img/productos/luna-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+        }
+        
+        .starWars__img,
+        .pokemon__img,
+        .harryPotter__img{
+            @include minfux.media(610px){
+                max-width: 200px;
+                min-width: 100px;
+                
+        
+            }
+        
+        }
+        
+        .background__red{
+            width: max(60px, 7vw);
+            // max-width: 97px;
+            height: 30px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 0;
+            left: calc(100% - max(60px, 7vw));
+        
+            @include minfux.media(680px){
+                height: 25px;
+            }
+        
+            .background__span{
+                color: variables.$c-font;
+                font: {
+                    size: variables.$fs-14;
+                    family: variables.$ff-i;
+                    weight: variables.$w-500;
+                }
+        
+                @include minfux.media(680px){
+                    font-size: variables.$fs-12;
+                        }
+            }
+        }
+    
+        .shop__product__card-text{
+
+            .last__product_title{
+                @include minfux.textCardHome(variables.$fs-16, variables.$w-500, 16.94px);
+                
+                @include minfux.media(680px){
+                    font-size: variables.$fs-12;
+                }
+    
+                @include minfux.media(610px){
+                    font-size: variables.$fs-14;
+                }
+
+            &_description{
+                @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px);
+            
+                @include minfux.media(980px){
+                    height: 43px;
+                }
+            
+                @include minfux.media(680px){
+                    font-size: variables.$fs-14;
+                    font-weight: 600;   
+                }
+            
+                @include minfux.media(610px){
+                    font-size: variables.$fs-18;   
+                    height: auto;
+                }
+            }
+        }
+            
+            .last__product__price{
+                @include minfux.textCardHome(variables.$fs-16, variables.$w-400, 19.36px);
+
+                @include minfux.media(680px){
+                    font-size: variables.$fs-18;
+                }
+
+                @include minfux.media(610px){
+                    font-size: variables.$fs-18;
+                    margin-bottom: 7px;
+                }
+            }
+
+            .last__product_fees{
+                 @include minfux.textCardHome(variables.$fs-12, variables.$w-700, 14.52px);
+                color: #1D84B5;
+
+                @include minfux.media(680px){
+                    letter-spacing: -0.5px;
+                }
+
+                @include minfux.media(610px){
+                    font-size: variables.$fs-12;
+                }
+}
+
+}
+        
+        }
+                
+    
+       
+        
+    }   
+
+.shop__list_product_flex{
+    position: relative;
+    top: max(157px, 14.5vw);
+    left: 0;
+    right: 0;
+    max-width: 100vw;
+    
+    padding: min(68px, 3vw) 110px 68px 110px;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+
+    @include minfux.media(980px){
+        padding: min(68px, 3vw) 40px 68px 40px; 
+    }
+
+    .shop__product__card{
+        @include minfux.productCard(100%);
+            display: flex;
+            justify-self: center;
+            box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.336);
+
+        .starWars__img{
+            @include minfux.imgCardHome(250px);
+            background: {
+                image: url(.../../../img/productos/lighsaber-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            };
+        }
+        
+        .pokemon__img{
+            @include minfux.imgCardHome(250px);
+            background: {
+                image: url(.../../../img/productos/pidgeotto-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+        }
+        
+        .harryPotter__img{
+            @include minfux.imgCardHome(250px);
+            background: {
+                image: url(.../../../img/productos/luna-1.png);
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+        }
+        
+        .starWars__img,
+        .pokemon__img,
+        .harryPotter__img{
+            @include minfux.media(610px){
+                max-width: 200px;
+                min-width: 100px;
+                
+        
+            }
+        
+        }
+        
+        .background__red{
+            width: max(60px, 7vw);
+            height: 30px;
+            background-color: red;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 0;
+            left: calc(100% - max(60px, 7vw));
+            
+                @include minfux.media(680px){
+                    height: 25px;
+                }
+            
+                .background__span{
+                    color: variables.$c-font;
+                    font: {
+                        size: variables.$fs-14;
+                        family: variables.$ff-i;
+                        weight: variables.$w-500;
+                    }
+            
+                    @include minfux.media(680px){
+                        font-size: variables.$fs-12;
+                            }
+                }
+            }
+
+        .shop__product__card-text{
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            width: 100%;
+            justify-content: space-between;
+            align-items: start;
+            padding: 20px 10px 50px 30px;
+
+            @include minfux.media(1150px){
+                padding: 20px 10px 50px 30px;
+                height: 100%
+            }
+
+            @include minfux.media(980px){
+                padding: 10px 10px 70px 30px;
+
+            }
+
+            .last__product_title{
+                @include minfux.textCardHome(variables.$fs-16, variables.$w-500, 30.94px);
+                margin: 0;
+   
+
+                &_description{
+                    @include minfux.textCardHome(30px, variables.$w-700, 40.78px);
+                    margin: 0;
+                }
+            }
+
+            .last__product__price{
+                @include minfux.textCardHome(variables.$fs-38, variables.$w-400, 60.36px);
+                height: auto;
+                margin: 0;
+            }
+
+            .last__product_fees{
+                @include minfux.textCardHome(variables.$fs-12, variables.$w-700, 14.52px);
+                color: #1D84B5;
+                margin: 0;
+            }
+        }
+    }
 }

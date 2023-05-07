@@ -74,17 +74,17 @@
 }
 
 @mixin productCard($width){
-    min-width: 200px;
+    min-width: 150px;
     width: 100%;
     max-width: $width;
     height: 100%;
     cursor: pointer;
 }
 
-@mixin imgCardHome{
+@mixin imgCardHome($width){
     // min-width: 200px;
     width: 100%;
-    max-width: 374px;
+    max-width: $width;
     height: max(200px, 25vw);
 }
 
@@ -99,8 +99,8 @@
 }
 
 @mixin borderInput{
-    border: 1px solid black;
-    border-radius: 5px;
+    border: 1px solid rgba(97, 95, 95, 0.295);
+    border-radius: 50px;
 }
 
 @mixin productimg{

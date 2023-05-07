@@ -49,189 +49,231 @@
     </header>
 
 
-    <main class="main" id="main__Shop">
+<main class="main" id="main__Shop">
+        
+
+    <section class=" nav__category" id="nav__category">
+
         <box-icon name='filter' color='#30343f' class="filter__icon" id="filter"></box-icon>
 
-        <section class="nav__category">
+        <div class="filters">
+
+            <box-icon name='left-arrow-alt'  class="bx_arrow" id="bx_arrow" color='#30343f'></box-icon> 
+
+            <article class="filters__text">
+
+                <div class="search__box">
+                    <h3 class="search__title">ORDENAR POR</h3>
     
-            <div class="category__search">
-                <h3 class="search__title">BUSCAR</h3>
-                <input type="text" name="" id="" class="search__input" placeholder="item o categoria">
-                <h3 class="search__title">ORDENAR POR</h3>
-                <input list="ordenar"  class="search__input" placeholder="Mayor a menor">
+                    <input list="ordenar" type="" class="ordenar__input" placeholder="Mayor a menor">
+    
                 <datalist id="ordenar">
-                    <option value="Mayor a menor"></option>
-                    <option value="Menor a mayor"></option>
-                </datalist>
-            </div>
-    
-            <div class="div__price">
-                <h3 class="search__title">PRECIO</h3>
-                <ul class="price__list">
-                    <li class="price__list__item">MIN<input type="text" class="price__list__item__imput" placeholder="0"></li>
-                    <li class="price__list__item item-max">MAX<input type="text" class="price__list__item__imput" placeholder="0"></li>
-                </ul>
-            </div>
-    
-    
-            <div class="filter">
-                <h3 class="search__title">FILTRAR</h3>
-                    <ul class="filter__list">
-                        
-                   
-                        <li class="filter__list_item">
-                            <input type="checkbox" class="filter__list__item__imput" >
-                            NUEVOS
-                        </li>
-                        
-                        <li class="filter__list_item">
-                            <input type="checkbox" class="filter__list__item__imput">
-                            OFERTAS
-                        </li>
-    
-                        <li class="filter__list_item">
-                            <input type="checkbox" class="filter__list__item__imput">
-                            EDICIÓN ESPECIAL
-                        </li>
-                        
-                        <li class="filter__list_item">
-                            <input type="checkbox" class="filter__list__item__imput">
-                            FAVORITOS
-                        </li>
-                    </ul>
-                
-            </div>
-        </section>
-        
-            <section class="shop__list_product">
-        
-                <article class="shop__product__card">
-                    <div class="starWars__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                        <div class="arrowback"></div>
-                    </div>
-                    <h3 class="last__product_title">STAR WARS</h3>
-                    <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="pokemon__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                    </div>
-                    <h3 class="last__product_title">POKEMON</h3>
-                    <h2 class="last__product_title_description">PIDGEOTTO</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="harryPotter__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                        <div class="arrownext"></div>
-                    </div>
-                    <h3 class="last__product_title">HARRY POTTER</h3>
-                    <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="starWars__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                        <div class="arrowback"></div>
-                    </div>
-                    <h3 class="last__product_title">STAR WARS</h3>
-                    <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="pokemon__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                    </div>
-                    <h3 class="last__product_title">POKEMON</h3>
-                    <h2 class="last__product_title_description">PIDGEOTTO</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="harryPotter__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                        <div class="arrownext"></div>
-                    </div>
-                    <h3 class="last__product_title">HARRY POTTER</h3>
-                    <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="starWars__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                        <div class="arrowback"></div>
-                    </div>
-                    <h3 class="last__product_title">STAR WARS</h3>
-                    <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="pokemon__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                    </div>
-                    <h3 class="last__product_title">POKEMON</h3>
-                    <h2 class="last__product_title_description">PIDGEOTTO</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <article class="shop__product__card">
-                    <div class="harryPotter__img">
-                        <div class="background__red">
-                            <span class="background__span">NUEVO</span>
-                        </div>
-                        <div class="arrownext"></div>
-                    </div>
-                    <h3 class="last__product_title">HARRY POTTER</h3>
-                    <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
-                    <h3 class="last__product__price">$ 1799,99.-</h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </article>
-        
-                <div class="container__number_up">
-                    <div class="container__number">
-                        <div class="container__item"><span><</span></div>
-                        <div class="container__item"><span>1</span></div>
-                        <div class="container__item"><span>2</span></div>
-                        <div class="container__item"><span>...</span></div>
-                        <div class="container__item"><span>9</span></div>
-                        <div class="container__item"><span>10</span></div>
-                        <div class="container__item"><span>></span></div>
-                    </div>
+                        <option value="Mayor a menor"></option>
+                        <option value="Menor a mayor"></option>
+                    </datalist>
+
                 </div>
-            </section>
-    </main>
+
+
+                <div class="div__price">
+                    <h3 class="search__title">PRECIO</h3>
+                    <ul class="price__list">
+                        <li class="price__list__item">MIN<input type="text" class="price__list__item__imput" placeholder="0"></li>
+                        <li class="price__list__item item-max">MAX<input type="text" class="price__list__item__imput" placeholder="0"></li>
+                    </ul>
+                </div>
+
+
+                <div class="filter">
+                    <h3 class="search__title">FILTRAR</h3>
+                        <ul class="filter__list">
+                            
+                    
+                            <li class="filter__list_item">
+                                <input type="checkbox" class="filter__list__item__imput" >
+                                NUEVOS
+                            </li>
+                            
+                            <li class="filter__list_item">
+                                <input type="checkbox" class="filter__list__item__imput">
+                                OFERTAS
+                            </li>
+
+                            <li class="filter__list_item">
+                                <input type="checkbox" class="filter__list__item__imput">
+                                EDICIÓN ESPECIAL
+                            </li>
+                            
+                            <li class="filter__list_item">
+                                <input type="checkbox" class="filter__list__item__imput">
+                                FAVORITOS
+                            </li>
+                        </ul>
+                    
+                </div>
+            </article>
+        </div>        
+
+        <div class="category__search">
+
+            <input type="text" class="search__input" placeholder="Quiero buscar por...">
+            <box-icon name='search' rotate='90' color='#30343f' class="bx-search"></box-icon>
+        </div> 
+
+        <box-icon name='grid-alt' color='#30343f' class="bx_block" id="bx_block"></box-icon>
+
+        <box-icon name='list-ul' class="bx_inline" id="bx_inline"></box-icon>
+
+
+    </section>
+        
+    <section class="shop__list_product_grid" id="shop__list_product_grid">
+
+        <article class="shop__product__card">
+            <div class="starWars__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">STAR WARS</h3>
+                <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="pokemon__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">POKEMON</h3>
+                <h2 class="last__product_title_description">PIDGEOTTO</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="harryPotter__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+                <div class="arrownext"></div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">HARRY POTTER</h3>
+                <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="starWars__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+                <div class="arrowback"></div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">STAR WARS</h3>
+                <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="pokemon__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">POKEMON</h3>
+                <h2 class="last__product_title_description">PIDGEOTTO</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="harryPotter__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+                <div class="arrownext"></div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">HARRY POTTER</h3>
+                <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="starWars__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+                <div class="arrowback"></div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">STAR WARS</h3>
+                <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="pokemon__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">POKEMON</h3>
+                <h2 class="last__product_title_description">PIDGEOTTO</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <article class="shop__product__card">
+            <div class="harryPotter__img">
+                <div class="background__red">
+                    <span class="background__span">NUEVO</span>
+                </div>
+                <div class="arrownext"></div>
+            </div>
+            <div class="shop__product__card-text">
+                <h3 class="last__product_title">HARRY POTTER</h3>
+                <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
+                <h3 class="last__product__price">$ 1799,99.-</h3>
+                <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+            </div>
+        </article>
+
+        <div class="container__number_up">
+            <div class="container__number">
+                <div class="container__item"><span><</span></div>
+                <div class="container__item"><span>1</span></div>
+                <div class="container__item"><span>2</span></div>
+                <div class="container__item"><span>...</span></div>
+                <div class="container__item"><span>9</span></div>
+                <div class="container__item"><span>10</span></div>
+                <div class="container__item"><span>></span></div>
+            </div>
+        </div>
+    </section>
+
+</main>
 
     <footer class="footer footer__shop">
         <div class="footer__div">

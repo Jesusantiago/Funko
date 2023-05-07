@@ -37,7 +37,8 @@
 .banner__text{
     display: flex;
     flex-direction: column;
-    max-width: 50%;
+    max-width: 80%;
+    height: auto;
     color: variables.$c-font;
 
     @include minfux.media(600px){
