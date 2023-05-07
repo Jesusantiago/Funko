@@ -130,8 +130,9 @@
         flex-direction: column;
         align-items: start;
         justify-content: flex-start;
-        padding-top: 20px;
+        padding-top: 15px;
         padding-right: 10px;
+        padding-left: 15px;
     }
 
     .last__product_title{
@@ -353,6 +354,7 @@
 
                 @include minfux.media(610px){  
                     margin-bottom: 7px;
+                    
                 }
             }
 
@@ -401,6 +403,8 @@
             justify-self: center;
             box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.336);
             border-radius: 5px;
+            height: max(150px, 15vw);
+
 
         .starWars__img{
             @include minfux.imgCardHome(250px);
@@ -435,6 +439,11 @@
         .starWars__img,
         .pokemon__img,
         .harryPotter__img{
+            border-right: 1px solid rgba(114, 114, 114, 0.363);
+            min-height: 100%;
+            height: max(150px, 15vw);
+            width: max(150px, 20vw);
+
             @include minfux.media(610px){
                 max-width: 200px;
                 min-width: 100px;
@@ -455,56 +464,42 @@
             top: 0;
             left: calc(100% - max(60px, 7vw));
             
-                @include minfux.media(680px){
-                    height: 25px;
-                }
-            
-                .background__span{
-                    color: variables.$c-font;
-                    font: {
-                        size: variables.$fs-14;
-                        family: variables.$ff-i;
-                        weight: variables.$w-500;
-                    }
-            
-                    @include minfux.media(680px){
-                        font-size: variables.$fs-12;
-                            }
-                }
+            @include minfux.media(680px){
+                height: 25px;
             }
+            
+            .background__span{
+                color: variables.$c-font;
+                font: {
+                    size: variables.$fs-14;
+                    family: variables.$ff-i;
+                    weight: variables.$w-500;
+                }
+            
+                @include minfux.media(680px){
+                    font-size: variables.$fs-12;
+                        }
+            }
+        }
 
         .shop__product__card-text{
             display: flex;
             flex-direction: column;
-            height: 80%;
-            width: 100%;
-            justify-content: space-between;
             align-items: start;
-            padding: 20px 10px 50px 30px;
-            
-            &::before{
-                content: "";
-                min-width: 170px;
-                min-height: 3px;
-                background-color: rgba(114, 114, 114, 0.534);
-                transform: rotate(-90deg);
-                translate: -100px 90px;
-                border: 1px solid rgba(114, 114, 114, 0);
-                border-radius: 10px;
+            justify-content: flex-start;
+            padding-top: 15px;
+            padding-right: 10px;
+            padding-left: 15px;
 
-            }
-            
-            @include minfux.media(980px){
-                padding: 10px 10px 70px 30px;
-
+            @include minfux.media(1200px){
+            padding-top: 5px;
+                    
             }
 
             .last__product_title{
-                @include minfux.textCardHome(variables.$fs-16, variables.$w-700, 30.94px);
+                @include minfux.textCardHome(variables.$fs-14, variables.$w-700, 30.94px);
                 margin: 0;
-                @include minfux.media(980px){
-                    font-size: variables.$fs-14;
-                }
+
 
                 @include minfux.media(610px){
                     font-size: variables.$fs-12;
@@ -512,11 +507,11 @@
                 }
    
                 &_description{
-                    @include minfux.textCardHome(variables.$fs-24, variables.$w-400, 40.78px);
-                    margin: 0;
+                    @include minfux.textCardHome(variables.$fs-18, variables.$w-400, 30.78px);
+                    margin: 0 0 0 0;
 
                     @include minfux.media(980px){
-                        font-size: variables.$fs-20;
+                        font-size: variables.$fs-16;
     
                     }
 
@@ -529,12 +524,11 @@
             }
 
             .last__product__price{
-                @include minfux.textCardHome(variables.$fs-38, variables.$w-400, 60.36px);
-                height: auto;
-                margin: 0;
+                @include minfux.textCardHome(30px, variables.$w-400, 40.36px);
+                margin: 0 0 10px 0;
 
                 @include minfux.media(980px){
-                    font-size: 30px;
+                    font-size: 28px;
                 }
 
                 @include minfux.media(610px){

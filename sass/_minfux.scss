@@ -82,7 +82,7 @@
 }
 
 @mixin imgCardHome($width){
-    // min-width: 200px;
+
     width: 100%;
     max-width: $width;
     height: max(200px, 25vw);
