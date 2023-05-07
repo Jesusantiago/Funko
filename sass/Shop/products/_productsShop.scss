@@ -39,7 +39,7 @@
         @include minfux.media(610px){
         max-width: 100%;
         display: flex;
-        gap: 30px;
+        gap: 5px;
         }
 
         .starWars__img{
@@ -77,10 +77,9 @@
         .pokemon__img,
         .harryPotter__img{
             @include minfux.media(610px){
-                max-width: 200px;
-                min-width: 100px;
-                
-        
+                max-width: 150px;
+                min-width: 80px;
+                height: 150px;
             }
         
         }
@@ -115,52 +114,55 @@
             }
         }
     
+.product__card_text{
+    min-width: 50%;
 
-
-            .last__product_title{
-                @include minfux.textCardHome(variables.$fs-16, variables.$w-500, 16.94px);
-                
-                @include minfux.media(680px){
-                    font-size: variables.$fs-12;
-                }
-    
-                @include minfux.media(610px){
-                    font-size: variables.$fs-14;
-                }
-
-            &_description{
-                @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px);
-            
-                @include minfux.media(980px){
-                    height: 43px;
-                }
-            
-                @include minfux.media(680px){
-                    font-size: variables.$fs-14;
-                    font-weight: 600;   
-                }
-            
-                @include minfux.media(610px){
-                    font-size: variables.$fs-18;   
-                    height: auto;
-                }
-            }
+    .last__product_title{
+        @include minfux.textCardHome(variables.$fs-16, variables.$w-500, 16.94px);
+        
+        @include minfux.media(680px){
+            font-size: variables.$fs-12;
         }
-            
-            .last__product__price{
-                @include minfux.textCardHome(variables.$fs-16, variables.$w-400, 19.36px);
 
-                @include minfux.media(680px){
-                    font-size: variables.$fs-18;
-                }
+        @include minfux.media(610px){
+            font-size: variables.$fs-14;
+        }
 
-                @include minfux.media(610px){
-                    font-size: variables.$fs-18;
-                    margin-bottom: 7px;
-                }
-            }
+    &_description{
+        @include minfux.textCardHome(variables.$fs-18, variables.$w-700, 21.78px);
+    
+        @include minfux.media(980px){
+            height: 43px;
+        }
+    
+        @include minfux.media(680px){
+            font-size: variables.$fs-14;
+            font-weight: 600;   
+        }
+    
+        @include minfux.media(610px){
+            font-size: variables.$fs-18;   
+            font-weight: variables.$w-400;
+            height: auto;
+        }
+    }
+    }
+    
+    .last__product__price{
+        @include minfux.textCardHome(variables.$fs-16, variables.$w-400, 19.36px);
 
-            .last__product_fees{
+        @include minfux.media(680px){
+            font-size: variables.$fs-18;
+        }
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-18;
+            font-weight: variables.$w-700;
+            margin-bottom: 7px;
+        }
+    }
+
+    .last__product_fees{
                     @include minfux.textCardHome(variables.$fs-12, variables.$w-700, 14.52px);
                 color: #1D84B5;
 
@@ -171,14 +173,14 @@
                 @include minfux.media(610px){
                     font-size: variables.$fs-12;
                 }
+    }
 }
+
+    
 
 }
         
         }
-
-
-
 
 .shop__list_product_grid{
     position: relative;
