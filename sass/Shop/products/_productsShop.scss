@@ -235,6 +235,7 @@
         min-width: 140px;
         max-width: 230px;
         }
+
         .starWars__img{
             @include minfux.imgCardHome(374px);
             background: {
@@ -269,6 +270,8 @@
         .starWars__img,
         .pokemon__img,
         .harryPotter__img{
+            border-bottom: 1px solid rgba(133, 133, 133, 0.336);
+
             @include minfux.media(610px){
                 max-width: 100%;
                 min-width: 100px;
@@ -318,12 +321,11 @@
                 }
     
                 @include minfux.media(610px){
-                    font-size: variables.$fs-14;   
+                    font-size: variables.$fs-12;   
                 }
 
             &_description{
                 @include minfux.textCardHome(variables.$fs-16, variables.$w-400, 21.78px);
-                // font-weight: variables.$w-500;
             
                 @include minfux.media(980px){
                     height: 43px;
@@ -331,14 +333,17 @@
             
                 @include minfux.media(680px){
                     font-size: variables.$fs-14;
-                    font-weight: variables.$w-400;   
+
 
                 }
                 
                 @include minfux.media(610px){
-                    font-size: variables.$fs-16;   
-                    font-weight: variables.$w-400;   
-                    height: auto;
+                    font-size: variables.$fs-16;    
+                }
+
+                @include minfux.media(500px){
+                    font-size: variables.$fs-14;    
+                    
                 }
             }
         }

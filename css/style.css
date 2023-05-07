@@ -830,6 +830,11 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+.shop__list_product_grid .shop__product__card .starWars__img,
+.shop__list_product_grid .shop__product__card .pokemon__img,
+.shop__list_product_grid .shop__product__card .harryPotter__img {
+  border-bottom: 1px solid rgba(133, 133, 133, 0.336);
+}
 @media (max-width: 610px) {
   .shop__list_product_grid .shop__product__card .starWars__img,
   .shop__list_product_grid .shop__product__card .pokemon__img,
@@ -880,7 +885,7 @@
 }
 @media (max-width: 610px) {
   .shop__list_product_grid .shop__product__card .shop__product__card-text .last__product_title {
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 .shop__list_product_grid .shop__product__card .shop__product__card-text .last__product_title_description {
@@ -898,14 +903,16 @@
 @media (max-width: 680px) {
   .shop__list_product_grid .shop__product__card .shop__product__card-text .last__product_title_description {
     font-size: 14px;
-    font-weight: 400;
   }
 }
 @media (max-width: 610px) {
   .shop__list_product_grid .shop__product__card .shop__product__card-text .last__product_title_description {
     font-size: 16px;
-    font-weight: 400;
-    height: auto;
+  }
+}
+@media (max-width: 500px) {
+  .shop__list_product_grid .shop__product__card .shop__product__card-text .last__product_title_description {
+    font-size: 14px;
   }
 }
 .shop__list_product_grid .shop__product__card .shop__product__card-text .last__product__price {
