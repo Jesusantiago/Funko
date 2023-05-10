@@ -1653,6 +1653,13 @@
     translate: -30px;
   }
 }
+@media (max-width: 600px) {
+  .product__img {
+    width: max(200px, 80vw);
+    height: max(200px, 45vw);
+    translate: -10px;
+  }
+}
 
 .product__text {
   width: 100%;

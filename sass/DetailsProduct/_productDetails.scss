@@ -41,6 +41,13 @@
         translate: -30px;
     }
 
+    @include minfux.media(600px){
+        width: max(200px, 80vw);
+        height: max(200px, 45vw);
+        translate: -10px;
+    }
+
+
 
 }
 
