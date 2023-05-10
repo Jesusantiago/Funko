@@ -42,8 +42,8 @@
     }
 
     @include minfux.media(600px){
-        width: max(200px, 80vw);
-        height: max(200px, 45vw);
+        width: max(300px, 80vw);
+        height: max(300px, 45vw);
         translate: -10px;
     }
 
