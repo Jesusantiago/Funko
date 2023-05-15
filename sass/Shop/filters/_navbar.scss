@@ -284,34 +284,44 @@
     .filters__text{
         display: flex;
         flex-direction: column;
-        // gap: 10px;
+        justify-content: start;
+        width: 250px;
+        height: 500px;
+        gap: 10px;
+        box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
+        background-color: #fff;
 
+        
         .search__box{
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            // box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
-            height: 50px;
+            align-items: start;
+            justify-content: space-around;
+            flex-direction: column;
+            gap: 10px;
+            height: 6rem;
             padding:  0 25px;
-            background-color: white;
-
+            
             .ordenar__input{
-                width: 240px;
+                width: 200px;
                 height: 2rem;
                 padding-left: 2vw;
                 box-shadow: 0px 0px 10px 2px rgba(133,133,133,0.29);
                 border: 1px solid rgba(114, 112, 112, 0.205);
                 @include minfux.borderInput;
+
                 
                 &:hover{
                     border: 1px solid  white; 
                 }
+
+        
             }
 
         }
 
         .search__title{
+            width: 200px;
+
            
             font: {
                 size: variables.$fs-20;
@@ -319,45 +329,42 @@
                 style: normal;
             }
             margin: 10px 0;
-
-            @include minfux.media(700px){
-                font-size: variables.$fs-16;
-            }
         }
 
         .div__price{
             display: flex;
-            align-items: center;
-            justify-content: space-between;
-            height: 50px;
-            // box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
+            flex-direction: column;
+            align-items: start;
+            justify-content: start;
+            height: 20rem;
             padding:  0 25px;
-            background-color: white;
     
         
             .price__list{
-                width: 235px;
-                height: 2em;
+                width: 90px;
                 margin: 0;
                 padding: 0;
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
+                align-items: start;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 10px;
         
                 .price__list__item{
                     font-size: variables.$fs-16;
                     list-style: none;
                     display: inline;
-
-                    @include minfux.media(700px){
-                        font-size: variables.$fs-14;
-                    }
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: start;
+                    height: 4.5em;
         
                     .price__list__item__imput{
-                        width: 60px;
+                        width: 75px;
                         height: 30px;
-                        margin-left: 10px;
-                        padding-left: 25px;
+                        margin-top: 10px;
+                        text-align: center;
                         @include minfux.borderInput;
                           
                         box-shadow: 0px 0px 10px 2px rgba(133,133,133,0.29);
@@ -455,32 +462,30 @@
         .filter{
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-            // box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
-            height: 70px;
+            justify-content: space-around;
+            flex-direction: column;
+            height: 200px;
             padding:  0 25px;
-            background-color: white;
 
             .filter__list{
                 display: flex;
+                flex-direction: column;
+                justify-content: start;
+                align-items: start;
                 list-style: none;
-                
-                &_item{
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                    border-right: 1px solid black;
+                height: 200px;
+                padding: 0;
+                width: 200px;
+                gap: 10px;
 
-                    &:last-child{
-                        border: none;
-                    }
-                }
+                
 
 
                 .filter__list__item__imput{
                     width: 20px;
                     height: 80%;
                     accent-color: variables.$c-fondo;
+                    border-width: 5px;
                 }
             }
         }
