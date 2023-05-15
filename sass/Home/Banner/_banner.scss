@@ -10,7 +10,7 @@
     font-family: variables.$ff-r;
     background-color: variables.$c-fondo;
     position: relative;
-    z-index: -100000000;
+    z-index: 1;
 
     @include minfux.media(600px){
         align-items: start;
@@ -38,7 +38,7 @@
     display: flex;
     flex-direction: column;
     max-width: 80%;
-    height: auto;
+    height: 50vh;
     color: variables.$c-font;
 
     @include minfux.media(600px){
