@@ -1,0 +1,89 @@
+@use "../minfux";
+@use "../variables";
+
+
+.section__login{
+    position: absolute;
+    top: max(80px, 11vw);
+    
+    min-width: 100vw;
+    height: calc(100vh - max(80px, 11vw) - 303px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    padding-top: 36px;
+
+    .login__title{
+        color: #1f1f1f;
+        font-family: variables.$ff-r;
+        font-weight: variables.$w-700;
+        font-size: variables.$fs-46;
+        line-height: 49px;
+        margin: 0;
+    }
+}
+
+.login__form{
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 21px;
+
+    .login__form_label{
+        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 30px, variables.$ff-i);
+        color: #000;
+        text-align: right;
+    }
+
+    .login__form_input{
+        border: 0;
+        border-bottom: 2px solid red;
+        width: 208.06px;
+
+        @include minfux.productInfo(variables.$fs-16, variables.$w-400, 19px, variables.$ff-i);
+    }
+}
+
+
+.login__article{
+    width: 274px;
+    height: 39.06px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &_ingresar{
+        background-color: red;
+        width: 103px;
+        height: 100%;
+        border: 0;
+        @include minfux.productInfo(variables.$fs-12, variables.$w-400, 14.52px, variables.$ff-i);
+
+        color: #fff;
+    }
+
+    &_input{
+        margin-right: -30px;
+        width: 16.27px;
+        height: 16.27px;
+        border: 2px solid #1f1f1f;
+        border-radius: 3px;
+    }
+
+    &_label{
+        @include minfux.productInfo(variables.$fs-18, variables.$w-400, 21.78px, variables.$ff-i);
+        color: #1f1f1f;
+
+    }
+}
+
+.login__recupero{
+    @include minfux.productInfo(variables.$fs-14, variables.$w-400, 16.94px, variables.$ff-i);
+        color: #1d84b5;
+}

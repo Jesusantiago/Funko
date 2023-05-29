@@ -504,6 +504,11 @@
   justify-content: space-between;
 }
 
+.footer__login {
+  position: absolute;
+  bottom: 0;
+}
+
 .footer__nav {
   width: 50%;
   height: auto;
@@ -2164,6 +2169,98 @@
 }
 .icon__wp .bx__wapp {
   scale: 2;
+}
+
+.section__login {
+  position: absolute;
+  top: max(80px, 11vw);
+  min-width: 100vw;
+  height: calc(100vh - max(80px, 11vw) - 303px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 36px;
+}
+.section__login .login__title {
+  color: #1f1f1f;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 49px;
+  margin: 0;
+}
+
+.login__form {
+  width: 400px;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 21px;
+}
+.login__form .login__form_label {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #000;
+  text-align: right;
+}
+.login__form .login__form_input {
+  border: 0;
+  border-bottom: 2px solid red;
+  width: 208.06px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+.login__article {
+  width: 274px;
+  height: 39.06px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login__article_ingresar {
+  background-color: red;
+  width: 103px;
+  height: 100%;
+  border: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.52px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #fff;
+}
+.login__article_input {
+  margin-right: -30px;
+  width: 16.27px;
+  height: 16.27px;
+  border: 2px solid #1f1f1f;
+  border-radius: 3px;
+}
+.login__article_label {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.78px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #1f1f1f;
+}
+
+.login__recupero {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.94px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #1d84b5;
 }
 
 /*# sourceMappingURL=style.css.map */
