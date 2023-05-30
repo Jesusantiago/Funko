@@ -38,19 +38,10 @@
         <div class="header__title"></div>
     </a>
         
-    <nav class="header__nav" id="nav">
-            <li class="nav__li"><a href="./pageShop.html">SHOP</a></li>
-            <li class="nav__li"><a href="#">CONTACT</a></li>
-            <li class="nav__li"><a href="#">LOGIN</a></li>
-            <li class="nav__li">
-                <a href="#">
-    
-                    <box-icon name='cart' color='#f96301' class="bx"></box-icon>
-                </a>
-            </li>
+    <nav class="header__nav_login" id="nav">
+            <li class="nav__li"><a href="../index.html">SALIR</a></li>
+            
         </nav>
-        
-        <div class="burger" id="burger"></div>
 </header>
 
 <main class="main__login">
@@ -60,11 +51,17 @@
         <h1 class="login__title">INGRESAR A MI CUENTA</h1>
 
         <form class="login__form">
-            <label class="login__form_label">EMAIL:</label>
-            <input type="email" class="login__form_input" placeholder="johndoe@correo.com" required>
+            <label class="login__form_label" for="loginEmail">EMAIL:
+                <input type="email" class="login__form_input" 
+            id="loginEmail" placeholder="johndoe@correo.com" required>
+            </label>
+            
 
-            <label class="login__form_label">CONTRASEÑA:</label>
-            <input type="password"  class="login__form_input" placeholder="" required>
+            <label class="login__form_label" for="loginPassword">CONTRASEÑA:
+                <input type="password"  class="login__form_input" 
+             id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
+            </label>
+            
         </form>
 
         <article class="login__article">
@@ -92,11 +89,6 @@
     
 <script src="./script/menuBurge.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
-
-    
-
-
 
 </body>
 </html>

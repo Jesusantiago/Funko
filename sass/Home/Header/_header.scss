@@ -4,7 +4,6 @@
 .header{
     min-width: 100%;
     height: max(80px, 11vw);
-    // max-height: 144px;
     background-color: variables.$c-fondo;
     display: flex;
     align-items: center;
@@ -18,8 +17,6 @@
     backdrop-filter: blur(20px);
     font-family: variables.$ff-r;
 }
-
-    
 
 .header__a{    
     width: 100%;
@@ -39,7 +36,6 @@
     max-height: 66px;
 }
 
-
 .header__nav{
     width: 406px;
     max-width: 500px;
@@ -57,6 +53,7 @@
 
  
 }
+
 
 .nav__li{
     text-decoration: none;
@@ -99,7 +96,6 @@
         }
     }
 }
-
 
 //active burger
 
@@ -181,4 +177,27 @@
 }
 
 
+}
+
+//login 
+
+.header__nav_login{
+    width: 406px;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    height: 50px;
+
+    @include minfux.media(980px){
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .nav__li{
+        display: inline-block;
+
+    }
 }
