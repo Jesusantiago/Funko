@@ -1,0 +1,79 @@
+@use "../minfux";
+@use "../variables";
+
+.contact__section{  
+    position: absolute;
+    top: max(80px, 11vw);
+
+    min-width: 100vw;
+    height: calc(100vh - max(80px, 11vw) - 303px);
+
+    text-align: center;
+
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @include minfux.media(610px){
+        height: calc(100vh - max(80px, 11vw) - 260px);
+    }
+
+    &_title{
+        @include minfux.productInfo(variables.$fs-38, variables.$w-500, 30px, variables.$ff-r);
+    }
+
+    &_subtitle{
+        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 30px, variables.$ff-r);
+
+        margin-top: 20px;
+    }
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto 0;
+
+    width: 400px;
+    max-width: 400px;
+    height: 30vh;
+
+    @include minfux.media(610px){
+        width: 300px;
+        height: 35vh;
+    }
+
+    &_label{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        @include minfux.productInfo(variables.$fs-20, variables.$w-400, 30px, variables.$ff-i);        
+    }
+
+    &_input{
+        width: 200px;
+        border: 0;
+        border-bottom: 2px solid red;
+        padding-left: 10px;
+
+        @include minfux.productInfo(variables.$fs-14, variables.$w-500, 30px, variables.$ff-r);  
+
+    }
+
+
+    &_btn{
+        @include minfux.productInfo(variables.$fs-16, variables.$w-500, 30px, variables.$ff-r);
+        
+        width: 90%;
+        max-width: 90%;
+        background-color: red;
+        border: 0;
+        border-radius: 15px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+}
