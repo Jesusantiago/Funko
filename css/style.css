@@ -514,7 +514,7 @@
 .footer {
   width: 100%;
   max-height: 303px;
-  padding: 50px max(40px, 7.5vw) 20px;
+  padding: 10px max(40px, 7.5vw) 5px;
   background-color: #30343F;
 }
 @media (max-width: 610px) {
@@ -568,7 +568,7 @@
 .footer__copy_text {
   width: 100%;
   text-align: center;
-  margin-top: 40px;
+  margin: 0;
   color: #FFF;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
@@ -2327,6 +2327,98 @@
   font-family: "Inter", sans-serif;
   margin: 0;
   color: #1d84b5;
+  cursor: pointer;
+}
+
+.section__register {
+  position: absolute;
+  top: max(80px, 11vw);
+  min-width: 100vw;
+  height: calc(100vh - max(80px, 11vw) - 303px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+}
+.section__register .register__title {
+  margin: 0;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  color: #000;
+}
+.section__register .register__subtitle {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  color: #000;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 300px;
+  justify-content: space-between;
+}
+.register__form_label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.register__form_input {
+  border: 0;
+  border-bottom: 2px solid red;
+  width: 208.06px;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.register__form_div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 39px;
+}
+.register__form_register {
+  background-color: red;
+  width: 103px;
+  height: 100%;
+  border: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 14.52px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #fff;
+  cursor: pointer;
+}
+.register__form_label_terminos {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 14.52px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.register__form_input_check {
+  cursor: pointer;
+}
+.register__form_span {
+  color: #1D84B5;
+  text-decoration: underline;
   cursor: pointer;
 }
 
