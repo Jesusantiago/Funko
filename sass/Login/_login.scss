@@ -19,7 +19,7 @@
     @include minfux.media(630px){
         padding-left: 20px;
         padding-right: 20px;
-        height: calc(100vh - max(80px, 11vw) - 155px);
+        height: calc(90vh - max(80px, 11vw) - 155px);
         padding-top: 0;
 
     }
