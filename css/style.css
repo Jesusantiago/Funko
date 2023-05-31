@@ -2342,7 +2342,8 @@
 }
 @media (max-width: 610px) {
   .contact__section {
-    height: calc(100vh - max(80px, 11vw) - 260px);
+    height: calc(100vh - max(80px, 11vw) - 155px);
+    padding-top: 10px;
   }
 }
 .contact__section_title {
@@ -2352,6 +2353,11 @@
   font-family: "Raleway", sans-serif;
   margin: 0;
 }
+@media (max-width: 610px) {
+  .contact__section_title {
+    font-size: 20px;
+  }
+}
 .contact__section_subtitle {
   font-size: 24px;
   font-weight: 400;
@@ -2359,6 +2365,12 @@
   font-family: "Raleway", sans-serif;
   margin: 0;
   margin-top: 20px;
+}
+@media (max-width: 610px) {
+  .contact__section_subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+  }
 }
 
 .contact__form {
@@ -2375,6 +2387,7 @@
   .contact__form {
     width: 300px;
     height: 35vh;
+    margin-top: 10px;
   }
 }
 .contact__form_label {
@@ -2387,6 +2400,11 @@
   font-family: "Inter", sans-serif;
   margin: 0;
 }
+@media (max-width: 610px) {
+  .contact__form_label {
+    font-size: 14px;
+  }
+}
 .contact__form_input {
   width: 200px;
   border: 0;
@@ -2397,6 +2415,11 @@
   line-height: 30px;
   font-family: "Raleway", sans-serif;
   margin: 0;
+}
+@media (max-width: 610px) {
+  .contact__form_input {
+    font-size: 12px;
+  }
 }
 .contact__form_btn {
   font-size: 16px;

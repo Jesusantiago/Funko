@@ -15,17 +15,28 @@
     padding-right: 30px;
 
     @include minfux.media(610px){
-        height: calc(100vh - max(80px, 11vw) - 260px);
+        height: calc(100vh - max(80px, 11vw) - 155px);
+        padding-top: 10px;
+
     }
 
     &_title{
         @include minfux.productInfo(variables.$fs-38, variables.$w-500, 30px, variables.$ff-r);
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-20;
+        }
     }
 
     &_subtitle{
         @include minfux.productInfo(variables.$fs-24, variables.$w-400, 30px, variables.$ff-r);
 
         margin-top: 20px;
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-18;
+            margin-top: 10px;
+        }
     }
 }
 
@@ -43,6 +54,7 @@
     @include minfux.media(610px){
         width: 300px;
         height: 35vh;
+        margin-top: 10px;
     }
 
     &_label{
@@ -51,6 +63,10 @@
         justify-content: space-between;
 
         @include minfux.productInfo(variables.$fs-20, variables.$w-400, 30px, variables.$ff-i);        
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-14;
+        }
     }
 
     &_input{
@@ -60,6 +76,10 @@
         padding-left: 10px;
 
         @include minfux.productInfo(variables.$fs-14, variables.$w-500, 30px, variables.$ff-r);  
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-12;
+        }
 
     }
 
