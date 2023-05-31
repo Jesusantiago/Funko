@@ -7,11 +7,16 @@
     max-height: 303px;
     padding: 50px max(40px, 7.5vw) 20px;
     background-color: variables.$c-fondo;
+
+    @include minfux.media(610px){
+        max-height: 220px;
+        padding: 10px max(40px, 7.5vw) 5px;
+
+    }
  
     
     .footer__div{
         width: 100%;
-
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -42,7 +47,7 @@
         };
 
         @include minfux.media(610px){
-            font-size: variables.$fs-16;
+            font-size: variables.$fs-14;
         }
 
     }
@@ -77,10 +82,11 @@
 
     @include minfux.media(610px){
         font-size: variables.$fs-12;
+        margin-top: 10px;
+        margin-bottom: 0;
     }
 }
 
 .footer__shop{
     position: relative;
-
 }

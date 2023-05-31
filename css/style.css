@@ -517,6 +517,12 @@
   padding: 50px max(40px, 7.5vw) 20px;
   background-color: #30343F;
 }
+@media (max-width: 610px) {
+  .footer {
+    max-height: 220px;
+    padding: 10px max(40px, 7.5vw) 5px;
+  }
+}
 .footer .footer__div {
   width: 100%;
   display: flex;
@@ -546,7 +552,7 @@
 }
 @media (max-width: 610px) {
   .footer__nav a {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -571,6 +577,8 @@
 @media (max-width: 610px) {
   .footer__copy_text {
     font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 0;
   }
 }
 
@@ -2181,7 +2189,7 @@
   width: 50px;
   height: 50px;
   position: fixed;
-  top: 60vh;
+  top: 68vh;
   right: 2.5vw;
   display: flex;
   align-items: center;
@@ -2206,6 +2214,7 @@
   .section__login {
     padding-left: 20px;
     padding-right: 20px;
+    height: calc(100vh - max(80px, 11vw) - 155px);
   }
 }
 .section__login .login__title {
@@ -2218,7 +2227,7 @@
 }
 @media (max-width: 630px) {
   .section__login .login__title {
-    font-size: 38px;
+    font-size: 24px;
     width: 300px;
     text-align: center;
   }
@@ -2254,7 +2263,7 @@
 }
 @media (max-width: 630px) {
   .login__form_label {
-    font-size: 20px;
+    font-size: 18px;
     width: 350px;
     flex-direction: column;
     align-items: center;
