@@ -2330,28 +2330,83 @@
   cursor: pointer;
 }
 
-.section__register {
+.main__register {
   position: absolute;
+  width: 100vw;
+  height: calc(100vh - max(80px, 11vw) - 170px);
+  padding: 30px max(40px, 7.5vw);
   top: max(80px, 11vw);
-  min-width: 100vw;
-  height: calc(100vh - max(80px, 11vw) - 303px);
+}
+@media (max-width: 610px) {
+  .main__register {
+    height: calc(100vh - max(80px, 11vw) - 140px);
+  }
+}
+
+.section__register {
+  min-width: 100%;
+  height: 100%;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  column-gap: max(30px, 5vh);
+}
+@media (max-width: 840px) {
+  .section__register {
+    align-items: center;
+    justify-content: center;
+  }
+}
+.section__register .article__register {
+  min-width: 150px;
+  max-width: 50%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  justify-content: start;
+  gap: 30px;
   padding-top: 30px;
 }
+@media (max-width: 840px) {
+  .section__register .article__register {
+    display: none;
+  }
+}
+.section__register .article__register .register__div {
+  min-width: 400px;
+  width: 60vw;
+  max-width: 800px;
+  height: 40vw;
+  min-height: 350px;
+  max-height: 550px;
+  position: absolute;
+  left: max(-40px, -7.5vw);
+  bottom: 0;
+  z-index: -100;
+}
+.section__register .article__register .register__div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .section__register .register__title {
-  margin: 0;
+  width: 100%;
+  color: #000;
   font-size: 38px;
   font-weight: 500;
   line-height: 30px;
   font-family: "Raleway", sans-serif;
   margin: 0;
-  color: #000;
+}
+@media (max-width: 610px) {
+  .section__register .register__title {
+    font-size: 30px;
+  }
 }
 .section__register .register__subtitle {
-  margin: 0;
+  text-align: start;
+  width: 100%;
   font-size: 24px;
   font-weight: 400;
   line-height: 30px;
@@ -2359,33 +2414,86 @@
   margin: 0;
   color: #000;
 }
+@media (max-width: 610px) {
+  .section__register .register__subtitle {
+    font-size: 20px;
+  }
+}
 
 .register__form {
   display: flex;
   flex-direction: column;
-  width: 500px;
-  height: 300px;
   justify-content: space-between;
+  align-items: end;
+  min-width: 200px;
+  width: 40%;
+  min-height: 30vw;
+  height: 90%;
+  border-radius: 10px;
+}
+@media (max-width: 840px) {
+  .register__form {
+    width: 80%;
+  }
+  .register__form::before {
+    position: absolute;
+    left: -150px;
+    bottom: 0;
+    z-index: -1000;
+    content: "";
+    width: 370px;
+    height: 250px;
+    background-image: url(../../img/views/baby-yoda-view.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.register__form .register__form__name {
+  width: 100%;
+  display: flex;
+  gap: 20px;
 }
 .register__form_label {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  font-size: 20px;
+  align-items: start;
+  padding: 15px 10px 10px 25px;
+  box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
+  background-color: rgba(168, 166, 166, 0.24);
+  border-radius: 25px;
+  width: 100%;
+  height: 60px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 0;
   font-family: "Inter", sans-serif;
   margin: 0;
 }
 .register__form_input {
+  background-color: transparent;
   border: 0;
-  border-bottom: 2px solid red;
-  width: 208.06px;
-  padding-left: 10px;
-  font-size: 16px;
+  width: 95%;
+  height: 30px;
+  text-align: start;
+  font-size: 24px;
   font-weight: 400;
   line-height: 19px;
   font-family: "Inter", sans-serif;
   margin: 0;
+}
+@media (max-width: 610px) {
+  .register__form_input {
+    font-size: 18px;
+  }
+}
+.register__form_input:focus {
+  height: 1.5rem;
+  padding-left: 10px;
+  border-radius: 15px;
+  outline: 1px solid red;
+  font-size: 16px;
 }
 .register__form_div {
   display: flex;
@@ -2395,18 +2503,22 @@
 }
 .register__form_register {
   background-color: red;
-  width: 103px;
-  height: 100%;
+  width: 30%;
+  height: 50px;
   border: 0;
+  border-radius: 22px;
   font-size: 16px;
   font-weight: 400;
   line-height: 14.52px;
   font-family: "Inter", sans-serif;
   margin: 0;
+  align-self: center;
   color: #fff;
   cursor: pointer;
 }
 .register__form_label_terminos {
+  width: 100%;
+  text-align: center;
   font-size: 16px;
   font-weight: 400;
   line-height: 14.52px;
@@ -2415,6 +2527,11 @@
 }
 .register__form_input_check {
   cursor: pointer;
+  background-color: red;
+}
+.register__form_input_check:focus {
+  border: 1px solid red;
+  border-radius: 15px;
 }
 .register__form_span {
   color: #1D84B5;

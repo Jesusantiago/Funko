@@ -1,3 +1,219 @@
 @use "../minfux";
 @use "../variables";
 
+.main__register{
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - max(80px, 11vw) - 170px);
+    padding: 30px max(40px, 7.5vw);
+    top: max(80px, 11vw);
+
+    @include minfux.media(610px){
+    height: calc(100vh - max(80px, 11vw) - 140px);
+
+    }
+}
+
+.section__register{
+    
+    min-width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    column-gap: max(30px, 5vh);
+
+    @include minfux.media(840px){
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    .article__register{
+        min-width: 150px;
+        max-width: 50%;
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        justify-content: start;
+        gap: 30px;
+        padding-top: 30px;
+
+        @include minfux.media(840px){
+            display: none;
+        }
+
+        .register__div{
+            min-width: 400px;
+            width: 60vw;
+            max-width: 800px;
+            
+            height: 40vw;
+            min-height: 350px;
+            max-height: 550px;
+            position: absolute;
+            left: max(-40px, -7.5vw);
+            bottom: 0;
+            z-index: -100;
+
+
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
+    }
+
+    .register__title{
+        width: 100%;
+        color: #000;
+
+        @include minfux.productInfo(variables.$fs-38, variables.$w-500, 30px, variables.$ff-r);
+
+        @include minfux.media(610px){
+            font-size: 30px;   
+        }
+    }
+
+    .register__subtitle{        
+        text-align: start;
+        width: 100%;
+
+        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 30px, variables.$ff-r);
+    color: #000;
+
+    @include minfux.media(610px){
+        font-size: variables.$fs-20;   
+    }
+    }
+}
+
+.register__form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    min-width: 200px;
+    width: 40%;
+    min-height: 30vw;
+    height: 90%;
+    border-radius: 10px;
+
+    @include minfux.media(840px){
+
+        width: 80%;
+
+        &::before{
+            position: absolute;
+            left: -150px;
+            bottom: 0;
+            z-index: -1000;
+            content: "";
+            width: 370px;
+            height: 250px;
+            background-image: url(../../img/views/baby-yoda-view.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+
+    .register__form__name{
+        width: 100%;
+        display: flex;
+        gap: 20px;
+    }
+
+
+    
+
+    &_label{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: start;
+        padding: 15px 10px 10px 25px;
+
+        box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
+        background-color: rgba(168, 166, 166, 0.24);
+        border-radius: 25px;
+
+        width: 100%;
+        height: 60px;
+
+
+        @include minfux.productInfo(variables.$fs-12, variables.$w-400, 0, variables.$ff-i);
+        
+    
+    }
+
+    &_input{
+        background-color: transparent;
+        border: 0;
+        width: 95%;
+        height: 30px;
+        text-align: start;
+    
+        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 19px, variables.$ff-i);
+
+        @include minfux.media(610px){
+            font-size: variables.$fs-18;   
+        }
+
+        &:focus{
+            height: 1.5rem;
+            padding-left: 10px;
+            border-radius: 15px;
+            outline: 1px solid red;
+            font-size: variables.$fs-16;
+        }
+    }
+
+    &_div{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 39px;
+    }
+
+    &_register{
+        background-color: red;
+        width: 30%;
+        height: 50px;
+        border: 0;
+        border-radius: 22px;
+        @include minfux.productInfo(variables.$fs-16, variables.$w-400, 14.52px, variables.$ff-i);
+        align-self: center;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    &_label_terminos{
+        width: 100%;
+        text-align: center;
+        @include minfux.productInfo(variables.$fs-16, variables.$w-400, 14.52px, variables.$ff-i);
+    }
+
+    &_input_check{
+        cursor: pointer;
+        background-color: red;
+
+        &:focus{
+            border: 1px solid red;
+            border-radius: 15px;
+        }
+    }
+
+    &_span{
+        color: #1D84B5;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+}

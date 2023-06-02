@@ -44,32 +44,56 @@
         </nav>
 </header>
 
-<main class="main__login">
+<main class="main__register">
 
-    <section class="section__login">
+    <section class="section__register">
 
-        <h1 class="login__title">INGRESAR A MI CUENTA</h1>
+        <article class="article__register">
 
-        <form class="login__form">
-            <label class="login__form_label" for="loginEmail">EMAIL:
-                <input type="email" class="login__form_input" 
-            id="loginEmail" placeholder="johndoe@correo.com" required>
-            </label>
+            <div class="register__div">
+                <img src="../img/views/baby-yoda-view.png" alt="" srcset="">
+            </div> 
+
             
+            
+        </article>
+        
+        
+        <form class="register__form">
+            <h1 class="register__title">Crea tu cuenta</h1>
+    
+            <h3 class="register__subtitle">Completa el formulario para ser parte del mundo de los Funkos</h3>
 
-            <label class="login__form_label" for="loginPassword">CONTRASEÑA:
-                <input type="password"  class="login__form_input" 
+            <div class="register__form__name">
+                <label class="register__form_label" for="loginEmail">NOMBRE:
+                    <input type="text" class="register__form_input" 
+                id="loginEmail" placeholder="Julian" required>
+                </label>
+                
+    
+                <label class="register__form_label" for="loginPassword">APELLIDO:
+                    <input type="text"  class="register__form_input" 
+                 id="loginPassword" placeholder="Alvarez" required>
+            </div>
+
+            </label>
+
+            <label class="register__form_label" for="loginPassword">EMAIL:
+                <input type="email"  class="register__form_input" 
+             id="loginPassword" placeholder="julianalvarez@gmail.com" required>
+            </label>
+
+            <label class="register__form_label" for="loginPassword">CONTRASEÑA:
+                <input type="password"  class="register__form_input" 
              id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
             </label>
+
+            <label class="register__form_label_terminos"><input type="checkbox"  class="register__form_input_check"> Aceptar <span class="register__form_span">terminos y condiciones</span></label>
+
+            <input type="button" class="register__form_register" value="Ingresar">
             
         </form>
 
-        <article class="login__article">
-            <input type="button" class="login__article_ingresar" value="Ingresar">
-            <input type="checkbox"  class="login__article_input">
-            <label  class="login__article_label">Recordarme</label>
-        </article>
-        <span class="login__recupero">Olvidé mi contraseña</span>
     </section>
     
 </main>
