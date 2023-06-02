@@ -519,8 +519,12 @@
 }
 @media (max-width: 610px) {
   .footer {
+    min-height: 100px;
     max-height: 220px;
-    padding: 10px max(40px, 7.5vw) 5px;
+    padding: 10px max(40px, 7.5vw) 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .footer .footer__div {
@@ -528,6 +532,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media (max-width: 610px) {
+  .footer .footer__div {
+    height: 50px;
+    width: 100%;
+  }
 }
 
 .footer__login {
@@ -540,8 +550,24 @@
   height: auto;
   list-style: none;
 }
+@media (max-width: 610px) {
+  .footer__nav {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    row-gap: 10px;
+  }
+}
 .footer__nav li {
   margin-bottom: 10px;
+  width: 50%;
+}
+@media (max-width: 610px) {
+  .footer__nav li {
+    margin-bottom: 0;
+  }
 }
 .footer__nav a {
   text-decoration: none;
@@ -564,6 +590,24 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+@media (max-width: 610px) {
+  .footer__logo {
+    position: absolute;
+    right: -5vw;
+    bottom: -1vw;
+    opacity: 20%;
+    scale: 0.9;
+  }
+}
+@media (max-width: 610px) {
+  .footer__logo_home {
+    position: relative;
+    right: -15vw;
+    bottom: -3vw;
+    opacity: 20%;
+    scale: 1.1;
+  }
+}
 
 .footer__copy_text {
   width: 100%;
@@ -577,7 +621,7 @@
 @media (max-width: 610px) {
   .footer__copy_text {
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 0;
   }
 }
@@ -2199,6 +2243,19 @@
   scale: 2;
 }
 
+.main__login {
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh - max(80px, 11vw) - 170px);
+  padding: 30px max(40px, 7.5vw);
+  top: max(80px, 11vw);
+}
+@media (max-width: 610px) {
+  .main__login {
+    height: calc(100vh - max(80px, 11vw) - 140px);
+  }
+}
+
 .section__login {
   position: absolute;
   top: max(80px, 11vw);
@@ -2332,14 +2389,16 @@
 
 .main__register {
   position: absolute;
-  width: 100vw;
-  height: calc(100vh - max(80px, 11vw) - 170px);
+  width: 100%;
+  height: calc(100% - max(80px, 11vw) - 170px);
   padding: 30px max(40px, 7.5vw);
   top: max(80px, 11vw);
 }
 @media (max-width: 610px) {
   .main__register {
-    height: calc(100vh - max(80px, 11vw) - 140px);
+    height: calc(100vh - max(80px, 11vw) - 155px);
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -2434,6 +2493,7 @@
 @media (max-width: 840px) {
   .register__form {
     width: 80%;
+    height: 100%;
   }
   .register__form::before {
     position: absolute;

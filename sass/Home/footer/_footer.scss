@@ -9,8 +9,13 @@
     background-color: variables.$c-fondo;
 
     @include minfux.media(610px){
+        min-height: 100px;
         max-height: 220px;
-        padding: 10px max(40px, 7.5vw) 5px;
+        padding: 10px max(40px, 7.5vw) 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // background-color: yellowgreen;
 
     }
  
@@ -20,6 +25,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include minfux.media(610px){
+            height: 50px;  
+            width: 100%;         
+
+    }
         
     }
 }
@@ -33,8 +44,22 @@
     width: 50%;
     height: auto;
     list-style: none;
+    @include minfux.media(610px){
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+        row-gap: 10px;
+        
+    }
     li{
         margin-bottom: 10px;
+        width: 50%;
+
+        @include minfux.media(610px){
+            margin-bottom: 0;
+        }
     }
     a{
         text-decoration: none;
@@ -44,11 +69,12 @@
             size: variables.$fs-20;
             weight: variables.$w-500;
             family: variables.$ff-r;
+            
         };
-
         @include minfux.media(610px){
             font-size: variables.$fs-14;
         }
+
 
     }
 }
@@ -63,6 +89,24 @@
         repeat: no-repeat;
         size: contain;
     };
+
+    @include minfux.media(610px){
+        position: absolute;
+        right: -5vw;
+        bottom: -1vw;
+        opacity: 20%;
+        scale: 0.9;
+    }
+
+    &_home{
+        @include minfux.media(610px){
+            position: relative;
+            right: -15vw;
+            bottom: -3vw;
+            opacity: 20%;
+            scale: 1.1;
+        }
+    }
 }
 
 
@@ -84,7 +128,7 @@
 
     @include minfux.media(610px){
         font-size: variables.$fs-12;
-        margin-top: 10px;
+        margin-top: 15px;
         margin-bottom: 0;
     }
 }

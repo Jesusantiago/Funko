@@ -3,13 +3,15 @@
 
 .main__register{
     position: absolute;
-    width: 100vw;
-    height: calc(100vh - max(80px, 11vw) - 170px);
+    width: 100%;
+    height: calc(100% - max(80px, 11vw) - 170px);
     padding: 30px max(40px, 7.5vw);
     top: max(80px, 11vw);
 
     @include minfux.media(610px){
-    height: calc(100vh - max(80px, 11vw) - 140px);
+    height: calc(100vh - max(80px, 11vw) - 155px);
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     }
 }
@@ -108,6 +110,7 @@
     @include minfux.media(840px){
 
         width: 80%;
+        height: 100%;
 
         &::before{
             position: absolute;

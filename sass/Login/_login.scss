@@ -1,6 +1,19 @@
 @use "../minfux";
 @use "../variables";
 
+.main__login{
+    position: absolute;
+    width: 100vw;
+    height: calc(100vh - max(80px, 11vw) - 170px);
+    padding: 30px max(40px, 7.5vw);
+    top: max(80px, 11vw);
+
+    @include minfux.media(610px){
+    height: calc(100vh - max(80px, 11vw) - 140px);
+
+    }
+}
+
 
 .section__login{
     position: absolute;
