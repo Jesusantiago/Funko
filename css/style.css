@@ -5,25 +5,24 @@
 
 .banner {
   min-width: 100%;
-  min-height: 100vh;
+  min-height: 100svh;
   display: flex;
   align-items: center;
   padding: 0 max(40px, 7.5vw);
   font-family: "Raleway", sans-serif;
-  background-color: red;
+  background-color: lightcoral;
   position: relative;
   z-index: 1;
 }
 @media (max-width: 600px) {
   .banner {
     align-items: start;
-    padding: 150px max(40px, 7.5vw);
+    padding: 100px max(40px, 7.5vw);
   }
 }
-
-.banner_img {
+.banner .banner_img {
   position: absolute;
-  top: max(80px, 11vw);
+  top: min(120px, 4vw);
   left: 0;
   z-index: -100000;
   min-width: 100vw;
@@ -50,24 +49,18 @@
 }
 .banner__text .banner__text_title {
   font-size: 38px;
+  font-size: clamp(36px, 2.5vw, 38px);
   line-height: 44.61px;
   font-weight: 700;
   margin-bottom: 0.4em;
 }
-@media (max-width: 600px) {
-  .banner__text .banner__text_title {
-    font-size: 38px;
-    min-font-size: 32px;
-  }
-}
 .banner__text .banner__text_span {
-  font-size: 18px;
+  font-size: clamp(20px, 3vw, 24px);
   line-height: 21.13px;
   font-weight: 400;
 }
 @media (max-width: 600px) {
   .banner__text .banner__text_span {
-    font-size: 20px;
     width: 80%;
   }
 }

@@ -3,25 +3,28 @@
 
 .banner{
     min-width: 100%;
-    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     align-items: center;
     padding: 0 max(40px, 7.5vw);
     font-family: variables.$ff-r;
-    background-color: variables.$c-fondo;
+    // background-color: variables.$c-fondo;
+    background-color: lightcoral;
     position: relative;
     z-index: 1;
 
     @include minfux.media(600px){
         align-items: start;
-        padding: 150px max(40px, 7.5vw);
+        padding: 100px max(40px, 7.5vw);
     }
-}
+
+ 
 
 
 .banner_img{
     position: absolute;
-    top:max(80px, 11vw);
+    top:min(120px, 4vw);
+    
     left: 0;
     z-index: -100000;
     min-width: 100vw;
@@ -32,6 +35,9 @@
         size: cover;
         position: center;
     };
+
+
+}
 }
 
 .banner__text{
@@ -49,23 +55,18 @@
 
     .banner__text_title{
         font-size: variables.$fs-38;
+        font-size: clamp(36px, 2.5vw, variables.$fs-38);
         line-height: 44.61px;
         font-weight: variables.$w-700;
         margin-bottom: .4em;
-
-        @include minfux.media(600px){
-            font-size: variables.$fs-38;
-            min-font-size: 32px;
-        }
     }
 
     .banner__text_span{
-        font-size: variables.$fs-18;
+        font-size: clamp(variables.$fs-20, 3vw,variables.$fs-24);
         line-height: 21.13px;
         font-weight: variables.$w-400;
 
         @include minfux.media(600px){
-            font-size: variables.$fs-20;
             width: 80%;
         }
     }
