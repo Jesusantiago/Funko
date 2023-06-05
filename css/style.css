@@ -297,11 +297,6 @@
   }
 }
 @media (max-width: 630px) {
-  .firstProduct .home__product__text {
-    min-height: 250px;
-  }
-}
-@media (max-width: 630px) {
   .firstProduct .home__product__text_title {
     font-size: 38px;
     line-height: 40px;
@@ -506,6 +501,7 @@
   max-height: 303px;
   padding: 10px max(40px, 7.5vw) 5px;
   background-color: #30343F;
+  overflow: hidden;
 }
 @media (max-width: 610px) {
   .footer {

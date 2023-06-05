@@ -27,10 +27,6 @@
         @include minfux.media(980px){
             min-height: 250px;
         }
-
-        @include minfux.media(630px){
-            min-height: 250px;
-        }
      
         &_title{
             @include minfux.media(630px){

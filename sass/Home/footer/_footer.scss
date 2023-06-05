@@ -7,6 +7,7 @@
     max-height: 303px;
     padding: 10px max(40px, 7.5vw) 5px;
     background-color: variables.$c-fondo;
+    overflow: hidden;
 
     @include minfux.media(610px){
         min-height: 100px;
@@ -15,7 +16,6 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        // background-color: yellowgreen;
 
     }
  
@@ -96,6 +96,7 @@
         bottom: -1vw;
         opacity: 20%;
         scale: 0.9;
+    
     }
 
     &_home{
