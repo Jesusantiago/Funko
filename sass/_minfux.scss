@@ -2,7 +2,7 @@
 
 @mixin pageProduct( $color-font){
     width: 100%;
-    min-height: calc(100vh - max(80px, 11vw));
+    min-height: calc(100svh - max(80px, 9vw));
     padding: 0 max(40px, 7.5vw);
     
     display: flex;
@@ -10,6 +10,7 @@
     justify-content: space-between;
     color: $color-font;
     font-family: variables.$ff-r;
+    outline: 1px solid black;
 
     @media (max-width:980px){
         align-items: center;
