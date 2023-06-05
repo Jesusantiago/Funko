@@ -10,7 +10,7 @@
   align-items: center;
   padding: 0 max(40px, 7.5vw);
   font-family: "Raleway", sans-serif;
-  background-color: #30343F;
+  background-color: red;
   position: relative;
   z-index: 1;
 }
@@ -97,7 +97,8 @@
 
 .header {
   min-width: 100%;
-  height: max(80px, 11vw);
+  height: max(80px, 9vw);
+  max-height: 120px;
   background-color: #30343F;
   display: flex;
   align-items: center;
@@ -105,18 +106,24 @@
   gap: 20px;
   padding: 0 max(40px, 7.5vw);
   position: fixed;
+  outline: 1px solid yellow;
   top: 0;
   left: 0;
   z-index: 1000;
   backdrop-filter: blur(20px);
   font-family: "Raleway", sans-serif;
 }
+@media (max-width: 514px) {
+  .header {
+    height: 50px;
+  }
+}
 
 .header__a {
   width: 100%;
-  min-width: 230px;
+  min-width: 100px;
   max-width: 372px;
-  height: 66px;
+  height: 100%;
 }
 
 .header__title {
@@ -125,9 +132,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
-  height: 66px;
-  max-width: 372px;
-  max-height: 66px;
+  height: 100%;
 }
 
 .header__nav {
@@ -162,7 +167,7 @@
 .nav__li a {
   text-decoration: none;
   color: #FFF;
-  font-size: 20px;
+  font-size: clamp(12px, 2.5vw, 20px);
   line-height: 23.48px;
   font-weight: 500;
 }
@@ -184,35 +189,32 @@
 }
 
 .a .header__a {
-  width: 100%;
-  min-width: 230px;
-  max-width: 372px;
-  height: 66px;
-}
-.a .header__title {
-  background-image: url(.../../../img/desktop/logo.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 230px;
-  height: 66px;
-  max-width: 372px;
-  max-height: 66px;
+  min-width: 80px;
+  max-width: 200px;
 }
 @media (max-width: 980px) {
   .a .header__nav {
     background-color: rgba(48, 52, 63, 0.942);
     position: absolute;
-    top: max(80px, 11vw);
-    left: 0;
-    min-width: 100vw;
-    height: calc(100vh - max(80px, 11vw));
-    padding: 150px;
+    top: max(80px, 9vw);
+    right: 0;
+    max-width: 100svw;
+    height: calc(100svh - max(80px, 9vw));
+    padding-top: 30px;
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
+}
+@media (max-width: 980px) and (max-width: 514px) {
+  .a .header__nav {
+    top: max(50px, 9vw);
+    height: calc(100svh - max(50px, 9vw));
+  }
+}
+@media (max-width: 980px) {
   .a .header__nav .nav__li {
     display: inline-block;
   }
@@ -238,11 +240,6 @@
     color: #30343F;
     padding: 5px 30px;
     border-radius: 50px;
-  }
-}
-@media (max-width: 600px) {
-  .a .header__nav {
-    padding: 200px 150px;
   }
 }
 
@@ -2150,7 +2147,7 @@
 @media (max-width: 980px) {
   .burger {
     position: absolute;
-    top: 4vh;
+    top: 3.5svh;
     right: 8vw;
     width: 45px;
     height: 20px;
@@ -2181,7 +2178,12 @@
 }
 @media (max-width: 600px) {
   .burger {
-    top: 3vh;
+    top: 2.5vh;
+  }
+}
+@media (max-width: 500px) {
+  .burger {
+    top: 2vh;
   }
 }
 
@@ -2390,30 +2392,46 @@
 .main__register {
   position: absolute;
   width: 100%;
-  height: calc(100svh - max(80px, 11vw) - 170px);
-  padding: 30px max(40px, 7.5vw);
+  height: calc(100vh - max(80px, 11vw) - 170px);
+  padding: 0 max(40px, 7.5vw);
   top: max(80px, 11vw);
+  border: 1px solid orange;
 }
 @media (max-width: 610px) {
   .main__register {
     height: calc(100svh - max(80px, 11vw) - 100px);
-    padding-top: 10px;
-    padding-bottom: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .main__register {
+    color: blue;
   }
 }
 
+.inline {
+  position: absolute;
+  z-index: 30000000000;
+  top: 0;
+  left: 0;
+  width: 514px;
+  height: 986px;
+  border: 1px solid red;
+}
+
 .section__register {
-  min-width: 100%;
+  min-width: 384px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: max(30px, 5vh);
+  border: 1px solid pink;
+  column-gap: max(30px, 5svh);
 }
 @media (max-width: 840px) {
   .section__register {
     align-items: center;
     justify-content: center;
+    column-gap: 0;
   }
 }
 .section__register .article__register {
@@ -2487,13 +2505,14 @@
   min-width: 200px;
   width: 40%;
   min-height: 30vw;
-  height: 90%;
+  height: 80%;
   border-radius: 10px;
+  border: 1px solid black;
 }
 @media (max-width: 840px) {
   .register__form {
     width: 80%;
-    height: 85%;
+    height: 80%;
   }
   .register__form::before {
     position: absolute;
@@ -2503,7 +2522,7 @@
     content: "";
     width: 370px;
     height: 250px;
-    background-image: url(../../img/views/baby-yoda-view.png);
+    background-image: url(../../../img/views/baby-yoda-view.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
