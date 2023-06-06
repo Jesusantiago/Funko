@@ -170,10 +170,7 @@
             padding: 10px 5px 5px 20px;
 
 
-        }
-
-        
-        
+        }       
     
     }
 
@@ -204,19 +201,19 @@
     }
 
     &_register{
-        background-color: red;
-        width: 30%;
-        height: 50px;
-        border: 0;
-        border-radius: 22px;
-        @include minfux.productInfo(variables.$fs-16, variables.$w-400, 14.52px, variables.$ff-i);
-        align-self: center;
-        color: #fff;
-        cursor: pointer;
+    background-color: red;
+    width: 30%;
+    height: 50px;
+    border: 0;
+    border-radius: 22px;
+    @include minfux.productInfo(variables.$fs-16, variables.$w-400, 14.52px, variables.$ff-i);
+    align-self: center;
+    color: #fff;
+    cursor: pointer;
 
-        @include minfux.media(450px){
-            width: 50%;
-        }
+    @include minfux.media(450px){
+        width: 50%;
+    }
     }
 
     &_label_terminos{
