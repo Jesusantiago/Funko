@@ -3,7 +3,7 @@
 
 .header{
     min-width: 100%;
-    height: max(80px, 9vw);
+    height: max(50px, 9vw);
     max-height: 120px;
     background-color: variables.$c-fondo;
     display: flex;
@@ -20,10 +20,6 @@
     z-index: 1000;
     backdrop-filter: blur(20px);
     font-family: variables.$ff-r;
-
-    @include minfux.media(514px){
-        height: 50px;        
-    }
 }
 
 .header__a{    
