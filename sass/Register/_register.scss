@@ -4,35 +4,49 @@
 .main__register{
     position: absolute;
     width: 100%;
-    height: calc(100svh - max(80px, 11vw) - 170px);
-    padding: 30px max(40px, 7.5vw);
-    top: max(80px, 11vw);
+    height: calc(100svh - max(50px, 6.5vw) - 170px);
+    padding: 0 max(40px, 7.5vw);
+    top: min(120px, 9vw);
 
     @include minfux.media(610px){
-    // height: calc(100vh - max(80px, 11vw) - 155px);
-    height: calc(100svh - max(80px, 11vw) - 100px);
-    padding-top: 10px;
-    padding-bottom: 10px;
-
+    height: calc(100svh - max(50px, 6.5vw) - 80px);
     }
+
+    @include minfux.media(450px){
+    // height: calc(100svh - max(50px, 20vw) - 80px);
+        padding: 0 20px;
+    }
+}
+
+.inline{
+    position: absolute;
+    z-index: 30000000000;
+    top: 0;
+    left: 0;
+    //width: 390px; MOBILE APPLE
+    //height: 668px; MOBILE APPLE
+
+    width: 514px; //SAMSUNG513
+    height: 986px; //SAMSUNG
+    border: 1px solid red;
 }
 
 .section__register{
     
-    min-width: 100%;
+    min-width: 335px;
     height: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     
-    column-gap: max(30px, 5vh);
+    column-gap: max(30px, 5svh);
 
     @include minfux.media(840px){
         align-items: center;
         justify-content: center;
+        column-gap: 0;
     }
-
 
     .article__register{
         min-width: 150px;
@@ -44,6 +58,7 @@
         justify-content: start;
         gap: 30px;
         padding-top: 30px;
+        
 
         @include minfux.media(840px){
             display: none;
@@ -77,23 +92,17 @@
         width: 100%;
         color: #000;
 
-        @include minfux.productInfo(variables.$fs-38, variables.$w-500, 30px, variables.$ff-r);
+        @include minfux.productInfo(clamp(28px, 4vw, variables.$fs-38), variables.$w-500, normal, variables.$ff-r);
 
-        @include minfux.media(610px){
-            font-size: 30px;   
-        }
     }
 
     .register__subtitle{        
         text-align: start;
         width: 100%;
 
-        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 30px, variables.$ff-r);
+        @include minfux.productInfo(clamp(variables.$fs-16, 4vw, variables.$fs-24), variables.$w-400, normal, variables.$ff-r);
     color: #000;
 
-    @include minfux.media(610px){
-        font-size: variables.$fs-20;   
-    }
     }
 }
 
@@ -105,13 +114,12 @@
     min-width: 200px;
     width: 40%;
     min-height: 30vw;
-    height: 90%;
+    height: 80%;
     border-radius: 10px;
 
     @include minfux.media(840px){
-
         width: 80%;
-        height: 85%;
+        height: 80%;
 
         &::before{
             position: absolute;
@@ -121,21 +129,24 @@
             content: "";
             width: 370px;
             height: 250px;
-            background-image: url(../../img/views/baby-yoda-view.png);
+            background-image: url(../../../img/views/baby-yoda-view.png);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
         }
     }
 
+    @include minfux.media(450px){
+        min-width: 100%;
+        height: 90%;
+    }
+    
+
     .register__form__name{
         width: 100%;
         display: flex;
         gap: 20px;
     }
-
-
-    
 
     &_label{
         display: flex;
@@ -152,7 +163,16 @@
         height: 60px;
 
 
-        @include minfux.productInfo(variables.$fs-12, variables.$w-400, 0, variables.$ff-i);
+        @include minfux.productInfo(clamp(8px, 2.5vw, variables.$fs-12) , variables.$w-400, 0, variables.$ff-i);
+
+        @include minfux.media(450px){
+            height: 50px;
+            padding: 10px 5px 5px 20px;
+
+
+        }
+
+        
         
     
     }
@@ -164,17 +184,14 @@
         height: 30px;
         text-align: start;
     
-        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 19px, variables.$ff-i);
+        @include minfux.productInfo(clamp(10px, 3.5vw, variables.$fs-16), variables.$w-400, 19px, variables.$ff-i);
 
-        @include minfux.media(610px){
-            font-size: variables.$fs-18;   
-        }
 
         &:focus{
             height: 1.5rem;
             padding-left: 10px;
             border-radius: 15px;
-            outline: 1px solid red;
+            outline: 1px solid rgba(255, 0, 0, 0.322);
             font-size: variables.$fs-16;
         }
     }
@@ -196,6 +213,10 @@
         align-self: center;
         color: #fff;
         cursor: pointer;
+
+        @include minfux.media(450px){
+            width: 50%;
+        }
     }
 
     &_label_terminos{
