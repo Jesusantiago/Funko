@@ -2230,22 +2230,26 @@
 
 .main__login {
   position: absolute;
-  width: 100vw;
-  height: calc(100vh - max(80px, 11vw) - 170px);
-  padding: 30px max(40px, 7.5vw);
-  top: max(80px, 11vw);
+  width: 100%;
+  height: calc(100svh - max(50px, 6.5vw) - 170px);
+  padding: 0 max(40px, 7.5vw);
+  top: min(120px, 9vw);
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
 @media (max-width: 610px) {
   .main__login {
-    height: calc(100vh - max(80px, 11vw) - 140px);
+    height: calc(100svh - max(50px, 6.5vw) - 80px);
+  }
+}
+@media (max-width: 450px) {
+  .main__login {
+    padding: 0 20px;
   }
 }
 
 .section__login {
-  position: absolute;
-  top: max(80px, 11vw);
-  min-width: 100vw;
-  height: calc(100vh - max(80px, 11vw) - 303px);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -2492,7 +2496,7 @@
     content: "";
     width: 370px;
     height: 250px;
-    background-image: url(../../../img/views/baby-yoda-view.png);
+    background-image: url(.../../../img/views/baby-yoda-view.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
