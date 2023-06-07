@@ -1,0 +1,148 @@
+<div class="main-admin">
+        <div class="search">
+            <img src="../multimedia/lupita.png" alt="" class="search-icon">
+            <input type="text" class="search-bar" placeholder="código, item o categoría">
+        </div>
+        <div class="admin-table-tittle">
+            <h1 class="admin-tittle">LISTADO DE PRODUCTOS</h1>
+            <label class="admin-add">AGREGAR <input type="button" ></label>
+        </div>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Código</th>
+                    <th>Nombre del Producto</th>
+                    <th>Categoría</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>STW001001</td>
+                    <td>Baby Yoda Blueball</td>
+                    <td>STAR WARS</td>
+                    <td><img src="../multimedia/Edit-icon.png" alt=""></td>
+                    <td><img src="../multimedia/Delete-icon.png" alt=""></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+.main-admin {
+    width: 100%;
+    min-height: calc(100vh - max(343px, 18.5vw) - 144px);
+    padding: 36px max(4.5%, 110px) 10px;
+}
+
+.search {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.search-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.search-bar {
+    width: 519px;
+    height: 44px;
+    border: solid 2px #30343F;
+    border-radius: 6px;
+}
+
+.search-bar::placeholder {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #B9B9B9;
+}
+
+.search-bar[type=text] {
+    padding: 0 23px;
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+}
+
+.admin-table-tittle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-tittle {
+    font-family: Raleway;
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #1F1F1F;
+    padding: max(3.5%, 36px) 0;
+}
+
+.admin-add {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    color: #1F1F1F;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    cursor: pointer;
+}
+
+.admin-table {
+    font-family: Inter;
+    width: 100%;
+}
+
+th {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding:22px 0;
+    color: #1F1F1F;
+
+}
+
+td {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 61px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    color: #1F1F1F;
+
+}
+
+input[type=button]{
+    width: 39px;
+    height: 39px;
+    background-image: url(../../multimedia/agregar.png);
+    background-size: cover;
+    border:none;
+    cursor: pointer;
+}

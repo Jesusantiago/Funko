@@ -2841,7 +2841,7 @@
 }
 @media (max-width: 450px) {
   .main__listado {
-    padding: 20px 20px;
+    padding: 40px 20px;
   }
 }
 
@@ -2858,7 +2858,8 @@
   cursor: pointer;
 }
 .section__search .search__icon input {
-  min-width: 150px;
+  min-width: 250px;
+  width: 40%;
   max-width: 530px;
   height: 30px;
   border-radius: 6px;
@@ -2899,7 +2900,7 @@
   cursor: pointer;
 }
 .section__list .list__label input {
-  min-width: 20px;
+  min-width: 30px;
   width: 40px;
   min-height: 20px;
   height: 40px;
@@ -2907,21 +2908,34 @@
   border: 0;
   border-radius: 10px;
   color: white;
-  font-size: 60px;
+  font-size: clamp(30px, 2.5vw, 60px);
   line-height: 0;
+  letter-spacing: 0;
+  text-align: center;
+  cursor: pointer;
 }
 
 .table {
   width: 100%;
   margin-top: 2rem;
 }
+@media (max-width: 540px) {
+  .table {
+    margin-top: 1rem;
+  }
+}
 .table thead {
   height: auto;
   font-size: clamp(12px, 2.5vw, 24px);
   font-weight: 700;
-  line-height: 30px;
+  line-height: 20px;
   font-family: "Inter", sans-serif;
   margin: 0;
+}
+@media (max-width: 450px) {
+  .table {
+    font-size: 10px;
+  }
 }
 .table tbody {
   font-size: clamp(12px, 2.5vw, 24px);
@@ -2930,6 +2944,11 @@
   font-family: "Inter", sans-serif;
   margin: 0;
   margin-top: 1rem;
+}
+@media (max-width: 450px) {
+  .table tbody {
+    font-size: 10px;
+  }
 }
 .table tbody box-icon {
   width: 30px;

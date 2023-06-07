@@ -13,7 +13,7 @@
     }
 
     @include minfux.media(450px){
-        padding: 20px 20px;
+        padding: 40px 20px;
     }
 }
 
@@ -31,7 +31,8 @@
         }
     
         input{
-            min-width: 150px;
+            min-width: 250px;
+            width: 40%;
             max-width: 530px;
             height: 30px;
             border-radius: 6px;
@@ -67,7 +68,7 @@
         cursor: pointer;
 
         input{
-            min-width: 20px;
+            min-width: 30px;
             width: 40px;
             min-height: 20px;
             height: 40px;
@@ -75,8 +76,11 @@
             border: 0;
             border-radius: 10px;
             color: white;
-            font-size: 60px;
+            font-size: clamp(30px, 2.5vw, 60px);
             line-height: 0;
+            letter-spacing: 0;
+            text-align: center;
+            cursor: pointer;            
         }
     }
 }
@@ -85,14 +89,26 @@
     width: 100%;
     margin-top: 2rem;
 
+    @include minfux.media(540px){
+        margin-top: 1rem;
+    }
+
     thead{
         height: auto;
-        @include minfux.productInfo(clamp(variables.$fs-12, 2.5vw, variables.$fs-24), variables.$w-700, 30px, variables.$ff-i);
+        @include minfux.productInfo(clamp(variables.$fs-12, 2.5vw, variables.$fs-24), variables.$w-700, 20px, variables.$ff-i);
+    }
+
+    @include minfux.media(450px){
+        font-size: 10px;
     }
 
     tbody{
         @include minfux.productInfo(clamp(variables.$fs-12, 2.5vw, variables.$fs-24), variables.$w-500, 40px, variables.$ff-i);
         margin-top: 1rem;
+
+        @include minfux.media(450px){
+            font-size: 10px;
+        }
 
         box-icon{
             width: 30px;
