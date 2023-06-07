@@ -71,13 +71,12 @@
     .login__title{
         color: #1f1f1f;
         font-family: variables.$ff-r;
-        font-weight: variables.$w-700;
+        font-weight: variables.$w-500;
         font-size: clamp(28px, 4vw, variables.$fs-46);
         line-height: 49px;
         margin: 0;
 
         @include minfux.media(610px){
-            font-size: variables.$fs-24;
 
             width: 300px;
             text-align: center;

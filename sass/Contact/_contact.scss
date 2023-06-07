@@ -1,37 +1,92 @@
 @use "../minfux";
 @use "../variables";
 
-.contact__section{  
+.main__contact{
     position: absolute;
-    top: max(80px, 11vw);
-
-    min-width: 100vw;
-    height: calc(100vh - max(80px, 11vw) - 303px);
-
-    text-align: center;
-
-    padding-top: 40px;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
+    height: calc(100svh - max(50px, 6.5vw) - 170px);
+    padding: 0 max(40px, 7.5vw);
+    top: min(120px, 9vw);
+    display: flex;
+    align-items: center;
+    justify-content: end;
 
     @include minfux.media(610px){
-        height: calc(100vh - max(80px, 11vw) - 155px);
-        padding-top: 10px;
+    height: calc(100svh - max(50px, 6.5vw) - 80px);
+    justify-content: center;
+    }
+
+    @include minfux.media(450px){
+        padding: 0 20px;
+    }
+
+    &::before{
+        content: "";
+        background: {
+            image: url(.../../../img/multimedia/harry-potter/harry-1.webp);
+            position: center;
+            size: contain;
+            repeat: no-repeat;
+        };
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: -1000;
+
+        min-width: 400px;
+        width: 60vw;
+        max-width: 800px;
+        
+        height: 40vw;
+        min-height: 350px;
+        max-height: 550px;
+
+        @include minfux.media(450px){
+        bottom: -100px;
+        opacity: 0.8;
+
+        }
+
+
+    }
+}
+
+.contact__section{  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 400px;
+    width: 50%;
+    min-height: 30vw;
+    height: 500px;
+
+    @include minfux.media(610px){
+        padding-left: 20px;
+        padding-right: 20px;
+        height: calc(90vh - max(80px, 11vw) - 155px);
+        padding-top: 0;
+    }
+
+    @include minfux.media(450px){
+        align-items: center;
+        height: 80%;
+        width: 90%;
+        min-width: 300px;
 
     }
 
     &_title{
-        @include minfux.productInfo(variables.$fs-38, variables.$w-500, 30px, variables.$ff-r);
-
-        @include minfux.media(610px){
-            font-size: variables.$fs-20;
-        }
+        @include minfux.productInfo(clamp(28px, 4vw, variables.$fs-46), variables.$w-500, 30px, variables.$ff-r);
+        text-align: start;
+        width: 100%;
+        
     }
 
     &_subtitle{
-        @include minfux.productInfo(variables.$fs-24, variables.$w-400, 30px, variables.$ff-r);
-
-        margin-top: 20px;
+        @include minfux.productInfo(clamp(variables.$fs-16, 4vw, variables.$fs-24), variables.$w-400, 30px, variables.$ff-r);
+        text-align: start;
+        
 
         @include minfux.media(610px){
             font-size: variables.$fs-18;
@@ -45,40 +100,55 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 30px auto 0;
-
-    width: 400px;
-    max-width: 400px;
-    height: 30vh;
+    width: 100%;
+    height: 40vh;
 
     @include minfux.media(610px){
-        width: 300px;
-        height: 35vh;
+        height: 70%;
         margin-top: 10px;
     }
 
     &_label{
-        width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
+        align-items: start;
+        padding: 15px 10px 10px 25px;
 
-        @include minfux.productInfo(variables.$fs-20, variables.$w-400, 30px, variables.$ff-i);        
+        box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
+        background-color: rgba(226, 226, 226, 0.89);
+        border-radius: 25px;
 
-        @include minfux.media(610px){
-            font-size: variables.$fs-14;
-        }
+        width: 100%;
+        height: 60px;
+
+
+        @include minfux.productInfo(clamp(8px, 2.5vw, variables.$fs-12) , variables.$w-400, 0, variables.$ff-i);
+
+        @include minfux.media(450px){
+            height: 50px;
+            padding: 10px 5px 5px 20px;
+
+
+        }    
     }
 
     &_input{
-        width: 200px;
+        background-color: transparent;
         border: 0;
-        border-bottom: 2px solid red;
-        padding-left: 10px;
+        width: 95%;
+        height: 30px;
+        text-align: start;
+    
+        @include minfux.productInfo(clamp(10px, 3.5vw, variables.$fs-16), variables.$w-400, 19px, variables.$ff-i);
 
-        @include minfux.productInfo(variables.$fs-14, variables.$w-500, 30px, variables.$ff-r);  
 
-        @include minfux.media(610px){
-            font-size: variables.$fs-12;
+        &:focus{
+            height: 1.5rem;
+            padding-left: 10px;
+            border-radius: 15px;
+            outline: 1px solid rgba(255, 0, 0, 0.322);
+            font-size: variables.$fs-16;
         }
 
     }
@@ -87,13 +157,17 @@
     &_btn{
         @include minfux.productInfo(variables.$fs-16, variables.$w-500, 30px, variables.$ff-r);
         
-        width: 90%;
-        max-width: 90%;
+        width: 30%;
+        height: 50px;
         background-color: red;
         border: 0;
-        border-radius: 15px;
+        border-radius: 22px;
         color: #fff;
         cursor: pointer;
+
+        @include minfux.media(450px){
+            width: 50%;
+        }
     }
 
 }
