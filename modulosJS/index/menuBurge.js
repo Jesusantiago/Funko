@@ -5,33 +5,12 @@ const burger = document.getElementById("burger");
 const nav = document.getElementById("nav");
 
 burger.addEventListener("click", (e)=>{
-    console.log(e.target.classList)
+    // console.log(e.target.classList)
     header.classList.toggle("a");
 })
 
-// Menu Filter
-
-const filter = document.getElementById("main__Shop");
-const navFilter = document.getElementById("nav__category");
-const btnFilter = document.getElementById("filter");
-
-btnFilter.addEventListener("click", () => {
-    navFilter.classList.toggle("nav__category-act")
-    console.log("hola")
-})
-
-
-
-const arrow = document.getElementById("bx_arrow");
-
-arrow.addEventListener("click", ()=>{
-    arrow.setAttribute("animation", "tada");
-    setTimeout(() => {
-        navFilter.classList.toggle("nav__category-act")
-    }, 700);
-})
-
 // Menu grid
+/*
 
 const itemBlock = document.getElementById("bx_block");
 const itemInline = document.getElementById("bx_inline");
@@ -66,3 +45,4 @@ const closeModal = document.getElementById("close__modal");
 closeModal.addEventListener("click", () => {
     mainDetailProduct.classList.toggle("product__main__active")
 })
+*/
