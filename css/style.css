@@ -2956,4 +2956,114 @@
   cursor: pointer;
 }
 
+.main__add {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+  min-width: 100vw;
+  min-height: 100svh;
+  padding: max(40px, 7.5vw) max(40px, 7.5vw);
+}
+
+.add__title {
+  font-size: clamp(20px, 3.5vw, 46px);
+  font-weight: 700;
+  line-height: 49.31px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+}
+
+.add__form {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  column-gap: 30px;
+  width: 80vw;
+  max-width: 827px;
+  min-height: 400px;
+  height: 75svh;
+  max-height: 800px;
+}
+.add__form_label {
+  font-size: clamp(16px, 3.5vw, 24px);
+  font-weight: 500;
+  line-height: 29.05px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  color: #1f1f1f;
+}
+.add__form_label:first-child, .add__form_label:nth-child(2) {
+  font-weight: 400;
+}
+.add__form_input {
+  font-size: clamp(12px, 3.5vw, 18px);
+  font-weight: 400;
+  line-height: 24.2px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  color: #b9b9b9;
+  padding-left: 20px;
+}
+
+.categoria, .licencia {
+  width: 40%;
+}
+.categoria select, .licencia select {
+  min-width: 100px;
+  width: 60%;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 1px solid red;
+  min-width: 50px;
+}
+
+textarea {
+  resize: none;
+}
+
+.name {
+  width: 75%;
+}
+
+.message {
+  resize: none;
+  width: 100%;
+}
+.message .add__form_input {
+  width: 100%;
+  min-height: 120px;
+  height: 20vh;
+}
+
+.image {
+  display: flex;
+  column-gap: 15px;
+  min-width: 100%;
+}
+.image input[type=file] {
+  width: 30%;
+}
+
+input[type=button] {
+  min-width: 100px;
+  width: 25%;
+  height: 44.33px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  font-size: clamp(10px, 3.5vw, 14px);
+  font-weight: 500;
+  line-height: 24.2px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+
+textarea:focus, input[type=text]:focus {
+  outline: none;
+}
+
 /*# sourceMappingURL=style.css.map */
