@@ -27,31 +27,28 @@
 
 <body>
 
-    <header class="header" id="header">
+<header class="header" id="header">
+    
+    <a href="../index.html" class="header__a">
+        <div class="header__title"></div>
+    </a>
         
-        <a href="../index.html" class="header__a">
-            <div class="header__title"></div>
-        </a>
-            
-        <nav class="header__nav" id="nav">
-                <li class="nav__li"><a href="./pageShop.html">SHOP</a></li>
-                <li class="nav__li"><a href="./contacto.html">CONTACT</a></li>
-                <li class="nav__li"><a href="./login.html">LOGIN</a></li>
-                <li class="nav__li">
-                    <a href="#">
-        
-                        <box-icon name='cart' color='#f96301' class="bx"></box-icon>
-                    </a>
-                </li>
-            </nav>
-            
-            <div class="burger" id="burger"></div>
-    </header>
+    <nav class="header__nav" id="nav">
+            <li class="nav__li"><a href="./pageShop.html">SHOP</a></li>
+            <li class="nav__li"><a href="./contacto.html">CONTACT</a></li>
+            <li class="nav__li"><a href="./login.html">LOGIN</a></li>
+            <li class="nav__li">
+                <a href="#">
+    
+                    <box-icon name='cart' color='#f96301' class="bx"></box-icon>
+                </a>
+            </li>
+        </nav>
+        <div class="burger" id="burger"></div>
+</header>
 
 
 <main class="main__shop" id="main__Shop">
-        
-
     <section class="nav__category" id="nav__category">
 
         <box-icon name='filter' color='#30343f' class="filter__icon" id="filter"></box-icon>
@@ -59,21 +56,17 @@
         <box-icon name='left-arrow-alt'  class="bx_arrow" id="bx_arrow" color='#30343f'></box-icon> 
         <div class="filters">
 
-
         <article class="filters__text">
-
             <div class="search__box">
                 <h3 class="search__title">ORDENAR POR</h3>
-
                 <input list="ordenar" type="" class="ordenar__input" placeholder="Mayor a menor">
 
-            <datalist id="ordenar">
+                <datalist id="ordenar">
                     <option value="Mayor a menor"></option>
                     <option value="Menor a mayor"></option>
                 </datalist>
 
             </div>
-
 
             <div class="div__price">
                 <h3 class="search__title">PRECIO</h3>
@@ -83,12 +76,9 @@
                 </ul>
             </div>
 
-
             <div class="filter">
                 <h3 class="search__title">FILTRAR</h3>
                     <ul class="filter__list">
-                        
-                
                         <li class="filter__list_item">
                             <input type="checkbox" class="filter__list__item__imput" >
                             NUEVOS
@@ -109,17 +99,14 @@
                             FAVORITOS
                         </li>
                     </ul>
-                
             </div>
         </article>
         </div>        
 
         <div class="category__search">
-
             <input type="text" class="search__input" placeholder="Quiero buscar por...">
-
             <button class="btn__search">
-                <box-icon name='search' rotate='90' color='#fff' class="bx-search"></box-icon>
+            <box-icon name='search' rotate='90' color='#fff' class="bx-search"></box-icon>
             </button>
         </div> 
 
@@ -131,7 +118,6 @@
     </section>
         
     <section class="shop__list_product_grid" id="shop__list_product_grid">
-
         <article class="shop__product__card">
             <div class="starWars__img">
                 <div class="background__red">
@@ -278,21 +264,21 @@
 
 </main>
 
-    <footer class="footer footer__shop">
-        <div class="footer__div">
-            <div class="footer__nav">
-                <li><a href="./pageShop.html">SHOP</a></li>
-                <li><a href="./register.html">REGISTRARSE</a></li>
-                <li><a href="./login.html">INGRESAR</a></li>
-                <li><a href="./contacto.html">CONTACTO</a></li>
-            </div>
-            <div class="footer__logo"></div>
+<footer class="footer footer__shop">
+    <div class="footer__div">
+        <div class="footer__nav">
+            <li><a href="./pageShop.html">SHOP</a></li>
+            <li><a href="./register.html">REGISTRARSE</a></li>
+            <li><a href="./login.html">INGRESAR</a></li>
+            <li><a href="./contacto.html">CONTACTO</a></li>
         </div>
-        <h5 class="footer__copy_text">All rights reserved 2022 - FunkoShop & copy</h5>
-    </footer>
+        <div class="footer__logo"></div>
+    </div>
+    <h5 class="footer__copy_text">All rights reserved 2022 - FunkoShop & copy</h5>
+</footer>
     
-    <script src="../script/menuBurge.js"></script>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="../modulosJS/shop/moduloshop.js" type="module"></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>
 
