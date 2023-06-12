@@ -1,5 +1,5 @@
 export const sendData = () =>{ 
-    location.href = ("https://jesusantiago.github.io/Funko/index.html");
+    location.href = ("https://jesusantiago.github.io/Funko/html/listado.html");
 }
 
 // export const sendData = () =>{ 
