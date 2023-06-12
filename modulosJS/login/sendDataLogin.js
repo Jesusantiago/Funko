@@ -1,6 +1,10 @@
 export const sendData = () =>{ 
-    location.href = ("./../../index.html");
+    location.href = ("https://jesusantiago.github.io/Funko/index.html");
 }
+
+// export const sendData = () =>{ 
+//     location.href = ("./../../index.html");
+// }
 
 /*
 sendData()

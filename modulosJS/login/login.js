@@ -1,4 +1,4 @@
-import { getData } from "./getData.js";
+import {getData} from "./getDataLogin.js";
 
 const btn = document.getElementById("btnIngresar")
 
