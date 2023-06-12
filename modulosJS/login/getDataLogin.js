@@ -1,4 +1,7 @@
-import {sendData} from"./sendData.js"
+import {sendData} from"./sendDataLogin.js"
+
+export const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+export const passRegex = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
 export const getData= () =>{
     let email;
@@ -6,10 +9,8 @@ export const getData= () =>{
     let ckeckbox;
     
     const emailInput = document.getElementById("loginEmail");
-    const emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 
     const passwordInput = document.getElementById("loginPassword");
-    const passRegex = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$/;
 
     email = document.getElementById("loginEmail").value;
     password = document.getElementById("loginPassword").value;
@@ -51,7 +52,7 @@ obtiene los datos ingresados del input, llama a la function que los valida y si 
 */
 
 
-const validateString = (str, regex)=>{
+export const validateString = (str, regex)=>{
     const validoRegex = regex;
     return validoRegex.test(str);
 }
