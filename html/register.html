@@ -68,30 +68,31 @@
             <div class="register__form__name">
                 <label class="register__form_label" for="loginEmail">NOMBRE:
                     <input type="text" class="register__form_input" 
-                id="loginEmail" placeholder="Julian" required>
+                id="registerName" placeholder="Julian" required>
                 </label>
                 
     
                 <label class="register__form_label" for="loginPassword">APELLIDO:
                     <input type="text"  class="register__form_input" 
-                 id="loginPassword" placeholder="Alvarez" required>
+                 id="registerSubname" placeholder="Alvarez" required>
             </div>
 
             </label>
 
             <label class="register__form_label" for="loginPassword">EMAIL:
                 <input type="email"  class="register__form_input" 
-             id="loginPassword" placeholder="julianalvarez@gmail.com" required>
+             id="registerEmail" placeholder="julianalvarez@gmail.com" required>
             </label>
 
             <label class="register__form_label" for="loginPassword">CONTRASEÑA:
                 <input type="password"  class="register__form_input" 
-             id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
+             id="registerPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
             </label>
 
-            <label class="register__form_label_terminos"><input type="checkbox"  class="register__form_input_check"> Aceptar <span class="register__form_span">terminos y condiciones</span></label>
+            <label class="register__form_label_terminos">
+                <input type="checkbox"  class="register__form_input_check" id="registerCheck"> Aceptar <span class="register__form_span">terminos y condiciones</span></label>
 
-            <input type="button" class="register__form_register" value="Ingresar">
+            <input type="button" class="register__form_register" value="Ingresar" id="registerBtn">
             
         </form>
 
@@ -112,7 +113,7 @@
     <h5 class="footer__copy_text">All rights reserved 2022 - FunkoShop & copy</h5>
 </footer>
     
-<script src="./script/menuBurge.js"></script>
+<script src="../modulosJS/register/modulosRegister.js" type="module"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>
