@@ -18,48 +18,48 @@ modal.innerHTML = `
 
 <form class="add__form">
 
-    <label class="add__form_label categoria">Categoría
-        <select class="add__form_input">
+    <label class="add__form_label categoria" >Categoría
+        <select class="add__form_input" id="categoryAdd">
             <option required>HARRY POTTER</option>
             <option required>START WARS</option>
             <option required>POKEMON</option>      
         </select>
     </label>
     
-    <label class="add__form_label licencia">Licencia:
-        <select class="add__form_input">
+    <label class="add__form_label licencia" >Licencia:
+        <select class="add__form_input" id="licenseAdd">
             <option>a</option>
             <option>b</option>
             <option>c</option>
         </select>
     </label>
     
-    <label class="add__form_label name">Nombre del producto:
-        <input type="text" class="add__form_input" placeholder="Kakashi Hatake Shippuden Saga">
+    <label class="add__form_label name" >Nombre del producto:
+        <input type="text" class="add__form_input" placeholder="Kakashi Hatake Shippuden Saga" id="nameAdd">
     </label>
     
     <label class="add__form_label message">
-        <textarea class="add__form_input" placeholder="Descripción del producto"></textarea>
+        <textarea class="add__form_input" placeholder="Descripción del producto" id="descriptionAdd"></textarea>
     </label>
     
     <label class="add__form_label sku">SKU:
-        <input type="text" class="add__form_input" size="7" placeholder="SSK111AB001">
+        <input type="text" class="add__form_input" size="7" placeholder="SSK111AB001" id="skuAdd">
     </label>
     
     <label class="add__form_label price">Precio:
-        <input type="text" class="add__form_input" placeholder="$0.0000,00" size="7">
+        <input type="text" class="add__form_input" placeholder="$0.0000,00" size="7" id="priceAdd">
     </label>
     
     <label class="add__form_label stock">Stock:
-        <input type="text" class="add__form_input" placeholder="0" size="1">
+        <input type="text" class="add__form_input" placeholder="0" size="1" id="stockAdd">
     </label>
     
     <label class="add__form_label descuentos">Descuento:
-        <input type="text" class="add__form_input" placeholder="0%" size="5">
+        <input type="text" class="add__form_input" placeholder="0%" size="5" id="discountAdd">
     </label>
     
     <label class="add__form_label cuotas">Cuotas:
-        <select class="add__form_input">
+        <select class="add__form_input" id="quotasAdd">
             <option required>0% de descuento</option>
             <option required>10% de descuento</option>
             <option required>20% de descuento</option>      
@@ -75,12 +75,12 @@ modal.innerHTML = `
     </label>
 
     <label class="add__form_label image">Imágenes:
-        <input type="file" accept="image/png, image/jpeg" class="add_form_input image">
+        <input type="file" accept="image/png, image/jpeg" class="add_form_input image" id="imageAdd">
     </label>
 
-    <input type="button" class="add__from_input"  value="Agregar Producto">
+    <input type="button" class="add__from_input"  value="Agregar Producto" id="btnADD">
 
-    <input type="button" class="add__from_input" value="Limpiar">
+    <input type="button" class="add__from_input" value="Limpiar" id="btnClear">
     
     
 </form>
@@ -101,9 +101,12 @@ console.log("modal")
 export const clearFooter = ()=>{
     const footer = document.getElementById("footerAdd");
     //el footer va a desaparecer
-    footer.classList.toggle("footer")
+    // footer.classList.toggle("footer")
+    // footer.classList.toggle("footer__login")
+    // footer.classList.toogle("footer_none")
+    footer.classList.replace("footer", "footer_none")
     footer.classList.toggle("footer__login")
-    footer.classList.toogle("footer-none")
+    
 }
 
 
