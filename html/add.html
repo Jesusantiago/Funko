@@ -22,7 +22,31 @@
 </head>
 <body>
 
-    <main class="main__add">
+    <header class="header" id="header">
+
+        <a href="../index.html" class="header__a">
+            <div class="header__title"></div>
+        </a>
+            
+        <nav class="header__nav" id="nav">
+                <li class="nav__li"><a href="./pageShop.html">SHOP</a></li>
+                <li class="nav__li"><a href="./contacto.html">CONTACT</a></li>
+                <li class="nav__li"><a href="./login.html">LOGIN</a></li>
+                <li class="nav__li">
+                    <a href="#">
+                        <box-icon name='cart' color='#f96301' class="bx"></box-icon>
+                    </a>
+                </li>
+            </nav>
+            
+            <div class="burger" id="burger"></div>
+    </header>
+
+
+<section class="main__modal">
+    
+
+    <article class="main__add">
 
         <h2 class="add__title">CREAR NUEVO ITEM</h2>
 
@@ -49,7 +73,7 @@
             </label>
             
             <label class="add__form_label message">
-                <textarea class="add__form_input" placeholder="Descripción del producto" autofocus >
+                <textarea class="add__form_input" placeholder="Descripción del producto">
                 </textarea>
             </label>
             
@@ -97,7 +121,21 @@
         </form>
 
 
-    </main>
+    </article>
+</section>
+
+    <footer class="footer footer__login" id="footerAdd">
+        <div class="footer__div">
+            <div class="footer__nav">
+                <li><a href="./pageShop.html">SHOP</a></li>
+                <li><a href="./register.html">REGISTRARSE</a></li>
+                <li><a href="./login.html">INGRESAR</a></li>
+                <li><a href="./contacto.html">CONTACTO</a></li>
+            </div>
+            <div class="footer__logo"></div>
+        </div>
+        <h5 class="footer__copy_text">All rights reserved 2022 - FunkoShop & copy</h5>
+    </footer>
 
 </body>
 </html>

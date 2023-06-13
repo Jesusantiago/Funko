@@ -47,7 +47,12 @@
         <div class="burger" id="burger"></div>
 </header>
 
-<main class="main__listado">
+<main class="main__listado" id="mainListado">
+
+    <section id="mainModal" class="main__modal-none">
+        <box-icon name='x' id="closeModal"></box-icon>
+    </section>
+
 
     <section class="section__search">
         <label class="search__icon">
@@ -59,7 +64,8 @@
     <section class="section__list">
         <h2 class="list__title">LISTADO DE PRODUCTOS</h2>
 
-        <label class="list__label">AGREGAR
+        <label class="list__label">
+            <a id="btnAddItem">AGREGAR</a> 
             <input type="button" value="+">
         </label>
     </section>
@@ -88,7 +94,7 @@
 
 </main>
 
-<footer class="footer footer__login">
+<footer class="footer footer__login" id="footerAdd">
     <div class="footer__div">
         <div class="footer__nav">
             <li><a href="./pageShop.html">SHOP</a></li>
