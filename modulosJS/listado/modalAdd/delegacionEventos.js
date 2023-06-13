@@ -1,4 +1,6 @@
 import { clearFooter } from "./createModal.js";
+import { getDataAdd } from "./validadAdd.js";
+import {clearInput} from "./clearInput.js";
 
 
 const padreModal = document.getElementById("mainModal")
@@ -17,7 +19,17 @@ padreModal.addEventListener("click", (e) =>{
         clearFooter()
         //cierra el modal
     }
-    // if(e.target.id == )
+    if(e.target.id == "btnADD"){
+        console.log("btnADD")
+        e.preventDefault();
+        getDataAdd()
+        //verifica y envio los input 
+    }
+
+    if(e.target.id == "btnClear"){
+        console.log("clear")
+        clearInput()
+    }
 
 })
 
