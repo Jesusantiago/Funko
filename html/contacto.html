@@ -60,20 +60,20 @@
         <form class="contact__form">
 
             <label class="contact__form_label">Nombre:
-                <input type="text" class="contact__form_input" placeholder="Julian">
+                <input type="text" class="contact__form_input" placeholder="Julian" id="nameContact" required>
             </label>
             <label class="contact__form_label">Apellido:
-                <input type="text" class="contact__form_input" placeholder="Alvarez">
+                <input type="text" class="contact__form_input" placeholder="Alvarez" id="subnameContact">
             </label>
             <label class="contact__form_label">Email :
-                <input type="Email" class="contact__form_input" placeholder="julianalvarez@gmail.com">
+                <input type="Email" class="contact__form_input" placeholder="julianalvarez@gmail.com" id="emailContact">
             </label>
             <label class="contact__form_label">Mensaje:
-                <input type="text" class="contact__form_input" placeholder="Escribe acá tu mensaje">
+                <input type="text" class="contact__form_input" placeholder="Escribe acá tu mensaje" id="messageContact">
             </label>
 
-            <input class="contact__form_btn" type="button" value="ENVIAR">
-    
+            <input class="contact__form_btn" type="button" value="ENVIAR" id="btnConta">
+            
         </form>
 
     </section>
@@ -93,7 +93,7 @@
     <h5 class="footer__copy_text">All rights reserved 2022 - FunkoShop & copy</h5>
 </footer>
     
-<script src="../script/menuBurge.js"></script>
+<script type="module" src="../modulosJS/contact/moduleContact.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </body>
