@@ -81,17 +81,14 @@ export const getDataAdd = () =>{
         // image: image
     }
 
-    console.log(data)
     
     if(strValid){
         console.log("NO SE PUEDE ENVIAR")
     }else{
-        sendDataAdd();
+        const dataLocal = localStorage.setItem("product", JSON.stringify(data))
     }
 
-    
-
-    
-
-
+    return data;
 }
+
+

@@ -52,9 +52,10 @@ export const getdataContact = () =>{
 
     if(strValid){
         console.log("no se puede enviar")
-    }else{
-        console.log(dataContact)
     }
+    // else{
+    //     console.log(dataContact)
+    // }
 return dataContact;
 
 }

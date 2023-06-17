@@ -101,10 +101,7 @@ console.log("modal")
 export const clearFooter = ()=>{
     const footer = document.getElementById("footerAdd");
     //el footer va a desaparecer
-    // footer.classList.toggle("footer")
-    // footer.classList.toggle("footer__login")
-    // footer.classList.toogle("footer_none")
-    footer.classList.replace("footer", "footer_none")
+    footer.classList.toggle("footer", "footer_none")
     footer.classList.toggle("footer__login")
     
 }

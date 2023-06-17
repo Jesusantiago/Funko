@@ -1,6 +1,7 @@
 import { clearFooter } from "./createModal.js";
 import { getDataAdd } from "./validadAdd.js";
 import {clearInput} from "./clearInput.js";
+import { sendDataAdd } from "./sendDataAdd.js";
 
 
 const padreModal = document.getElementById("mainModal")
@@ -22,7 +23,7 @@ padreModal.addEventListener("click", (e) =>{
     if(e.target.id == "btnADD"){
         console.log("btnADD")
         e.preventDefault();
-        getDataAdd()
+        sendDataAdd()
         //verifica y envio los input 
     }
 
