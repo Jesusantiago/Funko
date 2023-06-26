@@ -2,6 +2,7 @@ import { clearFooter } from "./createModal.js";
 import { getDataAdd } from "./validadAdd.js";
 import {clearInput} from "./clearInput.js";
 import { sendDataAdd } from "./sendDataAdd.js";
+import { imgToBase64 } from "./imageFile.js";
 
 
 const padreModal = document.getElementById("mainModal")
@@ -32,6 +33,7 @@ padreModal.addEventListener("click", (e) =>{
         clearInput()
     }
 
+    if(e.target.id == "imageAdd") imgToBase64()
 })
 
 console.log("delegacion de evento");

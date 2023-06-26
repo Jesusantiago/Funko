@@ -1,5 +1,6 @@
 import { validateString } from "../../login/getDataLogin.js";
 import {sendDataAdd} from "./sendDataAdd.js"
+import {retrieveUrlsFromLocalStorage} from "./imageFile.js";
 
 export const getDataAdd = () =>{
     let category;
@@ -11,7 +12,7 @@ export const getDataAdd = () =>{
     let stock;
     let discount;
     let quota;
-    // let image;
+    let image;
 
     const categoryInput = document.getElementById("categoryAdd");
     const licenseInput = document.getElementById("licenseAdd");
@@ -22,7 +23,7 @@ export const getDataAdd = () =>{
     const stockInput = document.getElementById("stockAdd");
     const discountInput = document.getElementById("discountAdd");
     const quotasInput = document.getElementById("quotasAdd");
-    // const imageInput = document.getElementById("imageAdd");
+    const imageInput = document.getElementById("imageAdd");
 
 
     const textRegex = /[A-ZÑa-zñ]+/i;
@@ -39,7 +40,8 @@ export const getDataAdd = () =>{
     stock = document.getElementById("stockAdd").value;
     discount = document.getElementById("discountAdd").value;
     quota = document.getElementById("quotasAdd").options[document.getElementById("quotasAdd").selectedIndex].text;
-    // image = document.getElementById("imageAdd").value;
+    image = retrieveUrlsFromLocalStorage()
+
 
     let strValid = false;
 
@@ -77,15 +79,17 @@ export const getDataAdd = () =>{
         price: price,
         stock: stock,
         discount: discount,
-        quota: quota
-        // image: image
+        quota: quota,
+        image: image
     }
 
     
     if(strValid){
         console.log("NO SE PUEDE ENVIAR")
     }else{
-        const dataLocal = localStorage.setItem("product", JSON.stringify(data))
+        // const dataLocal = localStorage.setItem("product", JSON.stringify(data))
+        // console.log(data)
+        console.log(".")
     }
 
     return data;

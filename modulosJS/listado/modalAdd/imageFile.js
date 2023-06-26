@@ -1,24 +1,50 @@
-var imgToBase64 = () => {
-    var url = [];
-    let file = document.querySelector(".input-img")
-    file.addEventListener('change', (e) => {
-        const selectedfiles = e.target.files;
-        if (selectedfiles.length > 0) {
-            selectedfiles.forEach(selectedFile => {
-                [selectedFile] = selectedfiles;
-                const fileReader = new FileReader();
-                fileReader.onload = () => {
-                    const srcData = fileReader.result;
-                    const urlSplit = srcData.split(",");
-                    var urlIndex = urlSplit[1];
-                    url.push(urlIndex);
-                    console.log(srcData)
-                    console.log(url)
-                    localStorage.setItem('url', url);
-                };
+export const imgToBase64 = () => {
+	return new Promise((resolve, reject) => {
+	  let fileInput = document.getElementById("imageAdd");
+	  let urls = [];
+  
+	  const handleFile = (file) => {
+		const fileReader = new FileReader();
+  
+		fileReader.onload = () => {
+		  const srcData = fileReader.result;
+		  const urlSplit = srcData.split(",");
+		  const url = urlSplit[1];
+		  urls.push(url);
+  
+		  if (urls.length === fileInput.files.length) {
+			urls.forEach((url, index) => {
+				localStorage.setItem(`url_${index}`, url);})
 
-            fileReader.readAsDataURL(selectedFile);
-            })
-        }
-    })
-}
+			resolve(urls); // Resolvemos la promesa con la lista de URLs de datos generadas
+		  }
+		};
+  
+		fileReader.readAsDataURL(file);
+	  };
+  
+	  const handleInputChange = () => {
+		const selectedFiles = fileInput.files;
+		Array.from(selectedFiles).forEach((file) => {
+		  handleFile(file);
+		});
+	  };
+  
+	  fileInput.addEventListener('change', handleInputChange);
+	});
+  };
+
+export const retrieveUrlsFromLocalStorage = () => {
+	const urls = [];
+	const localStorageKeys = Object.keys(localStorage);
+  
+	localStorageKeys.forEach((key) => {
+	  if (key.startsWith("url_")) {
+		const url = localStorage.getItem(key);
+		urls.push(url);
+	  }
+	});
+  
+	return urls;
+  };
+

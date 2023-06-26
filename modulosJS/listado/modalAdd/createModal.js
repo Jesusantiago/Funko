@@ -75,7 +75,7 @@ modal.innerHTML = `
     </label>
 
     <label class="add__form_label image">Imágenes:
-        <input type="file" accept="image/png, image/jpeg" class="add_form_input image" id="imageAdd">
+        <input type="file" accept="image/png, image/jpeg" class="add_form_input image" id="imageAdd" multiple="multiple" >
     </label>
 
     <input type="button" class="add__from_input"  value="Agregar Producto" id="btnADD">

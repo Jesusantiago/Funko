@@ -1,3 +1,5 @@
+import { retrieveUrlsFromLocalStorage } from "./imageFile.js";
+
 
 export const clearInput = () =>{
     console.log("nuevo clear")
@@ -8,6 +10,7 @@ export const clearInput = () =>{
     let priceInput = document.getElementById("priceAdd");
     let stockInput = document.getElementById("stockAdd");
     let discountInput = document.getElementById("discountAdd");
+    let inputImagen = document.getElementById("imageAdd")
 
     if(nameInput.value != ""){
         nameInput.value = "";
@@ -26,8 +29,18 @@ export const clearInput = () =>{
     }
     if(discountInput.value != ""){
         discountInput.value = "";
+    }   
+    
+    const cleanImage = () =>{
+        inputImagen.type = "text"
+        inputImagen.type = "file"
+    }
+        
+    cleanImage()
+
+    const clearLocal = () =>{
+        localStorage.clear()
     }
 
-
-
+    clearLocal()
 }
