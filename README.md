@@ -10,4 +10,4 @@
 
 📲 https://www.linkedin.com/in/jesuscsantiago/
 
-📂 Link para ver el resultado: jesusantiago.github.io/Funko
+📂 Link para ver el resultado: https://jesusantiago.github.io/Funko/
