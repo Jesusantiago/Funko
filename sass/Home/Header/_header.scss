@@ -111,29 +111,22 @@
         @include minfux.media(980px){
             background-color: rgba(48, 52, 63, 0.942);
             position: absolute;
-            top:  max(80px, 9vw);
+            top:  max(50px, 9vw);
             right: 0;
             max-width: 100svw;
             height: calc(100svh - max(80px, 9vw));
-            padding-top:30px;
-            padding-bottom: 30px;
-
-
+            padding-top:300px;
+            padding-bottom: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
 
-
-            
             @include minfux.media(514px){
                 top:  max(50px, 9vw);    
                 height: calc(100svh - max(50px, 9vw));
-
             }
 
-
-    
             .nav__li{
                 display: inline-block;   
     
@@ -144,7 +137,6 @@
                     line-height: 23.48px;
                     font-weight: variables.$w-500;
                     
-    
                     .bx{
                         width: 40px;
                         height: 40px;
