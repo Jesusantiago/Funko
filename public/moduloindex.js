@@ -1,1 +1,1 @@
-import"../modulosJS/index/menuBurge.js";
+import "./modulosJS/index/menuBurge.js";

@@ -1,21 +1,14 @@
-let express = require("express");
-
-let app = express();
+const express = require("express");
+const app = express();
+const PORT = 3000;
+const homeRouters = require("./src/router/homeRouters.js");
+const shopRouters = require("./src/router/shopRouters.js")
 
 app.use('/static', express.static(__dirname + "/public"))
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 
-app.get("/hola", (req, res)=>{
-    const a = req.query.a;
-    const b = req.query.b;
+app.use("/", homeRouters);
+app.use("/", shopRouters);
 
-    res.send(`Tu resultado es: ${a * b}`);
-})
-
-
-app.get("/", (req,res)=>{
-    res.sendFile("./public/index.html", {
-        root: __dirname
-    })
-})
-
-app.listen("3000")
+app.listen(PORT, ()=>console.log(`Se inicio el servidor en ${PORT}`))

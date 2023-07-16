@@ -10,7 +10,6 @@
   align-items: center;
   padding: 0 max(40px, 7.5vw);
   font-family: "Raleway", sans-serif;
-  background-color: lightcoral;
   position: relative;
   z-index: 1;
 }
