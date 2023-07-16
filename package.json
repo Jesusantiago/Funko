@@ -8,7 +8,6 @@
     "binary-extensions": "^2.2.0",
     "braces": "^3.0.2",
     "chokidar": "^3.5.3",
-    "express": "^4.18.2",
     "fill-range": "^7.0.1",
     "glob-parent": "^5.1.2",
     "immutable": "^4.3.0",
@@ -16,7 +15,6 @@
     "is-extglob": "^2.1.1",
     "is-glob": "^4.0.3",
     "is-number": "^7.0.0",
-    "nodemon": "^2.0.22",
     "normalize-path": "^3.0.0",
     "picomatch": "^2.3.1",
     "readdirp": "^3.6.0",
@@ -26,11 +24,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch app.js"
+    "sass": "sass --watch sass:css"
   },
   "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "sequelize-cli": "^6.6.1"
-  }
+  "license": "ISC"
 }
