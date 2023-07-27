@@ -1,0 +1,171 @@
+<%- include("../partials/header") %>
+
+<main class="product__main" id="product__main">
+
+    <% item.forEach(item =>{ %>
+        <section class="product__section__product">
+            <article class="product__img"></article>
+            <article class="product__text">
+                <h3 class="product__text__titleLower"><%= item.licence_name %></h3>
+                <h2 class="product__text__titleSuperior"><%=item.product_name %></h2>
+                <p class="product__text_paragraph"><%= item.product_description %></p>
+                <span class="product__text_price">$ <%= item.price %> .-</span>
+                <div class="product__btn">
+
+                    <div class="product__btn__lower" id="subtractItemProduct">
+                        <span>-</span>
+                    </div>
+
+                    <div class="product__btn__zero">
+                        <span id="itemTotal"></span>
+                    </div>            
+                    
+                    <div class="product__btn__superior" id="addItemProduct">
+                        <span>+</span>
+                    </div>
+
+                    <div class="product__btn__car">
+                        <span>Agregar al Carrito</span>
+                    </div>
+
+                </div>
+
+                <div class="medios" id="medios">
+                    <span class="producto__medios__pago">Ver métodos de pago</span>
+                    <span class="product__medios__fees">- 3 CUOTAS SIN INTERÉS</span>
+                </div>              
+            </article>
+        </section>
+    <% }); %>  
+
+    
+    <section class="modal__medios">
+    
+        <div class="div__medios">
+
+            <div class="x__close" id="close__modal"></div>
+        
+            <h2 class="medios__title">Medios de pago para este producto</h2>
+            <p class="medios__paragraph">Podés pagar tus compras con cualquier de estos medios. Es rápido y seguro siempre.</p>
+        
+            <div class="medios__line"></div>
+        
+            <h3 class="medios__title">Tarjetas de crédito</h3>
+        
+            <p class="medios__paragraph">Acreditación instantánea</p>
+        
+            <h3 class="medios__title">Mismo precios en hasta 9 cuotas con estas bancos:</h3>
+        
+            <div class="medios__bancos">
+        
+                <div class="santander"></div>
+                <div class="icbc"></div>
+                <div class="bbva"></div>
+                <div class="galicia"></div>
+        
+        
+            </div>
+        
+            <h3 class="medios__title">O hasta 12 cuotas con interés</h3>
+        
+            <div class="medios__bancos">
+        
+                <div class="mastercard"></div>
+                <div class="visa"></div>
+                <div class="paypal"></div>
+                <div class="naranja"></div>
+                <div class="cabal"></div>
+                
+        
+            </div>
+        
+            <h3 class="medios__title">Dinero en tu cuenta de Mercado Pago</h3>
+        
+            <p class="medios__paragraph">Al finalizar tu compra, pagás con el dinero disponible en tu cuenta. Podés ingresar dinero a Mercado Pago por Débito inmediato, transferencia bancaria o en efectivo.</p>
+        
+            <p class="medios__paragraph">Acreditación instantánea.</p>
+        
+            <div class="medios__bancos">
+        
+                <div class="mercadoPago"></div>
+            </div>
+        
+            <div class="medios__line"></div>
+        
+            <h3 class="medios__title">Dinero en efectivo a traves de:</h3>
+        
+            <div class="medios__bancos">
+        
+                <div class="pagofacil"></div>
+                <div class="rapipago"></div>
+        
+            </div>
+        
+        </div>
+        
+        
+    </section>
+
+
+    <section class="lastProduct">
+
+        <h2 class="lastProduct__title">ÚLTIMOS LANZAMIENTOS</h2>
+        
+        <article class="lastProduct_cards">
+
+            <article class="product__card">
+                <div class="starWars__img">
+                    <div class="background__red">
+                        <span class="background__span">NUEVO</span>
+                    </div>
+                    <div class="arrowback"></div>
+                </div>
+
+                <div class="product__card_text">
+
+                    <h3 class="last__product_title">STAR WARS</h3>
+                    <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
+                    <h3 class="last__product__price">$ 1799,99.-</h3>
+                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                </div>
+            </article>
+
+            <article class="product__card">
+                <div class="pokemon__img">
+                    <div class="background__red">
+                        <span class="background__span">NUEVO</span>
+                    </div>
+                </div>
+
+                <div class="product__card_text">
+                    <h3 class="last__product_title">POKEMON</h3>
+                    <h2 class="last__product_title_description">PIDGEOTTO</h2>
+                    <h3 class="last__product__price">$ 1799,99.-</h3>
+                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                </div>
+            </article>
+
+            <article class="product__card">
+                <div class="harryPotter__img">
+                    <div class="background__red">
+                        <span class="background__span">NUEVO</span>
+                    </div>
+                    <div class="arrownext"></div>
+                </div>
+
+                <div class="product__card_text">
+                    <h3 class="last__product_title">HARRY POTTER</h3>
+                    <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
+                    <h3 class="last__product__price">$ 1799,99.-</h3>
+                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                </div>
+            </article>
+
+        </article>
+
+    </section>
+</main>
+
+
+
+<%- include("../partials/footer") %>
