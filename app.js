@@ -20,10 +20,10 @@ app.set("view engine", "ejs")
 app.set("views", "./src/views")
 
 app.use("/", homeRouters);
-app.use("/", shopRouters);
-app.use("/", contactRouters);
-app.use("/", loginRouters);
-app.use("/", registerRouters);
+app.use("/shop", shopRouters);
+app.use("/contact", contactRouters);
+app.use("/login", loginRouters);
+app.use("/register", registerRouters);
 
 app.use(error404)
 
