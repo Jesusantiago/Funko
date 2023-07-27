@@ -30,21 +30,10 @@ const getItem = async (req,res)=>{
     });
 };
 
-const createItem = (req, res) =>{
-    res.send("hola desde create ITEM")
-}
 
-const deleteItem =  (req,res) =>{
-    const id = req.params.id;
-    let result = deleteOne({product_id : id})
-    res.send(result)
-    
-}
 
 
 module.exports = {
     getItems,
-    getItem,
-    createItem,
-    deleteItem
+    getItem
 }
