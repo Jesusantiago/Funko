@@ -1,0 +1,49 @@
+<%- include("../partials/header") -%>
+
+<main class="main__register">
+    <section class="section__register">
+        <article class="article__register">
+            <div class="register__div">
+                <img src="../img/views/baby-yoda-view.png" alt="" srcset="">
+            </div>          
+        </article>
+        
+        <form class="register__form">
+            <h1 class="register__title">Crea tu cuenta</h1>
+    
+            <h3 class="register__subtitle">Completa el formulario para ser parte del mundo de los Funkos</h3>
+
+            <div class="register__form__name">
+                <label class="register__form_label" for="loginEmail">NOMBRE:
+                    <input type="text" class="register__form_input" 
+                id="registerName" placeholder="Julian" required>
+                </label>
+
+                <label class="register__form_label" for="loginPassword">APELLIDO:
+                    <input type="text"  class="register__form_input" 
+                 id="registerSubname" placeholder="Alvarez" required>
+            </div>
+        </label>
+
+            <label class="register__form_label" for="loginPassword">EMAIL:
+                <input type="email"  class="register__form_input" 
+             id="registerEmail" placeholder="julianalvarez@gmail.com" required>
+            </label>
+
+            <label class="register__form_label" for="loginPassword">CONTRASEÑA:
+                <input type="password"  class="register__form_input" 
+             id="registerPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
+            </label>
+
+            <label class="register__form_label_terminos">
+                <input type="checkbox"  class="register__form_input_check" id="registerCheck"> Aceptar <span class="register__form_span">terminos y condiciones</span></label>
+
+            <input type="button" class="register__form_register" value="Ingresar" id="registerBtn">
+            
+        </form>
+
+    </section>
+    
+</main>
+
+<%- include("../partials/footerUnic") -%>

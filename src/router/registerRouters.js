@@ -1,8 +1,12 @@
 const express = require("express");
 const router = express.Router()
 
-router.get("/register", (req,res)=>{
-    res.send("Hola desde register")
+router.get("/", (req,res)=>{
+    res.render("../views/about/register", {
+        view : {
+            title : "Registro - FunkoShop"
+        }
+    })
 })
 
 router.post("/", (req,res)=>{
