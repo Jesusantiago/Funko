@@ -1,0 +1,114 @@
+<%- include("partials/header") %>
+<main class="main">
+        
+    <section class="banner">
+        <div class="banner_img"></div>
+        <div class="banner__text">
+            <h2 class="banner__text_title">Nuevos Ingresos</h2>
+            <span class="banner__text_span">Descubrí el próximo Funko Pop de tu colección</span>
+            <a href="./shop" class="banner__text_btn">SHOP</a>
+        </div>
+    </section>
+
+
+        <% items.forEach(item =>{ %>
+            <section class="firstProduct">
+                <div class="home__product__text">
+                    <h2 class="home__product__text_title"><%= item.licence_name%></h2>
+                    <p class="home__product__text_paragraph"><%= item.product_description%></p>
+                    <div class="home__product__text_line"></div>
+                    <a href="/shop/items/<%= item.product_id%>" class="home__product__btn">VER COLECCIÓN</a>
+                </div>
+                
+                <div class="home__product__img"></div>
+            </section>
+        <% }) %>  
+
+
+    <!-- <section class="secondProduct">
+        <div class="home__product__text">
+            <h2 class="home__product__text_title">POKEMON INDIGO</h2>
+            <p class="home__product__text_paragraph">Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
+            <div class="home__product__text_line"></div>
+            <a href="/item:id" class="home__product__btn">VER COLECCIÓN</a>
+        </div>
+
+        <div class="home__product__img_second"></div>
+    </section>
+
+    <section class="thirdProduct">
+        <div class="home__product__text">
+            <h2 class="home__product__text_title">HARRY POTTER</h2>
+            <p class="home__product__text_paragraph">Revive los recuerdos de una saga llena de magia y encanto.</p>
+            <div class="home__product__text_line"></div>
+            <a href=/item:id" class="home__product__btn">VER COLECCIÓN</a>
+        </div>
+
+        <div class="home__product__img_third"></div>
+    </section> -->
+
+    <section class="lastProduct">
+
+        <h2 class="lastProduct__title">ÚLTIMOS LANZAMIENTOS</h2>
+        
+        <article class="lastProduct_cards">
+
+            <article class="product__card">
+                <div class="starWars__img">
+                    <div class="background__red">
+                        <span class="background__span">NUEVO</span>
+                    </div>
+                    <div class="arrowback"></div>
+                </div>
+
+                <div class="product__card_text">
+
+                    <h3 class="last__product_title">STAR WARS</h3>
+                    <h2 class="last__product_title_description">STORMTROOPER LIGHTSABER</h2>
+                    <h3 class="last__product__price">$ 1799,99.-</h3>
+                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                </div>
+            </article>
+
+            <article class="product__card">
+                <div class="pokemon__img">
+                    <div class="background__red">
+                        <span class="background__span">NUEVO</span>
+                    </div>
+                </div>
+
+                <div class="product__card_text">
+                    <h3 class="last__product_title">POKEMON</h3>
+                    <h2 class="last__product_title_description">PIDGEOTTO</h2>
+                    <h3 class="last__product__price">$ 1799,99.-</h3>
+                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                </div>
+            </article>
+
+            <article class="product__card">
+                <div class="harryPotter__img">
+                    <div class="background__red">
+                        <span class="background__span">NUEVO</span>
+                    </div>
+                    <div class="arrownext"></div>
+                </div>
+
+                <div class="product__card_text">
+                    <h3 class="last__product_title">HARRY POTTER</h3>
+                    <h2 class="last__product_title_description">LUNA LOVEGOOD LION MASK</h2>
+                    <h3 class="last__product__price">$ 1799,99.-</h3>
+                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                </div>
+            </article>
+
+        </article>
+
+    </section>
+
+    <a href="https://api.whatsapp.com/send/?phone=%2B5491140665355&text&type=phone_number&app_absent=0" class="icon__wp">
+        <box-icon name='whatsapp' type='logo' color='#25d366' class="bx__wapp" ></box-icon>
+    </a>
+
+</main>
+
+<%- include("partials/footer") %>

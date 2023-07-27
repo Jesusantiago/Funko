@@ -16,6 +16,9 @@ app.use('/static', express.static(__dirname + "/public"))
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
+app.set("view engine", "ejs")
+app.set("views", "./src/views")
+
 app.use("/", homeRouters);
 app.use("/", shopRouters);
 app.use("/", contactRouters);

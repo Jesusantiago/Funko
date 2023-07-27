@@ -1,0 +1,183 @@
+Product: 
+
+    product_name: "Baby Yoda Blueball",
+    product_description: "Figura coleccionable de Baby Yoda (Grogu) - the mandalorian saga, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW001001",
+    dues: 3,
+    imagen_front: "public\img\multimedia\star-wars\baby-yoda-1.webp"
+    imagen_back: "public\img\multimedia\star-wars\baby-yoda-box.webp" 
+    licence_id: 2
+    category_id: 1
+
+    product_name: "Boba fett",
+    product_description: "Figura coleccionable de Boba fett, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW001002",
+    dues: 3,
+    imagen_front: "public\img\multimedia\star-wars\bobbafeth-1.webp"
+    imagen_back: "public\img\multimedia\star-wars\bobbafeth-box.webp" 
+    licence_id: 2
+    category_id: 1
+
+    product_name: "Luke Skywalfer with Grogu",
+    product_description: "Figura coleccionable de Luke Skywalfer con Grodu, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW001003",
+    dues: 3,
+    imagen_front: "public\img\multimedia\star-wars\luke-1.webp"
+    imagen_back: "public\img\multimedia\star-wars\luke-box.webp" 
+    licence_id: 2
+    category_id: 1
+
+    product_name: "Stormtrooper",
+    product_description: "Figura coleccionable de Stormtrooper, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW001004",
+    dues: 3,
+    imagen_front: "public\img\multimedia\star-wars\trooper-1.webp"
+    imagen_back: "public\img\multimedia\star-wars\trooper-box.webp" 
+    licence_id: 2
+    category_id: 1
+
+
+    product_name: "Vulpix",
+    product_description: "Figura coleccionable de Vulpix, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW002001",
+    dues: 3,
+    imagen_front: "public\img\multimedia\pokemon\vulpix-1.webp"
+    imagen_back: "public\img\multimedia\pokemon\vulpix-box.webp" 
+    licence_id: 3
+    category_id: 1
+
+    product_name: "Charmander",
+    product_description: "Figura coleccionable de Charmander, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW002002",
+    dues: 3,
+    imagen_front: "public\img\multimedia\pokemon\charmander-1.webp"
+    imagen_back: "public\img\multimedia\pokemon\charmander-box.webp" 
+    licence_id: 3
+    category_id: 1 
+
+    product_name: "Dragonite",
+    product_description: "Figura coleccionable de Dragonite, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW002003",
+    dues: 3,
+    imagen_front: "public\img\multimedia\pokemon\dragonite-1.webp"
+    imagen_back: "public\img\multimedia\pokemon\dragonite-box.webp" 
+    licence_id: 3
+    category_id: 1 
+
+    product_name: "Pidgeotto",
+    product_description: "Figura coleccionable de Pidgeotto, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW002004",
+    dues: 3,
+    imagen_front: "public\img\multimedia\pokemon\pidgeotto-1.webp"
+    imagen_back: "public\img\multimedia\pokemon\pidgeotto-box.webp" 
+    licence_id: 3
+    category_id: 1 
+    
+    product_name: "Pikachu",
+    product_description: "Figura coleccionable de Pikachu, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW002005",
+    dues: 3,
+    imagen_front: "public\img\multimedia\pokemon\pikachu-1.webp"
+    imagen_back: "public\img\multimedia\pokemon\pikachu-box.webp" 
+    licence_id: 3
+    category_id: 1 
+
+    product_name: "Patronus",
+    product_description: "Figura coleccionable de Patronus, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW003001",
+    dues: 3,
+    imagen_front: "public\img\multimedia\harry-potter\snape-patronus-1.webp"
+    imagen_back: "public\img\multimedia\harry-potter\snape-patronus-box.webp" 
+    licence_id: 1
+    category_id: 1 
+
+    product_name: "Harry Potter",
+    product_description: "Figura coleccionable de Harry Potter, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW003002",
+    dues: 3,
+    imagen_front: "public\img\multimedia\harry-potter\harry-1.webp"
+    imagen_back: "public\img\multimedia\harry-potter\harry-box.webp" 
+    licence_id: 1
+    category_id: 1 
+    
+    product_name: "Hermione Granger",
+    product_description: "Figura coleccionable de Hermione Granger, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW003003",
+    dues: 3,
+    imagen_front: "public\img\multimedia\harry-potter\hermione-1.webp"
+    imagen_back: "public\img\multimedia\harry-potter\hermione-box.webp" 
+    licence_id: 1
+    category_id: 1 
+
+    product_name: "Luna Lovegood",
+    product_description: "Figura coleccionable de luna Lovegood, edición limitada",
+    price: 1790.00, 
+    stock: 10,
+    disconunt: 20,
+    sku: "STW003004",
+    dues: 3,
+    imagen_front: "public\img\multimedia\harry-potter\luna-1.webp"
+    imagen_back: "public\img\multimedia\harry-potter\luna-box.webp" 
+    licence_id: 1
+    category_id: 1 
+
+    INSERT INTO product 
+    (product_name, 
+    product_description, 
+    price, 
+    stock, 
+    disconunt, 
+    sku, 
+    dues, 
+    imagen_front, 
+    imagen_back, 
+    licence_id, 
+    category_id) 
+    VALUES 
+    ("Baby Yoda Blueball", 
+    "Figura coleccionable de Baby Yoda (Grogu) - the mandalorian saga, edición limitada", 
+    1790.00, 
+    10, 
+    20,
+    "STW001001", 
+    3, 
+    "public\img\multimedia\star-wars\baby-yoda-1.webp", 
+    "public\img\multimedia\star-wars\baby-yoda-box.webp", 
+    2,
+    1);
