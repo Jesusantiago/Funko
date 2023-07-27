@@ -1,0 +1,38 @@
+<%- include("../partials/header") %>
+
+<main class="main__login">
+    
+
+    <section class="section__login">
+
+        <h1 class="login__title">INGRESAR A MI CUENTA</h1>
+
+        <form class="login__form">
+            <label class="login__form_label" for="loginEmail">EMAIL:
+                <input type="email" class="login__form_input" 
+            id="loginEmail" placeholder="johndoe@correo.com" required>
+            </label>
+            
+
+            <label class="login__form_label" for="loginPassword">CONTRASEÑA:
+                <input type="password"  class="login__form_input" 
+             id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
+            </label>
+            
+        </form>
+
+        <article class="login__article">
+            <input type="button" class="login__article_ingresar" value="Ingresar" id="btnIngresar">
+
+            
+
+            <label  class="login__article_label">
+                <input type="checkbox"  class="login__article_input" id="ingresar__checkbox"> Recordarme</label>
+        </article>
+
+        <span class="login__recupero">Olvidé mi contraseña</span>
+    </section>
+    
+</main>
+
+<%- include("../partials/footerUnic") -%>

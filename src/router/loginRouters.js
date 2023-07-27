@@ -2,7 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/login", (req, res)=>{
-    res.send("Hola desde el login")
+    res.render("../views/about/login", {
+        view : {
+            title: "Login - FunkoShop"
+        }
+    })
 })
 
 router.post("/", (req,res)=>{
