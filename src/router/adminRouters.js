@@ -1,23 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const adminControllers = require("../controllers/adminControllers")
 
-router.get("/", (req, res)=>{
-    res.render("../views/admin/admin", {
-        view : {
-            title : "Admin - FunkoShop"
-        }
-    })
-})
+router.get("/", adminControllers.getAdmin)
 
 module.exports = router;
-
-// const express = require("express")
-// const router = express.Router()
-
-// router.get("/", (req,res)=>{
-//     res.render("../views/admin/admin", {
-//         view: {
-//             title : "admin - FunkoShop"
-//         }
-//     })
-// })

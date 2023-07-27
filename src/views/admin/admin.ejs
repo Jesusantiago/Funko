@@ -18,7 +18,7 @@
         <h2 class="list__title">LISTADO DE PRODUCTOS</h2>
 
         <label class="list__label">
-            <a id="btnAddItem">AGREGAR</a> 
+            <a id="btnAddItem" href="/admin/add">AGREGAR</a> 
             <input type="button" value="+">
         </label>
     </section>
@@ -34,14 +34,17 @@
         </thead>
 
         <tbody>
-            <tr>
-                <td>01</td>
-                <td>STW001001</td>
-                <td>Baby Yoda Blueball</td>
-                <td>STAR WARS</td>
-                <td><box-icon name='pencil' type='solid' color='#1d84b5' ></box-icon></td>
-                <td><box-icon name='trash' color='#fd0000' ></box-icon></td>
-            </tr>
+            <% items.forEach(item =>{ %>
+                <tr>
+                    <td><%= item.product_id %></td>
+                    <td><%= item.sku %></td>
+                    <td><%= item.product_name %></td>
+                    <td><%= item.licence_name %></td>
+                    <td><box-icon name='pencil' type='solid' color='#1d84b5' ></box-icon></td>
+                    <td><box-icon name='trash' color='#fd0000' ></box-icon></td>
+                </tr>
+            <% }) %>  
+
         </tbody>
     </table>
 
