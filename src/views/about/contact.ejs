@@ -1,0 +1,35 @@
+<%- include("../partials/header") %>
+
+<main class="main__contact">
+
+    <section class="contact__section">
+        
+        <h2 class="contact__section_title">Contactanos</h2>
+
+        <h3 class="contact__section_subtitle">Dejamos tu consulta y pronto nos podenos en contacto contigo</h3>
+        
+
+        <form class="contact__form">
+
+            <label class="contact__form_label">Nombre:
+                <input type="text" class="contact__form_input" placeholder="Julian" id="nameContact" required>
+            </label>
+            <label class="contact__form_label">Apellido:
+                <input type="text" class="contact__form_input" placeholder="Alvarez" id="subnameContact">
+            </label>
+            <label class="contact__form_label">Email :
+                <input type="Email" class="contact__form_input" placeholder="julianalvarez@gmail.com" id="emailContact">
+            </label>
+            <label class="contact__form_label">Mensaje:
+                <input type="text" class="contact__form_input" placeholder="Escribe acá tu mensaje" id="messageContact">
+            </label>
+
+            <input class="contact__form_btn" type="button" value="ENVIAR" id="btnConta">
+            
+        </form>
+
+    </section>
+
+</main>
+
+<%- include("../partials/footerUnic") %>

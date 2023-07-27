@@ -2,7 +2,11 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/contact", (req, res)=>{
-    res.send(`Hola desde contact`)
+    res.render("../views/about/contact", {
+        view : {
+            title : "Contacto - FunkoShop"
+        }
+    })
 })
 
 /*
