@@ -8,6 +8,7 @@ const shopRouters = require("./src/router/shopRouters.js")
 const contactRouters = require("./src/router/contactRouters.js")
 const loginRouters = require("./src/router/loginRouters.js")
 const registerRouters = require("./src/router/registerRouters.js")
+const adminRouters = require("./src/router/adminRouters.js")
 const {error404} = require("./src/utils/errorHandler.js")
 
 const PORT = process.env.PORT;
@@ -24,6 +25,7 @@ app.use("/shop", shopRouters);
 app.use("/contact", contactRouters);
 app.use("/login", loginRouters);
 app.use("/register", registerRouters);
+app.use("/admin", adminRouters);
 
 app.use(error404)
 

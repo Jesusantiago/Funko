@@ -1,0 +1,50 @@
+<%- include("../partials/header") -%>
+
+<main class="main__listado" id="mainListado">
+
+    <section id="mainModal" class="main__modal-none">
+        <box-icon name='x' id="closeModal"></box-icon>
+    </section>
+
+
+    <section class="section__search">
+        <label class="search__icon">
+            <box-icon name='search-alt-2'></box-icon>
+            <input type="search" placeholder="código, nombre o categoria">
+        </label>
+    </section>
+
+    <section class="section__list">
+        <h2 class="list__title">LISTADO DE PRODUCTOS</h2>
+
+        <label class="list__label">
+            <a id="btnAddItem">AGREGAR</a> 
+            <input type="button" value="+">
+        </label>
+    </section>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Código</td>
+                <td>Nombre del Producto</td>
+                <td>Categoria</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>STW001001</td>
+                <td>Baby Yoda Blueball</td>
+                <td>STAR WARS</td>
+                <td><box-icon name='pencil' type='solid' color='#1d84b5' ></box-icon></td>
+                <td><box-icon name='trash' color='#fd0000' ></box-icon></td>
+            </tr>
+        </tbody>
+    </table>
+
+</main>
+
+<%- include("../partials/footerUnic") -%>
