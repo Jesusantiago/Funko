@@ -14,6 +14,14 @@ const getAdmin = async (req,res) => {
     })
 }
 
+const getAdd = async (req,res)=>{
+    res.render("../views/admin/add", {
+        view : {
+            title : "Agregar un nuevo Item"
+        }
+    })
+}
 module.exports = {
-    getAdmin
+    getAdmin,
+    getAdd
 }
