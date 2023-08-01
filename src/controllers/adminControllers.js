@@ -1,4 +1,6 @@
-const {getAllAdmin } = require("../services/adminService");
+const {getAllAdmin} = require("../services/adminService");
+const {getLicenceItem} = require("../services/licenceService")
+const {getCategoryItem} = require("../services/categoryService")
 
 const getAdmin = async (req,res) => {
     let items = await getAllAdmin()
@@ -14,14 +16,21 @@ const getAdmin = async (req,res) => {
     })
 }
 
-const getAdd = async (req,res)=>{
+const getLicenceAdd = async (req, res) =>{
+    let licence = await getLicenceItem()
+    let category = await getCategoryItem();
+    
     res.render("../views/admin/add", {
         view : {
-            title : "Agregar un nuevo Item"
-        }
+            title : "Agregar producto - FunkoShop"
+        },
+        category : category,
+        licence : licence
     })
 }
+
+
 module.exports = {
     getAdmin,
-    getAdd
+    getLicenceAdd
 }
