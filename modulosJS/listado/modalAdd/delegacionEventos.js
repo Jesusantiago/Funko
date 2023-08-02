@@ -17,7 +17,7 @@ padreModal.addEventListener("click", (e) =>{
     //escucha todos los eventos click que sucedan en sus hijos y estos se ejecutaran sobre su id
     // console.log(e)
     if(e.target.id == "closeModal"){
-        modalAdd.classList.replace("main__modal", "main__modal-none")
+        modalAdd.classList.replace("main__modal_add", "main__modal-none")
         clearFooter()
         //cierra el modal
     }
