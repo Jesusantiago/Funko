@@ -26,6 +26,14 @@ const getOne = async (params) =>{
     }
 }
 
+// const addOne = async (params) =>{
+//     try{
+//         const [rows] = ("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, imagen_front, imagen_back, licence_id, category_id) VALUES ?;", [params])
+//     }catch(e){
+
+//     }
+// }
+
 const deleteOne = async (req,res)=>{
     try{
         const [rows] = await conn.query("DELETE  FROM product WHERE ?;", params)

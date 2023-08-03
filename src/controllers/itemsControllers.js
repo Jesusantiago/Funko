@@ -2,7 +2,6 @@ const { getAllItems, getOneItem } = require( "../services/itemsServices")
 
 const getItems =  async (req, res)=>{ 
     let items = await getAllItems()
-    console.log(items)
     if(items.error){
         items = `Hubo un error`
     }
@@ -14,11 +13,9 @@ const getItems =  async (req, res)=>{
         items: items
     });    
 };
-
 const getItem = async (req,res)=>{
     const id = req.params.id;
     let item = await getOneItem({product_id : id})
-    console.log(item)
     if(item.error){
         item = `Hubo un error`
     }
