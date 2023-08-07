@@ -1,4 +1,4 @@
-const { getAll, getOne } = require("../models/itemsModel");
+const { getAll, getOne, home } = require("../models/itemsModel");
 
 const getAllItems = async () =>{
     const getAllItemsShop = await getAll()
@@ -12,7 +12,14 @@ const getOneItem = async (params) =>{
     return getOneItemView;
 }
 
+const itemHome = async () =>{
+    const getThreeItemHome = await home()
+    return getThreeItemHome;
+}
+
+
 module.exports = {
     getAllItems,
-    getOneItem
+    getOneItem,
+    itemHome
 }

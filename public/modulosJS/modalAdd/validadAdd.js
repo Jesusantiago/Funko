@@ -1,5 +1,5 @@
-import { validateString } from "../../login/getDataLogin.js";
-import {sendDataAdd} from "./sendDataAdd.js"
+import { validateString } from "../login/getDataLogin.js";
+import { sendData } from "../login/sendDataLogin.js";
 import {retrieveUrlsFromLocalStorage} from "./imageFile.js";
 
 export const getDataAdd = () =>{
@@ -31,15 +31,23 @@ export const getDataAdd = () =>{
     const numRegex = /^[0-9]+$/;
 
     category = document.getElementById("categoryAdd").options[document.getElementById("categoryAdd").selectedIndex].text;
-    // category.options[category.selectedIndex].text;
+
     license = document.getElementById("licenseAdd").options[document.getElementById("licenseAdd").selectedIndex].text;
+
     name = document.getElementById("nameAdd").value;
+
     description = document.getElementById("descriptionAdd").value;
+
     sku = document.getElementById("skuAdd").value;
+
     price = document.getElementById("priceAdd").value;
+
     stock = document.getElementById("stockAdd").value;
+
     discount = document.getElementById("discountAdd").value;
+
     quota = document.getElementById("quotasAdd").options[document.getElementById("quotasAdd").selectedIndex].text;
+
     image = retrieveUrlsFromLocalStorage()
 
 
@@ -87,12 +95,8 @@ export const getDataAdd = () =>{
     if(strValid){
         console.log("NO SE PUEDE ENVIAR")
     }else{
-        // const dataLocal = localStorage.setItem("product", JSON.stringify(data))
-        // console.log(data)
-        console.log(".")
+        sendData()
     }
 
     return data;
 }
-
-

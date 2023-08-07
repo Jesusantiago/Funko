@@ -12,9 +12,13 @@
             <% items.forEach((item) => { %>
 
                     <label class="add__form_label name">Nombre del producto:
-                        <input type="text" class="add__form_input" placeholder="<%= item.product_name %>">
+                        <input type="text" class="add__form_input" value="<%= item.product_name %>"> 
                     </label>
-                    
+
+            <% }) %>
+
+            <% category.forEach((item) => { %>
+            
 
                     <label class="add__form_label categoria" for="categoria">Categoría:
                         <select class="add__form_input" name="categoria" required>
@@ -22,48 +26,46 @@
                                 <option value=""><%= item.category_name %></option>
                         </select>
                     </label>
-                    
-                    <label class="add__form_label licencia" for="licence">Licencia:
-                        <select class="add__form_input" name="licence" required>
-                            <option value="" disabled selected hidden>Seleccionar</option>
+
+            <% }) %>
+
+            
+            <label class="add__form_label licencia" for="licence">Licencia:
+                <select class="add__form_input" name="licence" required>
+                    <option value="" disabled selected hidden>Seleccionar</option>
+                    <% licence.forEach((item) => { %>
                                 <option value=""><%= item.licence_name %></option>
+                    <% }) %>
                         </select>
                     </label>
+
+            <% items.forEach((item) => { %>
                     
                     <label class="add__form_label message">
-                        <textarea class="add__form_input" placeholder="Descripción del producto">
+                        <textarea class="add__form_input" value="">
+                            <%= item.product_description %>
                         </textarea>
                     </label>
                     
                     <label class="add__form_label sku">SKU:
-                        <input type="text" class="add__form_input" size="7" placeholder="SSK111AB001">
+                        <input type="text" class="add__form_input" size="10" value="<%= item.sku %>">
                     </label>
                     
                     <label class="add__form_label price">Precio:
-                        <input type="text" class="add__form_input" placeholder="$0.0000,00" size="7">
+                        <input type="text" class="add__form_input" value="<%= item.price %>" size="7">
                     </label>
                     
                     <label class="add__form_label stock">Stock:
-                        <input type="text" class="add__form_input" placeholder="0" size="1">
+                        <input type="text" class="add__form_input" value="<%= item.stock %>" size="1">
                     </label>
                     
                     <label class="add__form_label descuentos">Descuento:
-                        <input type="text" class="add__form_input" placeholder="0%" size="5">
+                        <input type="text" class="add__form_input" value="<%= item.disconunt %>" size="5">
                     </label>
                     
                     <label class="add__form_label cuotas">Cuotas:
                         <select class="add__form_input">
-                            <option required>0% de descuento</option>
-                            <option required>10% de descuento</option>
-                            <option required>20% de descuento</option>      
-                            <option required>30% de descuento</option>      
-                            <option required>40% de descuento</option>      
-                            <option required>50% de descuento</option>      
-                            <option required>60% de descuento</option>      
-                            <option required>70% de descuento</option>      
-                            <option required>80% de descuento</option>      
-                            <option required>90% de descuento</option>      
-                            <option required>100% de descuento</option>      
+                            <option value=""><%= item.dues %></option> 
                         </select>
                     </label>
 
@@ -71,7 +73,7 @@
                         <input type="file" accept="image/png, image/jpeg" class="add_form_input image">
                     </label>
 
-                    <input type="button" class="add__from_input"  value="Agregar Producto">
+                    <input type="button" class="add__from_input"  value="Editar Producto">
 
                     <input type="button" class="add__from_input" value="Limpiar">
             

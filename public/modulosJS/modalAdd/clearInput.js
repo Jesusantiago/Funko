@@ -1,9 +1,6 @@
 import { retrieveUrlsFromLocalStorage } from "./imageFile.js";
 
-
 export const clearInput = () =>{
-    console.log("nuevo clear")
-    
     let nameInput = document.getElementById("nameAdd");
     let descriptionInput = document.getElementById("descriptionAdd");
     let skuInput = document.getElementById("skuAdd");
@@ -38,9 +35,9 @@ export const clearInput = () =>{
         
     cleanImage()
 
-    const clearLocal = () =>{
-        localStorage.clear()
-    }
-
-    clearLocal()
 }
+
+const btnClear = document.getElementById("btnCLEAR").addEventListener("click", (e)=>{
+    e.preventDefault();
+    clearInput()
+})

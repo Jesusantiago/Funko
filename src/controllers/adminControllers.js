@@ -1,7 +1,8 @@
 const {getAllAdmin} = require("../services/adminService");
+const {getOneItem} = require("../services/itemsServices")
 const {getLicenceItem} = require("../services/licenceService")
 const {getCategoryItem} = require("../services/categoryService")
-const {getAllEdit} = require("../services/adminService")
+
 
 const getAdmin = async (req,res) => {
     let items = await getAllAdmin()
@@ -11,7 +12,8 @@ const getAdmin = async (req,res) => {
 
     res.render("../views/admin/admin", {
         view : {
-            title : "Admin - FunkoShop"
+            title : "Admin - FunkoShop",
+            script : "/static/modulosJS/listado/moduloListado.js"
         },
         items : items
     })
@@ -23,7 +25,8 @@ const getViewAdd = async (req, res) =>{
     
     res.render("../views/admin/add", {
         view : {
-            title : "Agregar producto - FunkoShop"
+            title : "Agregar producto - FunkoShop",
+            script : "../static/modulosJS/modalAdd/moduleAdd.js"
         },
         category : category,
         licence : licence
@@ -32,14 +35,19 @@ const getViewAdd = async (req, res) =>{
 
 const getViewEdit = async (req, res) => {
     const id = req.params.id;
-    let items = await getAllEdit({product_id : id})
+    let items = await getOneItem({product_id : id})
+    let licence = await getLicenceItem();
+    let category = await getCategoryItem();
+
     console.log(items)
 
     res.render("../views/admin/edit", {
         view : {
             title: "Edit - FunkoShop"
         },
-        items : items
+        items : items,
+        category,
+        licence
     })
 
 }
