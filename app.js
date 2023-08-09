@@ -14,11 +14,13 @@ const {error404} = require("./src/utils/errorHandler.js")
 const PORT = process.env.PORT;
 
 app.use('/static', express.static(__dirname + "/public"))
-app.use(express.urlencoded({extended:true}))
-app.use(express.json())
 
 app.set("view engine", "ejs")
 app.set("views", "./src/views")
+
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
+
 
 app.use("/", homeRouters);
 app.use("/shop", shopRouters);
@@ -29,5 +31,4 @@ app.use("/admin", adminRouters);
 
 app.use(error404)
 
-console.log(process.env.PORT)
 app.listen(PORT, ()=>console.log(`Se inicio el servidor en ${PORT}`))

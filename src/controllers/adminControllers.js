@@ -1,4 +1,4 @@
-const {getAllAdmin} = require("../services/adminService");
+const {getAllAdmin, addProduct} = require("../services/adminService");
 const {getOneItem} = require("../services/itemsServices")
 const {getLicenceItem} = require("../services/licenceService")
 const {getCategoryItem} = require("../services/categoryService")
@@ -45,16 +45,26 @@ const getViewEdit = async (req, res) => {
         view : {
             title: "Edit - FunkoShop"
         },
-        items : items,
+        items,
         category,
         licence
     })
 
 }
 
+const postCreate = async (req,res) =>{
+    const data = req.body;
+    // console.log(`Esto es data: ${data}`);
+    
+    // const result = await addProduct(Object.values(data))
+    await addProduct(data)
+    res.redirect("/admin")
+    // res.send(result)
+}
 
 module.exports = {
     getAdmin,
     getViewAdd,
-    getViewEdit
+    getViewEdit,
+    postCreate
 }

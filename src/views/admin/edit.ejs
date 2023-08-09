@@ -22,7 +22,7 @@
 
                     <label class="add__form_label categoria" for="categoria">Categoría:
                         <select class="add__form_input" name="categoria" required>
-                            <option value="" disabled selected hidden>Seleccionar</option>
+                            <option value="" disabled selected hidden><%= item.category_name%></option>
                                 <option value=""><%= item.category_name %></option>
                         </select>
                     </label>
@@ -32,9 +32,12 @@
             
             <label class="add__form_label licencia" for="licence">Licencia:
                 <select class="add__form_input" name="licence" required>
-                    <option value="" disabled selected hidden>Seleccionar</option>
-                    <% licence.forEach((item) => { %>
-                                <option value=""><%= item.licence_name %></option>
+                    <% items.forEach((item) => { %>
+                    <option value="" disabled selected hidden><%= item.licence_id %></option>
+            <% }) %>
+
+                    <% licence.forEach((license) => { %>
+                                <option value=""><%= license.licence_name %></option>
                     <% }) %>
                         </select>
                     </label>
@@ -73,9 +76,9 @@
                         <input type="file" accept="image/png, image/jpeg" class="add_form_input image">
                     </label>
 
-                    <input type="button" class="add__from_input"  value="Editar Producto">
+                    <!-- <input type="button" class="add__from_input"  value="Editar Producto">
 
-                    <input type="button" class="add__from_input" value="Limpiar">
+                    <input type="button" class="add__from_input" value="Limpiar"> -->
             
             <% }) %>
             

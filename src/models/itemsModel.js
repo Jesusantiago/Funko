@@ -100,6 +100,38 @@ const getAdmin = async () => {
 }
 
 /*
+    Query AddItem
+        Agrega un producto a la base de datos
+*/
+
+const addItem = async (params) => {
+    // console.log(`Esto es el params ${params}`)
+    try{
+
+        const [err, rows] = await conn.query("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, licence_id, category_id) VALUES (?);", [params]);
+        // const [rows] = await conn.query("SELECT * from product limit 1")
+        console.log("esto es un error")
+        console.log(err);
+        console.log(rows);
+        
+        const response = {
+            isError : false,
+            data : rows
+        };
+        
+
+        return response;
+    }   catch (e) {
+    const error = {
+      isError: true,
+      message: `No pudimos crear los valores seleccionados por: ${e}`
+    };
+    console.log(error);
+    return error;
+    }
+}
+
+/*
     Query edit.
         Trae la lista de view de edit.
 */
@@ -124,6 +156,7 @@ module.exports = {
     getOne,
     deleteOne,
     home,
-    getAdmin
+    getAdmin,
+    addItem
     // getEdit
 }
