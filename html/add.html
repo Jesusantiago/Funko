@@ -45,77 +45,70 @@
 
 <section class="main__modal_add">
     
-
     <article class="main__add">
 
         <h2 class="add__title">CREAR NUEVO ITEM</h2>
 
-        <form class="add__form">
+        <form class="add__form" action="/admin/add" method="POST" enctype="application/x-www-form-urlencoded">
 
-            <label class="add__form_label categoria">Categoría
+            <label class="add__form_label categoria" for="category">Categoría:
                 <select class="add__form_input">
-                    <option required>HARRY POTTER</option>
-                    <option required>START WARS</option>
-                    <option required>POKEMON</option>      
+                    <option disabled hidden required>Seleccionar</option>    
+                    <option value="Funko" name="category">Funko</option>    
                 </select>
             </label>
             
-            <label class="add__form_label licencia">Licencia:
+            <label class="add__form_label licencia" for="licence" >Licencia:
                 <select class="add__form_input">
-                    <option>a</option>
-                    <option>b</option>
-                    <option>c</option>
+                    <option hidden disabled required>Seleccionar</option>
+                    <option value="Harry potter" name="licence">Harry potter</option>
+                    <option value="Star wars" name="licence">Star Wars</option>
+                    <option value="Pokemon" name="licence">Pokemon</option>
                 </select>
             </label>
-            
-            <label class="add__form_label name">Nombre del producto:
-                <input type="text" class="add__form_input" placeholder="Kakashi Hatake Shippuden Saga">
+                        
+            <label class="add__form_label name" for="name">Nombre del producto:
+                <input type="text" class="add__form_input" placeholder="Kakashi Hatake Saga" name="name">
+            </label>
+
+            <label class="add__form_label message" for="description">
+                <textarea class="add__form_input" placeholder="Descripción del producto" name="description"></textarea>
             </label>
             
-            <label class="add__form_label message">
-                <textarea class="add__form_input" placeholder="Descripción del producto">
-                </textarea>
+            <label class="add__form_label sku" for="sku">SKU:
+                <input type="text" class="add__form_input" size="7" placeholder="SSK111AB001" name="sku">
             </label>
             
-            <label class="add__form_label sku">SKU:
-                <input type="text" class="add__form_input" size="7" placeholder="SSK111AB001">
+            <label class="add__form_label price" for="price">Precio:
+                <input type="text" class="add__form_input" placeholder="$0.0000,00" size="7" name="price">
             </label>
             
-            <label class="add__form_label price">Precio:
-                <input type="text" class="add__form_input" placeholder="$0.0000,00" size="7">
+            <label class="add__form_label stock" for="stock">Stock:
+                <input type="text" class="add__form_input" placeholder="0" size="3" name="stock">
+                <span>Unidades</span>
             </label>
             
-            <label class="add__form_label stock">Stock:
-                <input type="text" class="add__form_input" placeholder="0" size="1">
+            <label class="add__form_label descuentos" for="discount">Descuento:
+                <input type="text" class="add__form_input" placeholder="0%" size="3" name="discount">
             </label>
             
-            <label class="add__form_label descuentos">Descuento:
-                <input type="text" class="add__form_input" placeholder="0%" size="5">
-            </label>
-            
-            <label class="add__form_label cuotas">Cuotas:
+            <label class="add__form_label cuotas" for="dues">Cuotas:
                 <select class="add__form_input">
-                    <option required>0% de descuento</option>
-                    <option required>10% de descuento</option>
-                    <option required>20% de descuento</option>      
-                    <option required>30% de descuento</option>      
-                    <option required>40% de descuento</option>      
-                    <option required>50% de descuento</option>      
-                    <option required>60% de descuento</option>      
-                    <option required>70% de descuento</option>      
-                    <option required>80% de descuento</option>      
-                    <option required>90% de descuento</option>      
-                    <option required>100% de descuento</option>      
+                    <option value="" required >Seleccionar</option>
+                    <option value="3" name="dues">3 couta s/interes</option>
+                    <option value="6">6 couta s/interes</option>
+                    <option value="9">9 couta s/interes</option>      
+                    <option value="12">12 couta s/interes</option>        
                 </select>
             </label>
 
             <label class="add__form_label image">Imágenes:
-                <input type="file" accept="image/png, image/jpeg" class="add_form_input image">
+                <input type="file" accept="image/png, image/jpeg" class="add_form_input">
             </label>
 
-            <input type="button" class="add__from_input"  value="Agregar Producto">
+            <input type="submit" class="add__from_input"  value="Agregar Producto">
 
-            <input type="button" class="add__from_input" value="Limpiar">
+            <input type="reset" class="add__from_input" value="Limpiar">
             
             
         </form>
@@ -124,7 +117,7 @@
     </article>
 </section>
 
-    <footer class="footer footer__login" id="footerAdd">
+    <footer class="footer footer__shop" id="footerAdd">
         <div class="footer__div">
             <div class="footer__nav">
                 <li><a href="./pageShop.html">SHOP</a></li>
