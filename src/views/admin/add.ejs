@@ -8,23 +8,25 @@
 
                 <form class="add__form" action="/admin/add" method="POST" enctype="application/x-www-form-urlencoded">
 
-                    <label class="add__form_label categoria" for="category">Categoría:
-                    </label>
-                        <select class="add__form_input" name="category" required>
-                            <option disabled hidden selected>Seleccionar</option>    
-                            <% category.forEach((item, i)=> { %>
-                                <option value="<%= i+1 %>"><%= item.category_name %></option>
-                            <% }) %>    
-                        </select>
-                    
-                    <label class="add__form_label licencia" for="licence" >Licencia:
-                    </label>
-                        <select class="add__form_input" name="licence">
-                            <option hidden disabled selected>Seleccionar</option>
-                            <% licence.forEach((item, i)=>{ %>
-                                <option value="<%= i+1 %>"><%= item.licence_name %></option>
-                            <% }) %>
-                        </select>
+                    <article class="form_label">
+                        <section class="label_category">
+                            <label class="add__form_label categoria" for="category">Categoría:</label>
+                            <select class="add__form_input">
+                                <option disabled hidden required>Seleccionar</option>    
+                                <option value="Funko" name="category">Funko</option>    
+                            </select>
+                        </section>
+                        
+                        <section class="label_licence">
+                            <label class="add__form_label licencia" for="licence" >Licencia:</label>
+                            <select class="add__form_input">
+                                <option hidden disabled required>Seleccionar</option>
+                                <option value="Harry potter" name="licence">Harry potter</option>
+                                <option value="Star wars" name="licence">Star Wars</option>
+                                <option value="Pokemon" name="licence">Pokemon</option>
+                            </select>
+                        </section>
+                    </article>
                                 
                     <label class="add__form_label name" for="name">Nombre del producto:
                         <input type="text" class="add__form_input" placeholder="Kakashi Hatake Saga" name="name">
@@ -51,15 +53,16 @@
                         <input type="text" class="add__form_input" placeholder="0%" size="3" name="discount">
                     </label>
                     
-                    <label class="add__form_label cuotas" for="dues">Cuotas:
-                    </label>
-                        <select class="add__form_input" name="dues">
-                            <option value="">Seleccionar</option>
-                            <option value="3">3 couta s/interes</option>
+                    <article class="form_dues">
+                        <label class="add__form_label cuotas" for="dues">Cuotas:</label>
+                        <select class="add__form_input">
+                            <option value="" required >Seleccionar</option>
+                            <option value="3" name="dues">3 couta s/interes</option>
                             <option value="6">6 couta s/interes</option>
                             <option value="9">9 couta s/interes</option>      
                             <option value="12">12 couta s/interes</option>        
                         </select>
+                    </article>
         
                     <label class="add__form_label image">Imágenes:
                         <input type="file" accept="image/png, image/jpeg" class="add_form_input">
