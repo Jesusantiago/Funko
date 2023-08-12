@@ -54,9 +54,7 @@ const getViewEdit = async (req, res) => {
 
 const postCreate = async (req,res) =>{
     const data = req.body;
-    // console.log(`Esto es data: ${data}`);
-    
-    // const result = await addProduct(Object.values(data))
+    console.log(data);
     await addProduct(data)
     res.redirect("/admin")
     // res.send(result)

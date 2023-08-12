@@ -105,14 +105,10 @@ const getAdmin = async () => {
 */
 
 const addItem = async (params) => {
-    // console.log(`Esto es el params ${params}`)
+
     try{
 
-        const [err, rows] = await conn.query("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, licence_id, category_id) VALUES (?);", [params]);
-        // const [rows] = await conn.query("SELECT * from product limit 1")
-        console.log("esto es un error")
-        console.log(err);
-        console.log(rows);
+        const [rows] = await conn.query("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, licence_id, category_id) VALUES (?);", [params]);
         
         const response = {
             isError : false,

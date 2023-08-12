@@ -14,15 +14,14 @@ const addProduct = async (data) =>{
         product_description : data.description,
         price: data.price,
         stock : data.stock,
-        disconunt : data.disconunt,
+        discount : data.discount,
         sku : data.sku,
         dues : data.dues,
-        licence: data.licence,
-        category : data.category
+        licence_id: data.licence,
+        category_id: data.category
     }
-    // console.log(Object.values(createProduct));
+    console.log(Object.values(createProduct));
     return await addItem(Object.values(createProduct)) 
-    return await addItem(createProduct)
 }
 
 // const getAllEdit = async (params) => {
