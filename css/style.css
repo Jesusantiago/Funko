@@ -2986,7 +2986,7 @@
 }
 
 .main__add {
-  min-width: 360px;
+  min-width: 350px;
   width: 100%;
   max-width: 1220px;
   min-height: 700px;
@@ -3031,22 +3031,33 @@
   border-bottom: 1px solid red;
 }
 
-.categoria, .licencia {
-  min-width: 233px;
-  width: 50%;
+.form_label {
+  min-width: 350px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.form_label .label_category, .form_label .label_licence {
+  min-width: 300px;
+}
+.form_label .categoria, .form_label .licencia {
+  width: 120px;
 }
 @media (max-width: 550px) {
-  .categoria, .licencia {
+  .form_label .categoria, .form_label .licencia {
     margin-right: 10px;
   }
 }
-.categoria select, .licencia select {
+.form_label select {
   width: 150px;
   color: black;
   border: 1px solid red;
 }
 @media (max-width: 630px) {
-  .categoria select, .licencia select {
+  .form_label select {
     width: 130px;
   }
 }
@@ -3114,10 +3125,15 @@
   color: black;
 }
 
-.cuotas {
+.form_dues {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.form_dues .cuotas {
   width: 50%;
 }
-.cuotas select {
+.form_dues select {
   width: 180px;
   border: 1px solid red;
   color: black;
@@ -3143,7 +3159,7 @@ input[type=submit], input[type=reset] {
 }
 @media (max-width: 700px) {
   input[type=submit], input[type=reset] {
-    width: 14rem;
+    width: 10rem;
   }
 }
 

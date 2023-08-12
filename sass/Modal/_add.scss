@@ -15,7 +15,7 @@
 }
 
 .main__add{
-    min-width: 360px;
+    min-width: 350px;
     width: 100%;
     max-width: 1220px;
     
@@ -52,19 +52,32 @@
     }
 }
 
-.categoria, .licencia{
-    min-width: 233px;
-    width: 50%;
+.form_label{
+    min-width: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 
-    @include minfux.media(550px){
-        margin-right: 10px;
+    .label_category, .label_licence{
+        min-width: 300px;
     }
 
+    .categoria, .licencia{
+        width: 120px;
+    
+        @include minfux.media(550px){
+            margin-right: 10px;
+        }
+    }
+    
     select{
         width: 150px;
         color: black;
         border: 1px solid red;
-
+    
         @include minfux.media(630px){
             width: 130px;
         }
@@ -142,9 +155,14 @@
     }
 }
 
-.cuotas{
+.form_dues{
     width: 50%;
-    
+    display: flex;
+    align-items: center;
+    .cuotas{
+        width: 50%;
+        
+    }
     select{
         width: 180px;
         border: 1px solid red;
@@ -168,7 +186,7 @@ input[type=submit], input[type=reset]{
     border-radius: 10px;
 
     @include minfux.media(700px){
-        width: 14rem;
+        width: 10rem;
     }
 }
 
