@@ -8,75 +8,66 @@
 
                 <form class="add__form" action="/admin/add" method="POST" enctype="application/x-www-form-urlencoded">
 
-                <label class="add__form_label name" for="name">Nombre del producto:
-                    <input type="text" name="name" class="add__form_input" id="nameAdd" placeholder="Kakashi Hatake Shippuden Saga">
-                </label>
-
-                <label class="add__form_label categoria" for="category">Categoría:</label>
-                <select class="add__form_input" name="category" id="categoryAdd" required>
-                    <option value="" disabled selected hidden>Seleccionar</option>
-                    <% category.forEach((item, i)=> { %>
-                        <option value="<%= i+1 %>">
-                            <%= item.category_name %>
-                        </option>
-                        <% }) %>
-                </select>
-
-                <label class="add__form_label licencia" for="licence">Licencia:
-                </label>
-                <select class="add__form_input" name="licence" id="licenseAdd" required>
-                    <option value="" disabled selected hidden>Seleccionar</option>
-                    <% licence.forEach((item, i)=>{ %>
-                        <option value="<%= i+1 %>">
-                            <%= item.licence_name %>
-                        </option>
-                        <% }) %>
-                </select>
-
-                <label class="add__form_label message" for="description">
-                    <textarea class="add__form_input" name="description" id="descriptionAdd" placeholder="Descripción del producto">
-                        </textarea>
-                </label>
-
-                <label class="add__form_label sku" for="sku">SKU:
-                    <input type="text" name="sku" class="add__form_input" id="skuAdd" size="7" placeholder="SSK111AB001">
-                </label>
-
-                <label class="add__form_label price" for="price">Precio:
-                    <input type="text" name="price" class="add__form_input" id="priceAdd" placeholder="$0.0000,00" size="7">
-                </label>
-
-                <label class="add__form_label stock" for="stock">Stock:
-                    <input type="text" name="stock" class="add__form_input" id="stockAdd" placeholder="0" size="1">
-                </label>
-
-                <label class="add__form_label descuentos" for="disconunt">Descuento:
-                    <input type="text" name="disconunt" class="add__form_input" id="discountAdd" placeholder="0%" size="5">
-                </label>
-
-                <label class="add__form_label cuotas" for="dues">Cuotas:
-                    <select class="add__form_input" name="dues" id="quotasAdd">
-                        <option required>0% de descuento</option>
-                        <option required>10% de descuento</option>
-                        <option required>20% de descuento</option>
-                        <option required>30% de descuento</option>
-                        <option required>40% de descuento</option>
-                        <option required>50% de descuento</option>
-                        <option required>60% de descuento</option>
-                        <option required>70% de descuento</option>
-                        <option required>80% de descuento</option>
-                        <option required>90% de descuento</option>
-                        <option required>100% de descuento</option>
-                    </select>
-                </label>
-
-                <label class="add__form_label image" for="image">Imágenes:
-                    <input type="file" name="image" accept="image/png, image/jpeg" class="add_form_input image" id="imageAdd">
-                </label>
-
-                <input type="submit" class="add__from_input" value="Agregar Producto">
-
-                <input type="button" class="add__from_input" id="btnCLEAR" value="Limpiar">
+                    <label class="add__form_label categoria" for="category">Categoría:
+                    </label>
+                        <select class="add__form_input" name="category" required>
+                            <option disabled hidden selected>Seleccionar</option>    
+                            <% category.forEach((item, i)=> { %>
+                                <option value="<%= i+1 %>"><%= item.category_name %></option>
+                            <% }) %>    
+                        </select>
+                    
+                    <label class="add__form_label licencia" for="licence" >Licencia:
+                    </label>
+                        <select class="add__form_input" name="licence">
+                            <option hidden disabled selected>Seleccionar</option>
+                            <% licence.forEach((item, i)=>{ %>
+                                <option value="<%= i+1 %>"><%= item.licence_name %></option>
+                            <% }) %>
+                        </select>
+                                
+                    <label class="add__form_label name" for="name">Nombre del producto:
+                        <input type="text" class="add__form_input" placeholder="Kakashi Hatake Saga" name="name">
+                    </label>
+        
+                    <label class="add__form_label message" for="description">
+                        <textarea class="add__form_input" placeholder="Descripción del producto" name="description"></textarea>
+                    </label>
+                    
+                    <label class="add__form_label sku" for="sku">SKU:
+                        <input type="text" class="add__form_input" size="7" placeholder="SSK111AB001" name="sku">
+                    </label>
+                    
+                    <label class="add__form_label price" for="price">Precio:
+                        <input type="text" class="add__form_input" placeholder="$0.0000,00" size="7" name="price">
+                    </label>
+                    
+                    <label class="add__form_label stock" for="stock">Stock:
+                        <input type="text" class="add__form_input" placeholder="0" size="3" name="stock">
+                        <span>Unidades</span>
+                    </label>
+                    
+                    <label class="add__form_label descuentos" for="discount">Descuento:
+                        <input type="text" class="add__form_input" placeholder="0%" size="3" name="discount">
+                    </label>
+                    
+                    <label class="add__form_label cuotas" for="dues">Cuotas:
+                    </label>
+                        <select class="add__form_input" name="dues">
+                            <option value="">Seleccionar</option>
+                            <option value="3">3 couta s/interes</option>
+                            <option value="6">6 couta s/interes</option>
+                            <option value="9">9 couta s/interes</option>      
+                            <option value="12">12 couta s/interes</option>        
+                        </select>
+        
+                    <label class="add__form_label image">Imágenes:
+                        <input type="file" accept="image/png, image/jpeg" class="add_form_input">
+                    </label>
+        
+                    <input type="submit" class="add__from_input"  value="Agregar Producto">
+        
+                    <input type="reset" class="add__from_input" value="Limpiar">
 
 
             </form>

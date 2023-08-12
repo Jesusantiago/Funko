@@ -1,122 +1,183 @@
 @use "../minfux";
 @use "../variables";
 
-.main__add{
+.main__modal_add{
+    width: 100%;
+    height: 115svh;
     display: flex;
-    flex-direction: column;
     align-items: start;
-    justify-content: space-evenly;
-    gap: 20px;
-    min-width: 300px;
-    height: 100%;
-    margin: 10px 0;
-    padding: 15px 25px;
-    background-color: #fff;
+    justify-content: center;
+    padding: 10vw 5vw 0;
+
+    @include minfux.media(500px){
+        padding-top: 15vw;
+    }
+}
+
+.main__add{
+    min-width: 360px;
+    width: 100%;
+    max-width: 1220px;
+    
+    min-height: 700px;
+    height: 60%;
 }
 
 .add__title{
     @include minfux.productInfo(clamp(variables.$fs-20, 3.5vw, variables.$fs-46), variables.$w-700, 30px, variables.$ff-r);
+    margin-bottom: 25px;
 }
 
 .add__form{
+    width: 100%;
+    height: 90%;
+
     display: flex;
     align-items: center;
     justify-content: start;
     flex-wrap: wrap;
-    column-gap: 30px;
-
-    width: 80vw;
-    max-width: 827px;
     
-    min-height: 400px;
-    height: 75svh;
-    max-height: 900px;
-
-    border: 1px solid black;
-    border-radius: 10px;
-    padding: 15px 25px;
-
-    @include minfux.media(610px){
-        min-height: 350px;
-        height: 90svh
-    }
-
-
     &_label{
-        @include minfux.productInfo(clamp(variables.$fs-16, 3.5vw, variables.$fs-24), variables.$w-500, 20px, variables.$ff-r);
+        @include minfux.productInfo(clamp(variables.$fs-14, 3vw, variables.$fs-24), variables.$w-500, 20px, variables.$ff-r);
         color: #1f1f1f;
-
-        &:first-child, &:nth-child(2){
-            font-weight: 400;
-        }
-    }
+    }       
 
     &_input{
         @include minfux.productInfo(clamp(variables.$fs-12, 3.5vw, variables.$fs-18), variables.$w-400, 30px, variables.$ff-i); 
-        color: #b9b9b9;        
-        padding-left: 20px;
+        color: #b9b9b9;     
+        margin-left: 10px;   
+        padding-left: 10px;
+        border: none;
+        border-bottom: 1px solid red;
     }
 }
 
 .categoria, .licencia{
-    width: 40%;
-    
-    select{
-        min-width: 100px;
-        width: 60%;
+    min-width: 233px;
+    width: 50%;
+
+    @include minfux.media(550px){
+        margin-right: 10px;
     }
-    
+
+    select{
+        width: 150px;
+        color: black;
+        border: 1px solid red;
+
+        @include minfux.media(630px){
+            width: 130px;
+        }
+    }
 }
-
-input[type=text]{
-border: none;
-border-bottom: 1px solid red;
-min-width: 50px;
-}
-
-textarea {
-    resize: none;
-
-  }
 
 .name{
-    width: 75%;
+    width: 100%;
+
+    .add__form_input{
+        width: 300px;
+        color: black;
+    }
 }
 
 .message{
-    resize: none;
     width: 100%;
-    .add__form_input{
-        width: 100%;
+    height: 120px;
 
-        min-height: 120px;
-        height: 10vh;
+    .add__form_input{
+        width: 95%;
+        height: 100%;
+        resize: none;
+        border: 1px solid red;
+        color: black;
+    }
+}
+
+.sku{
+    min-width: 250px;
+    width: 30%;
+
+    input{
+        width: 160px;
+        color: black;
+    }
+}
+
+.price{
+    min-width: 253px;
+
+    width: 30%;
+
+    input{
+        width: 160px;
+        color: black;
+    }
+}
+
+.stock{
+    width: 220px;
+
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+    input{
+        width: 160px;
+        color: black;
+    }
+    span{
+        font-size: 14px;
+        position: absolute;
+        bottom: 5px;
+        left: 150px;
+    }
+}
+
+.descuentos{
+    width: 50%;
+    
+    input{
+        width: 140px;
+        color: black;
+    }
+}
+
+.cuotas{
+    width: 50%;
+    
+    select{
+        width: 180px;
+        border: 1px solid red;
+        color: black;
     }
 }
 
 .image{
-    display: flex;
-    // flex-wrap: wrap;
-    column-gap: 15px;
-    min-width: 100%;
+    width: 100%;
+}
 
-    input[type=file]{
-        width: 30%;
+input[type=submit], input[type=reset]{
+    @include minfux.productInfo(clamp(variables.$fs-16, 3.5vw, variables.$fs-24), variables.$w-500, 20px, variables.$ff-r);
+
+    width: 19rem;
+    height: 2.5rem;
+    margin-right: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    @include minfux.media(700px){
+        width: 14rem;
     }
 }
 
-input[type=button]{
-    min-width: 100px;
-    width: 25%;
-    height: 44.33px;
-    background-color: red;
-    color: #fff;
-    border: none;
-    @include minfux.productInfo(clamp(10px, 3.5vw, variables.$fs-14), variables.$w-500, 20px, variables.$ff-i); 
-
-}
-
-textarea:focus, input[type=text]:focus{
-    outline: none;
-    color: black;
+.sku,
+.price,
+.stock,
+.descuentos,
+.cuotas{
+    @include minfux.media(565px){
+        width: 100%;   
+    }
 }
