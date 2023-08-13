@@ -15,27 +15,23 @@
 
     @include minfux.media(610px){
         max-height: 100px;
-        // max-height: 220px;
         padding: 10px max(40px, 7.5vw) 10px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
     }
  
-    
     .footer__div{
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
 
         @include minfux.media(610px){
             height: 50px;  
             width: 100%;         
-
-    }
-        
+        }
     }
 }
 
@@ -55,7 +51,6 @@
         justify-content: start;
         align-items: center;
         row-gap: 10px;
-        
     }
     li{
         margin-bottom: 10px;
@@ -78,8 +73,6 @@
         @include minfux.media(610px){
             font-size: variables.$fs-14;
         }
-
-
     }
 }
 
@@ -119,8 +112,6 @@
 
     width: 100%;
     text-align: center;
-    // margin-top: 10px;
-    // margin-bottom: 0;
     margin: 0;
     color: variables.$c-font;
 
@@ -130,7 +121,6 @@
         weight: variables.$w-500;
     }
     
-
     @include minfux.media(610px){
         font-size: variables.$fs-12;
         margin-top: 15px;
