@@ -13,17 +13,19 @@
                             <label class="add__form_label categoria" for="category">Categoría:</label>
                             <select class="add__form_input">
                                 <option disabled hidden required>Seleccionar</option>    
-                                <option value="Funko" name="category">Funko</option>    
+                                <% category.forEach((item,i) => { %>
+                                    <option value="<%= i+1 %>" name="category"> <%= item.category_name %></option>
+                                    <% }) %>
                             </select>
                         </section>
                         
                         <section class="label_licence">
                             <label class="add__form_label licencia" for="licence" >Licencia:</label>
                             <select class="add__form_input">
-                                <option hidden disabled required>Seleccionar</option>
-                                <option value="Harry potter" name="licence">Harry potter</option>
-                                <option value="Star wars" name="licence">Star Wars</option>
-                                <option value="Pokemon" name="licence">Pokemon</option>
+                                <option hidden disabled required select>Seleccionar</option>
+                                <% licence.forEach((item,i) => { %>
+                                <option value="<%= i+1 %>" name="licence"> <%= item.licence_name %></option>
+                                <% }) %>
                             </select>
                         </section>
                     </article>
@@ -71,13 +73,8 @@
                     <input type="submit" class="add__from_input"  value="Agregar Producto">
         
                     <input type="reset" class="add__from_input" value="Limpiar">
-
-
             </form>
-
-
         </article>
-
     </section>
 
     <!-- <script src="<%= view.script %>" type="module"> </script> -->
