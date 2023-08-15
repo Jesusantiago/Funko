@@ -54,14 +54,6 @@ const getOne = async (params) =>{
     }
 }
 
-// const addOne = async (params) =>{
-//     try{
-//         const [rows] = ("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, imagen_front, imagen_back, licence_id, category_id) VALUES ?;", [params])
-//     }catch(e){
-
-//     }
-// }
-
 /*
     Query delete
         Elimina un producto de la base de datos
@@ -107,15 +99,12 @@ const getAdmin = async () => {
 const addItem = async (params) => {
 
     try{
-
         const [rows] = await conn.query("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, licence_id, category_id) VALUES (?);", [params]);
         
         const response = {
             isError : false,
             data : rows
         };
-        
-
         return response;
     }   catch (e) {
     const error = {
@@ -128,23 +117,33 @@ const addItem = async (params) => {
 }
 
 /*
-    Query edit.
-        Trae la lista de view de edit.
+    Query edit Update.
+        Hace el update del edit
 */
 
-// const getEdit = async (params) =>{
-//     try{
-//         const [rows] = await conn.query("SELECT product_name, product_description, price, stock, disconunt, sku, dues, imagen_back,imagen_front, licence.licence_name, category.category_name FROM product JOIN licence ON product.licence_id = licence.licence_id JOIN category ON product.category_id = category.category_id WHERE product.?;", params)
+const editUpdateModel = async (item,id) => {
+    
+    try {
         
-//         return rows
-//     }catch(e){
-//         const error = {
-//             isError : true,
-//             message : `Huebo un error en: ${e}`
-//         }
-//         return error
-//     }
-// }
+        const [rows] = await conn.query("UPDATE product SET ? WHERE ?;", [item,id])
+        
+        const response = {
+            isError : false,
+            message : `El item fue modificado exitosamente`,
+            status : rows
+        };
+
+        return response;
+    } catch(e){
+        const error = {
+            irError : true,
+            message : `No pudimos modificar el item seleccionado, error : ${e}`
+        }
+        console.log(error);
+        return error
+    }
+}
+
 
 
 module.exports = {
@@ -153,6 +152,6 @@ module.exports = {
     deleteOne,
     home,
     getAdmin,
-    addItem
-    // getEdit
+    addItem,
+    editUpdateModel
 }
