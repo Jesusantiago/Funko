@@ -40,7 +40,11 @@
                             <box-icon name='pencil' type='solid' color='#1d84b5'></box-icon>
                         </a>
                     </td>
-                    <td><box-icon name='trash' color='#fd0000' ></box-icon></td>
+                    <td>
+                        <a href="/admin/delete/<%= item.product_id%>">
+                            <box-icon name='trash' color='#fd0000' ></box-icon>
+                        </a>
+                    </td>
                 </tr>
             <% }) %>  
 

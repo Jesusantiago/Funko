@@ -1,4 +1,4 @@
-const {getAdmin, addItem, editUpdateModel} = require("../models/itemsModel")
+const {getAdmin, addItem, editUpdateModel, deleteModel} = require("../models/itemsModel")
 
 const getAllAdmin = async () => {
     const getAllAdminItem = await getAdmin();
@@ -39,9 +39,16 @@ const editService = async (item,id) => {
     return await editUpdateModel(data,{product_id : id});
 }
 
+const deleteService = async (id) => {
+    const deleteProduct = await deleteModel(id);
+
+    return deleteProduct;
+}
+
 
 module.exports = {
     getAllAdmin,
     addProduct,
-    editService
+    editService,
+    deleteService
 }

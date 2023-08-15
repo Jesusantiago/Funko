@@ -1,4 +1,4 @@
-const {getAllAdmin, addProduct, editService} = require("../services/adminService");
+const {getAllAdmin, addProduct, editService, deleteService} = require("../services/adminService");
 const {getOneItem} = require("../services/itemsServices")
 const {getLicenceItem} = require("../services/licenceService")
 const {getCategoryItem} = require("../services/categoryService")
@@ -64,10 +64,18 @@ const editItem = async (req,res) => {
     res.redirect("/admin")
 }
 
+const deleteItem = async (req,res) => {
+    const id = req.params.id;
+
+    await deleteService({product_id : id});
+    res.redirect("/admin")
+}
+
 module.exports = {
     getAdmin,
     getViewAdd,
     getViewEdit,
     postCreate,
-    editItem
+    editItem,
+    deleteItem
 }

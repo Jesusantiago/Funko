@@ -144,6 +144,29 @@ const editUpdateModel = async (item,id) => {
     }
 }
 
+/*
+    Query delete 
+        Elimina un producto
+*/
+
+const deleteModel = async (id) => {
+    try{
+        const [row] = conn.query("DELETE FROM product WHERE ?;", id)
+
+        const resulte = {
+            isError : false,
+            data : row
+        }
+
+        return resulte
+    }catch(e){
+        const error = {
+            isError : true,
+            error : `No se puede eliminar el producto por: ${e}`
+        }
+        return error
+    }
+}
 
 
 module.exports = {
@@ -153,5 +176,6 @@ module.exports = {
     home,
     getAdmin,
     addItem,
-    editUpdateModel
+    editUpdateModel,
+    deleteModel
 }
