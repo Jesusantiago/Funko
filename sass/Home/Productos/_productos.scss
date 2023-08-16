@@ -1,10 +1,7 @@
 @use "../../variables";
 @use "../../minfux";
 
-.firstProduct,
-.secondProduct,
-.thirdProduct{
-
+.firstProduct{
     @include minfux.pageProduct(black);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -17,11 +14,6 @@
         align-items: center;
     }
 
-
-
-};
-
-.firstProduct{
     .home__product__text{
         @include minfux.media(980px){
             min-height: 250px;
@@ -46,7 +38,6 @@
     @include minfux.productText;
 
     @include minfux.media(980px){
-        // min-width: 530px;
         width: 70vw;
         min-height: 250px;
         max-height: 15vh;
@@ -94,53 +85,13 @@
 
 .home__product__img{
     @include minfux.homeimgProduct(1);
-    background: {
-        image: url(.../../../img/productos/baby-yoda-1.png);
-        repeat: no-repeat;
-        position: center;
-        size: contain;
-    }
-    @include minfux.media(980px){
-        background-position: center;
-        min-width: 80%;
-        height: 100%;
-        order: -1;
-        transform: translate(-20px, 0);
-    }
-
-}
-
-.home__product__img_second{
-    @include minfux.homeimgProduct(-1);
-    background: {
-        image: url(.../../../img/productos/vulpix-1.png);
-        repeat: no-repeat;
-        position: center;
-        size: contain;
-    }
-
-    @include minfux.media(980px){
-        background-position: center;
-        min-width: 80%;
-        height: 100%;
-        
-
+    img{
+        width: 100%;
     }
 }
 
-.home__product__img_third{
-    @include minfux.homeimgProduct(1);
-    background: {
-        image: url(.../../../img/productos/snape-patronus-1.png);
-        repeat: no-repeat;
-        position: center;
-        size: contain;
-    }
-    @include minfux.media(980px){
-        background-position: center;
-        min-width: 80%;
-        height: 100%;
-        order: -1;
-    }
-}
+.firstProduct:nth-child(3) 
+ .home__product__img{
+    order: -1;
 
+}
