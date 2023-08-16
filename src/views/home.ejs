@@ -20,7 +20,9 @@
                     <a href="/shop/item/<%= item.product_id%>" class="home__product__btn">VER COLECCIÓN</a>
                 </div>
                 
-                <div class="home__product__img"></div>
+                <div class="home__product__img">
+                    <img src="/static/<%= item.imagen_back %>" alt="`Imagen de <%= item.product_name %>`">
+                </div>
             </section>
         <% }) %>  
 
