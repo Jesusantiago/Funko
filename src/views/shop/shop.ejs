@@ -72,19 +72,22 @@
     <section class="shop__list_product_grid" id="shop__list_product_grid">
 
         <% items.forEach(item =>{ %>
-            <article class="shop__product__card">
-                <div class="starWars__img">
-                    <div class="background__red">
-                        <span class="background__span">NUEVO</span>
+            <a href="/shop/item/<%= item.product_id %>">
+                <article class="shop__product__card">
+                    <div class="starWars__img">
+                        <div class="background__red">
+                            <span class="background__span">NUEVO</span>
+                        </div>
+                        <img src="/static/<%=item.imagen_back %>" alt="`Imagen de <%= item.product_name%>`">
                     </div>
-                </div>
-                <div class="shop__product__card-text">
-                    <h3 class="last__product_title"><%= item.licence_name%></h3>
-                    <h2 class="last__product_title_description"><%= item.product_name%></h2>
-                    <h3 class="last__product__price"><%= item.price %></h3>
-                    <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
-                </div>
-            </article>
+                    <div class="shop__product__card-text">
+                        <h3 class="last__product_title"><%= item.licence_name%></h3>
+                        <h2 class="last__product_title_description"><%= item.product_name%></h2>
+                        <h3 class="last__product__price"><%= item.price %></h3>
+                        <h4 class="last__product_fees">3 CUOTAS SIN INTERÉS</h4>
+                    </div>
+                </article>
+            </a>
         <% }) %>  
 
     </section>

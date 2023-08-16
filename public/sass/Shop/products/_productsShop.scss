@@ -235,7 +235,14 @@
         
     }
 
-    .shop__product__card{
+    a{
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        color: initial;
+    }
+
+    .shop__product__card, a{
         @include minfux.productCard(305px);
         justify-self: center;
         box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.336);
@@ -248,38 +255,14 @@
 
         .starWars__img{
             @include minfux.imgCardHome(374px);
-            background: {
-                image: url(.../../../img/productos/lighsaber-1.png);
-                position: center;
-                repeat: no-repeat;
-                size: contain;
-            };
-        
-        }
-        
-        .pokemon__img{
-            @include minfux.imgCardHome(374px);
-            background: {
-                image: url(.../../../img/productos/pidgeotto-1.png);
-                position: center;
-                repeat: no-repeat;
-                size: contain;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
             }
         }
         
-        .harryPotter__img{
-            @include minfux.imgCardHome(374px);
-            background: {
-                image: url(.../../../img/productos/luna-1.png);
-                position: center;
-                repeat: no-repeat;
-                size: contain;
-            }
-        }
-        
-        .starWars__img,
-        .pokemon__img,
-        .harryPotter__img{
+        .starWars__img{
             border-bottom: 1px solid rgba(133, 133, 133, 0.336);
 
             @include minfux.media(610px){
@@ -291,7 +274,6 @@
         
         .background__red{
             width: max(60px, 7vw);
-            // max-width: 97px;
             height: 30px;
             background-color: red;
             display: flex;
@@ -301,7 +283,7 @@
             top: 0;
             left: calc(100% - max(60px, 7vw));
             border-radius: 0 20px 0;
-        
+            
             @include minfux.media(680px){
                 height: 25px;
             }
@@ -313,6 +295,8 @@
                     family: variables.$ff-i;
                     weight: variables.$w-500;
                 }
+                text-decoration: none;
+                
         
                 @include minfux.media(680px){
                     font-size: variables.$fs-12;
@@ -407,48 +391,31 @@
         gap: 10px
     }
 
-    .shop__product__card{
-        @include minfux.productCard(90%);
+    a{
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+        color: initial;
+    }
+
+    a, .shop__product__card{
+        @include minfux.productCard(100%);
             display: flex;
             justify-self: center;
             box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.336);
             border-radius: 5px;
             height: max(150px, 15vw);
 
-
         .starWars__img{
             @include minfux.imgCardHome(250px);
-            background: {
-                image: url(.../../../img/productos/lighsaber-1.png);
-                position: center;
-                repeat: no-repeat;
-                size: contain;
-            };
-        }
-        
-        .pokemon__img{
-            @include minfux.imgCardHome(250px);
-            background: {
-                image: url(.../../../img/productos/pidgeotto-1.png);
-                position: center;
-                repeat: no-repeat;
-                size: contain;
+            img{
+                width: 100%;
+                height: 90%;
+                object-fit: contain;
             }
         }
-        
-        .harryPotter__img{
-            @include minfux.imgCardHome(250px);
-            background: {
-                image: url(.../../../img/productos/luna-1.png);
-                position: center;
-                repeat: no-repeat;
-                size: contain;
-            }
-        }
-        
-        .starWars__img,
-        .pokemon__img,
-        .harryPotter__img{
+                
+        .starWars__img{
             border-right: 1px solid rgba(114, 114, 114, 0.363);
             min-height: 100%;
             height: max(150px, 15vw);
@@ -469,6 +436,7 @@
             @include minfux.media(680px){
                 height: 25px;
             }
+            text-decoration: none;
             
             .background__span{
                 color: variables.$c-font;
@@ -547,3 +515,4 @@
         }
     }
 }
+
