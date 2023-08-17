@@ -4,7 +4,9 @@
 
     <% item.forEach(item =>{ %>
         <section class="product__section__product">
-            <article class="product__img"></article>
+            <article class="product__img">
+                <img src="/static/<%= item.imagen_back %>" alt="Imagen de <%= item.product_name %>">
+            </article>
             <article class="product__text">
                 <h3 class="product__text__titleLower"><%= item.licence_name %></h3>
                 <h2 class="product__text__titleSuperior"><%=item.product_name %></h2>
