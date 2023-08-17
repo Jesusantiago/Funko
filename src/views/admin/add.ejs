@@ -6,7 +6,7 @@
 
         <h2 class="add__title">CREAR NUEVO ITEM</h2>
 
-            <form class="add__form" action="/admin/add" method="POST" enctype="application/x-www-form-urlencoded">
+            <form class="add__form" action="/admin/add" method="POST" enctype="multipart/form-data">
 
                 <article class="form_label">
                     <section class="label_category">
@@ -67,8 +67,8 @@
                     </select>
                 </article>
     
-                <label class="add__form_label image">Imágenes:
-                    <input type="file" accept="image/png, image/jpeg" class="add_form_input">
+                <label class="add__form_label image" for="images">Imágenes:
+                    <input type="file" name="images" class="add_form_input" multiple>
                 </label>
     
                 <input type="submit" class="add__from_input"  value="Agregar Producto">

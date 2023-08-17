@@ -99,7 +99,7 @@ const getAdmin = async () => {
 const addItem = async (params) => {
 
     try{
-        const [rows] = await conn.query("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, licence_id, category_id) VALUES (?);", [params]);
+        const [rows] = await conn.query("INSERT INTO product (product_name, product_description, price, stock, disconunt, sku, dues, imagen_back, imagen_front, licence_id, category_id) VALUES (?);", [params]);
         
         const response = {
             isError : false,

@@ -6,7 +6,7 @@ const getAllAdmin = async () => {
     return getAllAdminItem
 };
 
-const addProduct = async (data) =>{
+const addProduct = async (data, files) =>{
     
     const createProduct = {
         product_name : data.name,
@@ -16,6 +16,8 @@ const addProduct = async (data) =>{
         discount : data.discount,
         sku : data.sku,
         dues : data.dues,
+        imagen_back: "/img/" + files[0].filename,
+        imagen_front: "/img/" + files[1].filename,
         licence_id: data.licence,
         category_id: data.category
     }

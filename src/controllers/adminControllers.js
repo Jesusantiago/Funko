@@ -35,8 +35,9 @@ const getViewAdd = async (req, res) =>{
 
 const postCreate = async (req,res) =>{
     const data = req.body;
-    console.log(data);
-    await addProduct(data)
+    const files = req.files
+    // console.log(data, req.files);
+    await addProduct(data, files)
     res.redirect("/admin")
 }
 
