@@ -33,13 +33,20 @@ const home = async () =>{
 const getAll = async () =>{ 
     try{
         const [rows] = await conn.query("SELECT * FROM product JOIN licence ON product.licence_id = licence.licence_id LIMIT 9;")
-        return rows;
+
+        const result = {
+            isError : false,
+            message : rows
+        }
+        return result;
     }catch(e){
-        const error = {
+        const result = {
             isError : true,
             message: `Hubo un error en: ${e}`
         }
-        return error;
+        return result;
+    } finally {
+        await conn.releaseConnection();
     }
 }
 

@@ -7,28 +7,28 @@
 
         <h1 class="login__title">INGRESAR A MI CUENTA</h1>
 
-        <form class="login__form">
-            <label class="login__form_label" for="loginEmail">EMAIL:
-                <input type="email" class="login__form_input" 
-            id="loginEmail" placeholder="johndoe@correo.com" required>
+        <form class="login__form" action="/login/" method="post">
+            <label class="login__form_label" for="email">EMAIL:
+                <input type="text" class="login__form_input" 
+            id="loginEmail" placeholder="johndoe@correo.com" name="email">
             </label>
             
 
-            <label class="login__form_label" for="loginPassword">CONTRASEÑA:
+            <label class="login__form_label" for="password">CONTRASEÑA:
                 <input type="password"  class="login__form_input" 
-             id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●" required>
+             id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●"  name="password">
             </label>
             
-        </form>
-
-        <article class="login__article">
-            <input type="button" class="login__article_ingresar" value="Ingresar" id="btnIngresar">
-
             
-
-            <label  class="login__article_label">
-                <input type="checkbox"  class="login__article_input" id="ingresar__checkbox"> Recordarme</label>
-        </article>
+            <article class="login__article">
+                <input type="submit" class="login__article_ingresar" value="Ingresar" id="btnIngresar">
+                
+                
+                
+                <label  class="login__article_label">
+                    <input type="checkbox"  class="login__article_input" id="ingresar__checkbox"> Recordarme</label>
+                </article>
+            </form>
 
         <span class="login__recupero">Olvidé mi contraseña</span>
     </section>
