@@ -3056,4 +3056,90 @@ input[type=submit], input[type=reset] {
   }
 }
 
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 70svh;
+}
+.error .error_text {
+  text-align: center;
+  width: 100%;
+  font-size: clamp(10px, 3.5vw, 20px);
+  font-weight: 500;
+  line-height: 10px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.error h1 {
+  line-height: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.animated {
+  width: 500px;
+  height: 400px;
+}
+
+svg#freepik_stories-computer-troubleshooting:not(.animated) .animable {
+  opacity: 0;
+}
+
+svg#freepik_stories-computer-troubleshooting.animated #freepik--background-complete--inject-4 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0s;
+}
+
+svg#freepik_stories-computer-troubleshooting.animated #freepik--Screwdriver--inject-4 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideUp, 1.5s Infinite linear floating;
+  animation-delay: 0s, 1s;
+}
+
+svg#freepik_stories-computer-troubleshooting.animated #freepik--Gears--inject-4 {
+  animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) fadeIn;
+  animation-delay: 0s;
+}
+
+svg#freepik_stories-computer-troubleshooting.animated #freepik--Character--inject-4 {
+  animation: 1s 1 forwards linear slideUp, 1.5s Infinite linear floating;
+  animation-delay: 0s, 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: inherit;
+  }
+}
+@keyframes floating {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
