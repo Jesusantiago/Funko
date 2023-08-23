@@ -14,6 +14,7 @@ const home = async () =>{
             message: rows
         }
         return result;
+        
     } catch(e){
         const result = {
             isError: true,
@@ -57,14 +58,22 @@ const getAll = async () =>{
 
 const getOne = async (params) =>{ 
     try{
-        const [rows] = await conn.query("SELECT * FROM product WHERE ?;", params)
-        return rows
-    }catch(e){
-        const error = {
+        const [rows] = await conn.query("SELECT * FROM product WHERE ?;", params);
+
+        const result = {
+            isError : false,
+            message : rows
+        }
+        return result
+
+    } catch (e) {
+        const result = {
             isError : true,
             message: `Hubo un error en: ${e}`
         }
-        return error
+        return result
+    }finally{
+       await conn.releaseConnection()
     }
 }
 

@@ -1,3 +1,4 @@
+const { log } = require("console");
 const { getAllItems, getOneItem } = require( "../services/itemsServices")
 
 const getItems =  async (req, res)=>{ 
@@ -15,15 +16,12 @@ const getItems =  async (req, res)=>{
 const getItem = async (req,res)=>{
     const id = req.params.id;
     let item = await getOneItem({product_id : id})
-    if(item.error){
-        item = `Hubo un error`
-    }
     res.render("../views/shop/item", {
         view : {
             title: "Item - FunkoShop",
             script: "/static/modulosJS/itemProduct/moduloItemProduct.js"
         },
-        item: item
+        item
     });
 };
 

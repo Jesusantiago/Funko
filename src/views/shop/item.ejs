@@ -2,43 +2,50 @@
 
 <main class="product__main" id="product__main">
 
-    <% item.forEach(item =>{ %>
-        <section class="product__section__product">
-            <article class="product__img">
-                <img src="/static/<%= item.imagen_back %>" alt="Imagen de <%= item.product_name %>">
-            </article>
-            <article class="product__text">
-                <h3 class="product__text__titleLower"><%= item.licence_name %></h3>
-                <h2 class="product__text__titleSuperior"><%=item.product_name %></h2>
-                <p class="product__text_paragraph"><%= item.product_description %></p>
-                <span class="product__text_price">$ <%= item.price %> .-</span>
-                <div class="product__btn">
+    <% if(item.message.length == 0) { %>
 
-                    <div class="product__btn__lower" id="subtractItemProduct">
-                        <span>-</span>
+        <%- include("../partials/errorProduct") %>
+
+    <% }else { %>
+
+        <% item.message.forEach(item =>{ %>
+            <section class="product__section__product">
+                <article class="product__img">
+                    <img src="/static/<%= item.imagen_back %>" alt="Imagen de <%= item.product_name %>">
+                </article>
+                <article class="product__text">
+                    <h3 class="product__text__titleLower"><%= item.licence_name %></h3>
+                    <h2 class="product__text__titleSuperior"><%=item.product_name %></h2>
+                    <p class="product__text_paragraph"><%= item.product_description %></p>
+                    <span class="product__text_price">$ <%= item.price %> .-</span>
+                    <div class="product__btn">
+
+                        <div class="product__btn__lower" id="subtractItemProduct">
+                            <span>-</span>
+                        </div>
+
+                        <div class="product__btn__zero">
+                            <span id="itemTotal"></span>
+                        </div>            
+                        
+                        <div class="product__btn__superior" id="addItemProduct">
+                            <span>+</span>
+                        </div>
+
+                        <div class="product__btn__car">
+                            <span>Agregar al Carrito</span>
+                        </div>
+
                     </div>
 
-                    <div class="product__btn__zero">
-                        <span id="itemTotal"></span>
-                    </div>            
-                    
-                    <div class="product__btn__superior" id="addItemProduct">
-                        <span>+</span>
-                    </div>
-
-                    <div class="product__btn__car">
-                        <span>Agregar al Carrito</span>
-                    </div>
-
-                </div>
-
-                <div class="medios" id="medios">
-                    <span class="producto__medios__pago">Ver métodos de pago</span>
-                    <span class="product__medios__fees">- 3 CUOTAS SIN INTERÉS</span>
-                </div>              
-            </article>
-        </section>
-    <% }); %>  
+                    <div class="medios" id="medios">
+                        <span class="producto__medios__pago">Ver métodos de pago</span>
+                        <span class="product__medios__fees">- 3 CUOTAS SIN INTERÉS</span>
+                    </div>              
+                </article>
+            </section>
+        <% }); %>  
+    <%} %>
 
     
     <section class="modal__medios">
