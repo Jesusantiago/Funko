@@ -8,15 +8,22 @@ const {conn} = require("../config/conn.js");
 const home = async () =>{ 
     try{
         const [rows] = await conn.query("SELECT * FROM product JOIN licence ON product.licence_id = licence.licence_id ORDER BY RAND() LIMIT 3;")
-        return rows;
+
+        const result = {
+            isError: false,
+            message: rows
+        }
+        return result;
     } catch(e){
-        const error = {
+        const result = {
             isError: true,
             message: `no pudimos recuperar los datos por: ${e}`
         }
-        return error;
+        return result;
+    } finally {
+        await conn.releaseConnection();
     }
-}
+};
 
 /*
     Query del Show.
