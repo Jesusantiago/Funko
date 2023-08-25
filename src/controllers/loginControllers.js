@@ -1,7 +1,4 @@
-
-/*
-    Controllers de login, que trae la vista del login 
-*/
+//    Controllers de login, que trae la vista del login 
 
 const loginViewController = async(req,res) => {
     res.render("../views/about/login", {
@@ -11,17 +8,14 @@ const loginViewController = async(req,res) => {
     })
 };
 
-/*
-    Controller que manda los datos para verificar si estas registrado e iniciar seccion
-*/
 
-// const loginDataController = async(req,res) => {
-//     // const data = req.body
-//     // console.log(data);
-//     // res.send(data)
-// };
+//    Controller que manda los datos para verificar si estas registrado e iniciar seccion
+
+const loginDataController = async(req,res) => {
+    res.redirect("/")
+};
 
 module.exports = {
-    loginViewController
-    // loginDataController
+    loginViewController,
+    loginDataController
 }
