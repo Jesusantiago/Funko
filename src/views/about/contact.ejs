@@ -9,24 +9,48 @@
         <h3 class="contact__section_subtitle">Dejamos tu consulta y pronto nos podenos en contacto contigo</h3>
         
 
-        <form class="contact__form">
+        <form class="contact__form" action="/contact/" method="POST">
 
-            <label class="contact__form_label">Nombre:
-                <input type="text" class="contact__form_input" placeholder="Julian" id="nameContact" required>
-            </label>
-            <label class="contact__form_label">Apellido:
-                <input type="text" class="contact__form_input" placeholder="Alvarez" id="subnameContact">
-            </label>
-            <label class="contact__form_label">Email :
-                <input type="Email" class="contact__form_input" placeholder="julianalvarez@gmail.com" id="emailContact">
-            </label>
-            <label class="contact__form_label">Mensaje:
-                <input type="text" class="contact__form_input" placeholder="Escribe acá tu mensaje" id="messageContact">
+            <label class="contact__form_label" for="name">Nombre:
+                <% if(typeof valores == "undefined" ) {%>
+                    <input type="text" class="contact__form_input" placeholder="Adrian" id="nameContact" name="name" >
+                <% } else {%>
+                    <input type="text" class="contact__form_input" id="nameContact" name="name" value="<%= valores.name%>" >
+                <%}%>
             </label>
 
-            <input class="contact__form_btn" type="button" value="ENVIAR" id="btnConta">
+            <label class="contact__form_label" for="subname">Apellido:
+                <% if(typeof valores == "undefined" ) {%>
+                    <input type="text" class="contact__form_input" placeholder="Alvarez" id="subnameContact" name="subname">
+                <% } else {%>
+                    <input type="text" class="contact__form_input" id="subnameContact" name="subname" value="<%= valores.subname%>">
+                <%}%>
+            </label>
+
+            <label class="contact__form_label" for="email">Email :
+                <% if(typeof valores == "undefined" ) {%>
+                    <input type="Email" class="contact__form_input" placeholder="julianalvarez@gmail.com" id="emailContact" name="email">
+                <% } else {%>
+                    <input type="Email" class="contact__form_input" placeholder="julianalvarez@gmail.com" name="email" value="<%= valores.email%>">
+                <%}%>
+
+            </label>
+
+            <label class="contact__form_label" for="message">Mensaje:
+                <input type="text" class="contact__form_input" placeholder="Escribe acá tu mensaje" id="messageContact" name="message">
+            </label>
+
+            <input class="contact__form_btn" type="submit" value="ENVIAR" id="btnConta">
             
         </form>
+
+        <% if(typeof validaciones != "undefined") {%>
+            <% validaciones.forEach((validacion) =>{ %>
+                <div class="error_validacion">
+                    <strong> <%= validacion.msg %> </strong>
+                </div>
+            <% })%>
+        <% }%>
 
     </section>
 

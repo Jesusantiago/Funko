@@ -1,11 +1,13 @@
 const { body, validationResult} = require("express-validator");
 
+//validaciones para el login
+
 const loginValidation = [
-    body("email","Necesito que ingrese un correo Valido")
+    body("email","Por favor ingresa un correo existente")
     .exists()
     .isEmail(),
 
-    body("password", "La Contraseña debe de tener al menos 6 caracteres y contener letras y numeros")
+    body("password", "Por favor ingresa una contraseña entre 6 a 16 caracteres. La contrasera debe de tener algo menos un numero, una letra.")
     .isLength({min: 6, max:16})
     .isAlphanumeric()
 ]
@@ -17,6 +19,7 @@ const validateInput = (req,res,next) => {
         
         const valores = req.body;
         const validaciones = errors.array()
+        console.log(validaciones);
 
         if(validaciones.length === 3){
             validaciones.pop()
@@ -33,10 +36,57 @@ const validateInput = (req,res,next) => {
     }else {
         next()
     }
-
 }
+
+//validaciones para Contact
+
+const contactValidation = [
+    
+    body("name", "Por favor ingresa un nombre")
+        .exists()
+        .isLength({min : 2 , max : 15}).withMessage('Por favor ingrese un nombre entre 2 y 15 caracteres.')
+        .isAlpha().withMessage('Por favor ingrese solamente letras.'),
+    body("subname", "Por favor ingresa un apellido")
+        .exists()
+        .isLength({min : 2 , max : 15}).withMessage("Por favor ingrese un apellido entre 2 y 15 caracteres.")
+        .isAlpha().withMessage('Por favor ingrese solamente letras.'),
+    
+    body("email","Por favor ingresa un correo existente")
+    .exists()
+    .isEmail(),
+    
+    body("message","Por favor Sea un poco mas especifico ")
+    .exists()
+    .isLength({min : 40, max : 150}),
+
+]
+
+const validateContact = (req,res,next) => {
+    const errors = validationResult(req);
+    
+    if(!errors.isEmpty()){
+        
+        const valores = req.body;
+        const validaciones = errors.array()
+        
+        res.status(400).
+        render("../views/about/contact", {
+            view : {
+                title : "Contacto - FunkoShop"
+            },
+            validaciones,
+            valores
+        })
+    }else {
+        next()
+    }
+}
+
+
 
 module.exports = {
     loginValidation,
-    validateInput
+    contactValidation,
+    validateInput,
+    validateContact
 };
