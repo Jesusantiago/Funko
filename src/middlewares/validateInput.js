@@ -46,6 +46,7 @@ const contactValidation = [
         .exists()
         .isLength({min : 2 , max : 15}).withMessage('Por favor ingrese un nombre entre 2 y 15 caracteres.')
         .isAlpha().withMessage('Por favor ingrese solamente letras.'),
+
     body("subname", "Por favor ingresa un apellido")
         .exists()
         .isLength({min : 2 , max : 15}).withMessage("Por favor ingrese un apellido entre 2 y 15 caracteres.")
@@ -82,11 +83,57 @@ const validateContact = (req,res,next) => {
     }
 }
 
+//Validaciones para Create
 
+const registerValidation = [
+    
+    body("name")
+        .exists()
+        .isLength({min : 2 , max : 15}).withMessage('Por favor ingrese un nombre entre 2 y 15 caracteres.')
+        .isAlpha().withMessage('Por favor ingrese solamente letras.'),
+    
+    body("subname", "Por favor ingresa un apellido")
+        .exists()
+        .isLength({min : 2 , max : 15}).withMessage("Por favor ingrese un apellido entre 2 y 15 caracteres.")
+        .isAlpha().withMessage('Por favor ingrese solamente letras.'),  
+        
+    body("email","Por favor ingresa un correo existente")
+        .exists()
+        .isEmail(),
+
+    body("password")
+        .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/, "i")
+        .withMessage("*minimo 8 caracteres, al menos una letra en mayuscula, al menos una letra en minuscula, al menos un caracter especial")
+]
+
+const validateRegister = (req,res,next) => {
+
+    const errors = validationResult(req);
+    
+    if(!errors.isEmpty()){
+        
+        const valores = req.body;
+        const validaciones = errors.array()
+        console.log(validaciones);
+        
+        res.status(400).
+        render("../views/about/register", {
+            view : {
+                title : "Contacto - FunkoShop"
+            },
+            validaciones,
+            valores
+        })
+    }else {
+        next()
+    }
+}
 
 module.exports = {
     loginValidation,
     contactValidation,
     validateInput,
-    validateContact
+    validateContact,
+    registerValidation,
+    validateRegister
 };

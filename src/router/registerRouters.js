@@ -1,17 +1,11 @@
 const express = require("express");
 const router = express.Router()
 
-router.get("/", (req,res)=>{
-    res.render("../views/about/register", {
-        view : {
-            title : "Registro - FunkoShop"
-        }
-    })
-})
+const {registerController, registerDataController} = require("../controllers/registerControllers")
+const {registerValidation, validateRegister} = require("../middlewares/validateInput")
 
-router.post("/", (req,res)=>{
-    const data = req.body;
-    res.send("Acá van los datos del resgister")
-})
+router.get("/", registerController)
+
+router.post("/", registerValidation, validateRegister, registerDataController)
 
 module.exports = router;
