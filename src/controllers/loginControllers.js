@@ -13,6 +13,7 @@ const loginViewController = async(req,res) => {
 
 const loginDataController = async(req,res) => {
     res.redirect("/")
+    console.log("Hola");
 };
 
 module.exports = {
