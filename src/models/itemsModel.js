@@ -68,10 +68,12 @@ const getOne = async (params) =>{
 
     } catch (e) {
         const result = {
-            isError : true,
+            isError : false,
             message: `Hubo un error en: ${e}`
         }
+
         return result
+        
     }finally{
        await conn.releaseConnection()
     }

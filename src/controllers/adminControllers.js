@@ -3,7 +3,7 @@ const {getOneItem} = require("../services/itemsServices")
 const {getLicenceItem} = require("../services/licenceService")
 const {getCategoryItem} = require("../services/categoryService")
 
-
+// Controller de la lista de productos de Admin
 const getAdmin = async (req,res) => {
     let items = await getAllAdmin()
     if(items.error){
@@ -19,6 +19,7 @@ const getAdmin = async (req,res) => {
     })
 }
 
+// Obtiene la vista para agregar productos
 const getViewAdd = async (req, res) =>{
     let licence = await getLicenceItem()
     let category = await getCategoryItem();
@@ -33,6 +34,7 @@ const getViewAdd = async (req, res) =>{
     })
 }
 
+// Sube los datos a la base de datos POST
 const postCreate = async (req,res) =>{
     const data = req.body;
     const files = req.files
@@ -41,22 +43,24 @@ const postCreate = async (req,res) =>{
     res.redirect("/admin")
 }
 
+// Obtiene la vista del edit Product
 const getViewEdit = async (req, res) => {
     const id = req.params.id;
-    let items = await getOneItem({product_id : id})
+    let {message} = await getOneItem({product_id : id})
     let licence = await getLicenceItem();
     let category = await getCategoryItem();
     
     res.render("../views/admin/edit", {
         view : {
-            title: `Edit #${id} - Admin FunkoShop`
+            title: `Editar #${id} - Admin FunkoShop`
         },
-        item : items[0], 
+        item : message[0], 
         categories : category,
         licences : licence
     })
 }
 
+// Sube los datos del edit Product
 const editItem = async (req,res) => {
     const id = req.params.id;
     const item = req.body;
@@ -65,6 +69,7 @@ const editItem = async (req,res) => {
     res.redirect("/admin")
 }
 
+// Elimina un producto de la base de datos
 const deleteItem = async (req,res) => {
     const id = req.params.id;
 

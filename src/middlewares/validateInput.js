@@ -1,5 +1,8 @@
 const { body, validationResult} = require("express-validator");
 
+const {getLicenceItem} = require("../services/licenceService")
+const {getCategoryItem} = require("../services/categoryService")
+
 //validaciones para el login
 
 const loginValidation = [
@@ -53,8 +56,8 @@ const contactValidation = [
         .isAlpha().withMessage('Por favor ingrese solamente letras.'),
     
     body("email","Por favor ingresa un correo existente")
-    .exists()
-    .isEmail(),
+        .exists()
+        .isEmail(),
     
     body("message","Por favor Sea un poco mas especifico ")
     .exists()
@@ -129,11 +132,72 @@ const validateRegister = (req,res,next) => {
     }
 }
 
+//Validaciones para productos add/edit
+
+const productValidation = [
+    
+    body("name", "Caracteres admitidos: Letras y numeros. Minimos 2, Maximo 244 digitos")
+        .exists()
+        .isAlphanumeric()
+        .isLength({min : 2 , max : 244}),     
+    
+    body("description", "Caracteres admitidos: Letras y numeros. Minimos 2, Maximo 244 digitos")
+        .exists()
+        .isLength({min : 2 , max : 244})
+        .isAlphanumeric(),          
+        
+    body("sku","Caracteres admitidos: Letras y numeros. Maximo 15 digitos")
+        .exists()
+        .isLength({min : 10 , max : 15})
+        .isAlphanumeric(),
+
+    body("price", "Caracteres admitidos: Numeros")
+        .exists()
+        .isNumeric(),
+
+    body("stock", "Caracteres admitidos: Numeros")
+        .exists()
+        .isNumeric(),
+
+    body("discount", "Caracteres admitidos: Numeros. Maximo 2 digitos")
+        .exists()
+        .isNumeric()
+        .isLength( { max : 2 } ),
+]
+
+const validateProduct = async (req,res,next) => {
+
+    const errors = validationResult(req);
+    const licence = await getLicenceItem();
+    const category = await getCategoryItem();
+    if(!errors.isEmpty()){
+        
+        const valores = req.body;
+        const validaciones = errors.array({ onlyFirstError: true });
+        console.log(validaciones);
+        
+        res.status(400).
+        render("../views/admin/add", {
+            view : {
+                title : "Agregar producto - FunkoShop"
+            },
+            validaciones,
+            valores,
+            licence,
+            category
+        })
+    }else {
+        next()
+    }
+}
+
 module.exports = {
     loginValidation,
     contactValidation,
     validateInput,
     validateContact,
     registerValidation,
-    validateRegister
+    validateRegister,
+    productValidation,
+    validateProduct
 };
