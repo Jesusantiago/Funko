@@ -87,11 +87,11 @@ const validateContact = (req,res,next) => {
     }
 }
 
-//Validaciones para Create
+//Validaciones para Register
 
 const registerValidation = [
     
-    body("name")
+    body("name", "por favor ingrese un nombre")
         .exists()
         .isLength({min : 2 , max : 15}).withMessage('Por favor ingrese un nombre entre 2 y 15 caracteres.')
         .isAlpha().withMessage('Por favor ingrese solamente letras.'),
@@ -118,7 +118,6 @@ const validateRegister = (req,res,next) => {
         
         const valores = req.body;
         const validaciones = errors.array({onlyFirstError: true})
-        console.log(validaciones);
         
         res.status(400).
         render("../views/about/register", {
@@ -176,7 +175,7 @@ const validateProduct = async (req,res,next) => {
         
         const valores = req.body;
         const validaciones = errors.array({ onlyFirstError: true });
-        console.log(validaciones);
+        
         
         res.status(400).
         render("../views/admin/add", {
