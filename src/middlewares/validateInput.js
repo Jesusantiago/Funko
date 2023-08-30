@@ -71,12 +71,13 @@ const validateContact = (req,res,next) => {
     if(!errors.isEmpty()){
         
         const valores = req.body;
-        const validaciones = errors.array()
+        const validaciones = errors.array( {onlyFirstError: true} )
         
         res.status(400).
         render("../views/about/contact", {
             view : {
-                title : "Contacto - FunkoShop"
+                title : "Contacto - FunkoShop",
+                script : "/static/modulosJS/login/moduloLogin.js"
             },
             validaciones,
             valores
