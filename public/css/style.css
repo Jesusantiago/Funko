@@ -2133,7 +2133,7 @@
   scale: 2;
 }
 
-.main__login {
+.main__about {
   position: absolute;
   width: 100%;
   height: calc(100svh - max(50px, 6.5vw) - 170px);
@@ -2141,75 +2141,161 @@
   top: min(120px, 9vw);
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: space-between;
+  column-gap: 20px;
 }
 @media (max-width: 610px) {
-  .main__login {
+  .main__about {
     height: calc(100svh - max(50px, 6.5vw) - 80px);
     justify-content: center;
   }
 }
 @media (max-width: 450px) {
-  .main__login {
+  .main__about {
     padding: 0 20px;
   }
 }
-.main__login::before {
-  content: "";
-  background-image: url(.../../../img/productos/vulpix-1.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1000;
-  min-width: 400px;
-  width: 60vw;
-  max-width: 800px;
-  height: 40vw;
-  min-height: 350px;
-  max-height: 550px;
+
+.about__img {
+  width: 50%;
+  height: 100%;
 }
-@media (max-width: 450px) {
-  .main__login::before {
-    bottom: -100px;
-  }
+.about__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.section__login {
+.about__section {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  min-width: 400px;
+  width: 50%;
+  min-height: 28vw;
   height: 500px;
+  row-gap: 15px;
 }
 @media (max-width: 610px) {
-  .section__login {
+  .about__section {
     padding-left: 20px;
     padding-right: 20px;
     height: calc(90vh - max(80px, 11vw) - 155px);
     padding-top: 0;
   }
 }
-.section__login .login__title {
-  color: #1f1f1f;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
+@media (max-width: 450px) {
+  .about__section {
+    align-items: center;
+    height: 80%;
+    width: 90%;
+    min-width: 300px;
+  }
+}
+.about__section_title {
   font-size: clamp(28px, 4vw, 46px);
-  line-height: 49px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Raleway", sans-serif;
   margin: 0;
+  text-align: start;
+  width: 100%;
+}
+.about__section_subtitle {
+  font-size: clamp(16px, 4vw, 24px);
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  text-align: start;
 }
 @media (max-width: 610px) {
-  .section__login .login__title {
-    width: 300px;
-    text-align: center;
+  .about__section_subtitle {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+}
+@media (max-width: 610px) {
+  .contact__form {
+    height: 70%;
+    margin-top: 10px;
+  }
+}
+.contact__form_label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 15px 10px 10px 25px;
+  box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
+  background-color: rgba(226, 226, 226, 0.89);
+  border-radius: 25px;
+  width: 100%;
+  height: 60px;
+  font-size: clamp(8px, 2.5vw, 12px);
+  font-weight: 400;
+  line-height: 0;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+@media (max-width: 450px) {
+  .contact__form_label {
+    height: 50px;
+    padding: 10px 5px 5px 20px;
+  }
+}
+.contact__form_input {
+  background-color: transparent;
+  border: 0;
+  width: 95%;
+  height: 30px;
+  text-align: start;
+  font-size: clamp(10px, 3.5vw, 16px);
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Inter", sans-serif;
+  margin: 0;
+}
+.contact__form_input:focus {
+  height: 1.5rem;
+  padding-left: 10px;
+  border-radius: 15px;
+  outline: 1px solid rgba(255, 0, 0, 0.322);
+  font-size: 16px;
+}
+.contact__form_btn {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  width: 30%;
+  height: 50px;
+  background-color: red;
+  border: 0;
+  border-radius: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  .contact__form_btn {
+    width: 50%;
   }
 }
 
 .login__form {
-  width: 400px;
-  height: 100px;
+  width: 500px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -2228,12 +2314,12 @@
     width: 90%;
   }
 }
-
 .login__form_label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
+  width: 100%;
   padding: 15px 10px 10px 25px;
   box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
   background-color: rgba(168, 166, 166, 0.24);
@@ -2252,7 +2338,6 @@
     padding: 10px 5px 5px 20px;
   }
 }
-
 .login__form_input {
   background-color: transparent;
   border: 0;
@@ -2272,23 +2357,22 @@
   outline: 1px solid rgba(255, 0, 0, 0.322);
   font-size: 16px;
 }
-
-.login__article {
-  width: 274px;
+.login__form_article {
+  width: 100%;
   height: 39.06px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 610px) {
-  .login__article {
+  .login__form_article {
     flex-direction: column-reverse;
     height: 5rem;
   }
 }
-.login__article_ingresar {
+.login__form_article_ingresar {
   background-color: red;
-  width: 50%;
+  width: 30%;
   height: 50px;
   border: 0;
   border-radius: 22px;
@@ -2302,18 +2386,11 @@
   cursor: pointer;
 }
 @media (max-width: 450px) {
-  .login__article_ingresar {
+  .login__form_article_ingresar {
     width: 50%;
   }
 }
-.login__article_input {
-  width: 16.27px;
-  height: 16.27px;
-  border: 2px solid #1f1f1f;
-  border-radius: 3px;
-  cursor: pointer;
-}
-.login__article_label {
+.login__form_article_label {
   font-size: 18px;
   font-weight: 400;
   line-height: 21.78px;
@@ -2321,9 +2398,10 @@
   margin: 0;
   color: #1f1f1f;
   cursor: pointer;
+  width: 50%;
+  justify-content: end;
 }
-
-.login__recupero {
+.login__form_recupero {
   font-size: 14px;
   font-weight: 400;
   line-height: 16.94px;
@@ -2331,102 +2409,9 @@
   margin: 0;
   color: #1d84b5;
   cursor: pointer;
-}
-
-.main__register {
-  position: absolute;
+  display: block;
   width: 100%;
-  height: calc(100svh - max(50px, 6.5vw) - 170px);
-  padding: 0 max(40px, 7.5vw);
-  top: min(120px, 9vw);
-}
-@media (max-width: 610px) {
-  .main__register {
-    height: calc(100svh - max(50px, 6.5vw) - 80px);
-  }
-}
-@media (max-width: 450px) {
-  .main__register {
-    padding: 0 20px;
-  }
-}
-
-.inline {
-  position: absolute;
-  z-index: 30000000000;
-  top: 0;
-  left: 0;
-  width: 514px;
-  height: 986px;
-  border: 1px solid red;
-}
-
-.section__register {
-  min-width: 335px;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  column-gap: max(30px, 5svh);
-}
-@media (max-width: 840px) {
-  .section__register {
-    align-items: center;
-    justify-content: center;
-    column-gap: 0;
-  }
-}
-.section__register .article__register {
-  min-width: 150px;
-  max-width: 50%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  align-self: flex-start;
-  justify-content: start;
-  gap: 30px;
-  padding-top: 30px;
-}
-@media (max-width: 840px) {
-  .section__register .article__register {
-    display: none;
-  }
-}
-.section__register .article__register .register__div {
-  min-width: 400px;
-  width: 60vw;
-  max-width: 800px;
-  height: 40vw;
-  min-height: 350px;
-  max-height: 550px;
-  position: absolute;
-  left: max(-40px, -7.5vw);
-  bottom: 0;
-  z-index: -100;
-}
-.section__register .article__register .register__div img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.section__register .register__title {
-  width: 100%;
-  color: #000;
-  font-size: clamp(28px, 4vw, 38px);
-  font-weight: 500;
-  line-height: normal;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-}
-.section__register .register__subtitle {
-  text-align: start;
-  width: 100%;
-  font-size: clamp(16px, 4vw, 24px);
-  font-weight: 400;
-  line-height: normal;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  color: #000;
+  text-align: center;
 }
 
 .register__form {
@@ -2435,7 +2420,7 @@
   justify-content: space-between;
   align-items: end;
   min-width: 200px;
-  width: 40%;
+  width: 100%;
   min-height: 30vw;
   height: 80%;
   border-radius: 10px;
@@ -2444,19 +2429,6 @@
   .register__form {
     width: 80%;
     height: 80%;
-  }
-  .register__form::before {
-    position: absolute;
-    left: -150px;
-    bottom: 0;
-    z-index: -1000;
-    content: "";
-    width: 370px;
-    height: 250px;
-    background-image: url(.../../../img/views/baby-yoda-view.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
   }
 }
 @media (max-width: 450px) {
@@ -2559,177 +2531,6 @@
   color: #1D84B5;
   text-decoration: underline;
   cursor: pointer;
-}
-
-.main__contact {
-  position: absolute;
-  width: 100%;
-  height: calc(100svh - max(50px, 6.5vw) - 170px);
-  padding: 0 max(40px, 7.5vw);
-  top: min(120px, 9vw);
-  display: flex;
-  align-items: center;
-  justify-content: end;
-}
-@media (max-width: 610px) {
-  .main__contact {
-    height: calc(100svh - max(50px, 6.5vw) - 80px);
-    justify-content: center;
-  }
-}
-@media (max-width: 450px) {
-  .main__contact {
-    padding: 0 20px;
-  }
-}
-.main__contact::before {
-  content: "";
-  background-image: url(.../../../img/multimedia/harry-potter/harry-1.webp);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1000;
-  min-width: 400px;
-  width: 60vw;
-  max-width: 800px;
-  height: 40vw;
-  min-height: 350px;
-  max-height: 550px;
-}
-@media (max-width: 450px) {
-  .main__contact::before {
-    bottom: -100px;
-    opacity: 0.8;
-  }
-}
-
-.contact__section {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  min-width: 400px;
-  width: 50%;
-  min-height: 30vw;
-  height: 500px;
-}
-@media (max-width: 610px) {
-  .contact__section {
-    padding-left: 20px;
-    padding-right: 20px;
-    height: calc(90vh - max(80px, 11vw) - 155px);
-    padding-top: 0;
-  }
-}
-@media (max-width: 450px) {
-  .contact__section {
-    align-items: center;
-    height: 80%;
-    width: 90%;
-    min-width: 300px;
-  }
-}
-.contact__section_title {
-  font-size: clamp(28px, 4vw, 46px);
-  font-weight: 500;
-  line-height: 30px;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  text-align: start;
-  width: 100%;
-}
-.contact__section_subtitle {
-  font-size: clamp(16px, 4vw, 24px);
-  font-weight: 400;
-  line-height: 30px;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  text-align: start;
-}
-@media (max-width: 610px) {
-  .contact__section_subtitle {
-    font-size: 18px;
-    margin-top: 10px;
-  }
-}
-
-.contact__form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 40vh;
-}
-@media (max-width: 610px) {
-  .contact__form {
-    height: 70%;
-    margin-top: 10px;
-  }
-}
-.contact__form_label {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  padding: 15px 10px 10px 25px;
-  box-shadow: 0px 0px 10px 2px rgba(133, 133, 133, 0.534);
-  background-color: rgba(226, 226, 226, 0.89);
-  border-radius: 25px;
-  width: 100%;
-  height: 60px;
-  font-size: clamp(8px, 2.5vw, 12px);
-  font-weight: 400;
-  line-height: 0;
-  font-family: "Inter", sans-serif;
-  margin: 0;
-}
-@media (max-width: 450px) {
-  .contact__form_label {
-    height: 50px;
-    padding: 10px 5px 5px 20px;
-  }
-}
-.contact__form_input {
-  background-color: transparent;
-  border: 0;
-  width: 95%;
-  height: 30px;
-  text-align: start;
-  font-size: clamp(10px, 3.5vw, 16px);
-  font-weight: 400;
-  line-height: 19px;
-  font-family: "Inter", sans-serif;
-  margin: 0;
-}
-.contact__form_input:focus {
-  height: 1.5rem;
-  padding-left: 10px;
-  border-radius: 15px;
-  outline: 1px solid rgba(255, 0, 0, 0.322);
-  font-size: 16px;
-}
-.contact__form_btn {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 30px;
-  font-family: "Raleway", sans-serif;
-  margin: 0;
-  width: 30%;
-  height: 50px;
-  background-color: red;
-  border: 0;
-  border-radius: 22px;
-  color: #fff;
-  cursor: pointer;
-}
-@media (max-width: 450px) {
-  .contact__form_btn {
-    width: 50%;
-  }
 }
 
 .main__listado {

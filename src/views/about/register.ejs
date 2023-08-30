@@ -1,89 +1,95 @@
 <%- include("../partials/header") %>
 
-<main class="main__register">
-<section class="section__register">
-    <article class="article__register">
-        <div class="register__div">
-            <img src="../img/views/baby-yoda-view.png" alt="" srcset="">
-        </div>          
-    </article>
+<main class="main__about">
+
+    <section class="about__img">
+        <img src="../../../static/img/productos/baby-yoda-1.png" alt="">
+    </section>
+
+    <section class="about__section">
+
+        <h2 class="about__section_title">Crea tu cuenta</h2>
+
+        <h3 class="about__section_subtitle">Completa el formulario para ser parte del mundo de los Funkos</h3>
+
+        <form class="register__form" action="/register/" method="POST">
+            
+            <div class="register__form__name">
         
-<form class="register__form" action="/register/" method="POST">
-    <h1 class="register__title">Crea tu cuenta</h1>
-    <h3 class="register__subtitle">Completa el formulario para ser parte del mundo de los Funkos</h3>
-    
-    <div class="register__form__name">
-
-        <label class="register__form_label" for="name">NOMBRE:
-
-            <% if(typeof valores == "undefined" ) {%>
-
-                <input type="text" class="register__form_input" 
-        id="registerName" placeholder="Julian" name="name">
-
-            <% } else {%>
-                <input type="text" class="register__form_input" 
-                id="registerName" name="name" value="<%= valores.name %>">
-            <%}%>   
-
-        </label>
-
-        <label class="register__form_label" for="subname">APELLIDO:
-
-            <% if(typeof valores == "undefined" ) {%>
-
-                <input type="text"  class="register__form_input" 
-                id="registerSubname" placeholder="Alvarez" name="subname">
-
-            <% } else {%>
-
-                <input type="text" class="register__form_input" 
-                id="registerName" name="name" value="<%= valores.subname %>">
-
-            <%}%>   
+                <label class="register__form_label" for="name">NOMBRE:
+        
+                    <% if(typeof valores == "undefined" ) {%>
+        
+                        <input type="text" class="register__form_input" 
+                id="registerName" placeholder="Julian" name="name">
+        
+                    <% } else {%>
+                        <input type="text" class="register__form_input" 
+                        id="registerName" name="name" value="<%= valores.name %>">
+                    <%}%>   
+        
+                </label>
+        
+                <label class="register__form_label" for="subname">APELLIDO:
+        
+                    <% if(typeof valores == "undefined" ) {%>
+        
+                        <input type="text"  class="register__form_input" 
+                        id="registerSubname" placeholder="Alvarez" name="subname">
+        
+                    <% } else {%>
+        
+                        <input type="text" class="register__form_input" 
+                        id="registerName" name="name" value="<%= valores.subname %>">
+        
+                    <%}%>   
+                    
+                </label>
+            </div>
+        
+            <label class="register__form_label" for="email">EMAIL:
+        
+                <% if(typeof valores == "undefined" ) {%>
+                    
+                    <input type="email"  class="register__form_input" 
+                    id="registerEmail" placeholder="julianalvarez@gmail.com" name="email" >
+        
+                <% } else {%>
+        
+                    <input type="email"  class="register__form_input" 
+                    id="registerEmail" value="<%= valores.email %>" name="email" >
+        
+                <%}%> 
+            </label>
+        
+            <label class="register__form_label" for="password">CONTRASEÑA:
+                    
+                <input type="password"  class="register__form_input" 
+                id="registerPassword" placeholder="● ● ● ● ● ● ● ● ●" name="password">
+        
+            </label>
+        
+            <label class="register__form_label_terminos" for="terminos">
+        
+                <% if(typeof valores == "undefined" ) {%>
+        
+                    <input type="checkbox"  class="register__form_input_check" id="registerCheck" name="terminos"> Aceptar <span class="register__form_span">terminos y condiciones</span>
+        
+                <% } else {%>
+        
+                    <input type="checkbox"  class="register__form_input_check" id="registerCheck" name="terminos" checked> Aceptar <span class="register__form_span" >terminos y condiciones</span>
+        
+                    <%}%> 
+            </label>
+        
+        
+            <input type="submit" class="register__form_register" value="Ingresar" id="registerBtn">
             
-        </label>
-    </div>
+        </form>
 
-    <label class="register__form_label" for="email">EMAIL:
+    </section>
+        
 
-        <% if(typeof valores == "undefined" ) {%>
-            
-            <input type="email"  class="register__form_input" 
-            id="registerEmail" placeholder="julianalvarez@gmail.com" name="email" >
-
-        <% } else {%>
-
-            <input type="email"  class="register__form_input" 
-            id="registerEmail" value="<%= valores.email %>" name="email" >
-
-        <%}%> 
-    </label>
-
-    <label class="register__form_label" for="password">CONTRASEÑA:
-            
-        <input type="password"  class="register__form_input" 
-        id="registerPassword" placeholder="● ● ● ● ● ● ● ● ●" name="password">
-
-    </label>
-
-    <label class="register__form_label_terminos" for="terminos">
-
-        <% if(typeof valores == "undefined" ) {%>
-
-            <input type="checkbox"  class="register__form_input_check" id="registerCheck" name="terminos"> Aceptar <span class="register__form_span">terminos y condiciones</span>
-
-        <% } else {%>
-
-            <input type="checkbox"  class="register__form_input_check" id="registerCheck" name="terminos" checked> Aceptar <span class="register__form_span" >terminos y condiciones</span>
-
-            <%}%> 
-    </label>
-
-
-    <input type="submit" class="register__form_register" value="Ingresar" id="registerBtn">
-    
-</form>
 
 <% if(typeof validaciones != "undefined") {%>
     <div class="error_validation slide-bottom" >

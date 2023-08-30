@@ -1,8 +1,13 @@
 <%- include("../partials/header") %>
 
-<main class="main__login">
-        <section class="section__login">
-        <h1 class="login__title">INGRESAR A MI CUENTA</h1>
+<main class="main__about">
+
+    <section class="about__img">
+        <img src="../../../static/img/productos/snape-patronus-1.png" alt="">
+    </section>
+
+    <section class="about__section">
+        <h1 class="about__section_title login_title">INGRESAR A MI CUENTA</h1>
 
         <form class="login__form" action="/login/" method="POST">              
 
@@ -20,15 +25,19 @@
             id="loginPassword" placeholder="● ● ● ● ● ● ● ● ●"  name="password">
             </label>
             
-            <article class="login__article">
-                <input type="submit" class="login__article_ingresar" value="Ingresar" id="btnIngresar">
+            <article class="login__form_article">
+
+                <input type="submit" class="login__form_article_ingresar" value="Ingresar" id="btnIngresar">
                                 
-                <label  class="login__article_label">
-                    <input type="checkbox"  class="login__article_input" id="ingresar__checkbox"> Recordarme</label>
+                <label  class="login__form_article_label">
+                    <input type="checkbox"  class="login__article_input" id="ingresar__checkbox"> Recordarme
+                </label>
+
             </article>
+
+            <span class="login__form_recupero">Olvidé mi contraseña</span>
         </form>
 
-        <span class="login__recupero">Olvidé mi contraseña</span>
 
     </section>
 
