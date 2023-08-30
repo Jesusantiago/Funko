@@ -86,12 +86,13 @@
 </form>
 
 <% if(typeof validaciones != "undefined") {%>
-    <% validaciones.forEach((validacion) =>{ %>
-        <div class="error_validacion">
-            <strong> <%= validacion.msg %> </strong>
-        </div>
-    
-    <% })%>
+    <div class="error_validation slide-bottom" >
+        <% validaciones.forEach((validacion, i) =>{ %>
+            <strong class="validationText <%= i %>" id="validationText"> <%= validacion.msg %> 
+                <box-icon name='x' color="#fff" class="closeError"></box-icon> 
+            </strong>
+        <% })%>
+    </div>
 <% }%>
 
 
@@ -99,3 +100,4 @@
     
 </main>
 
+<%- include("../partials/footerUnic") %>

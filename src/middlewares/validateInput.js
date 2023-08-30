@@ -117,13 +117,14 @@ const validateRegister = (req,res,next) => {
     if(!errors.isEmpty()){
         
         const valores = req.body;
-        const validaciones = errors.array()
+        const validaciones = errors.array({onlyFirstError: true})
         console.log(validaciones);
         
         res.status(400).
         render("../views/about/register", {
             view : {
-                title : "Contacto - FunkoShop"
+                title : "Contacto - FunkoShop",
+                script : "/static/modulosJS/login/moduloLogin.js"
             },
             validaciones,
             valores
