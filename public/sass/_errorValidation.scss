@@ -1,0 +1,46 @@
+@use "./variables";
+@use "./minfux";
+
+.error_validation{
+    min-width: 130px;
+    width: 25%;
+    max-width: 400px;
+    position: absolute;
+    top: 0;
+    right: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 10px;
+
+    strong{
+
+        width: 100%;
+        @include minfux.productInfo(variables.$fs-16, variables.$w-500, 1.5rem, variables.$ff-r);
+        color: white;
+        padding: 5px 30px 5px 10px;
+        border-radius: 5px;
+
+        background-color: #2D87E2;
+        position: relative;
+    }
+}
+
+
+.slide-bottom{
+    animation:slide-bottom 1s linear both
+}
+@keyframes slide-bottom{
+    0%{
+        transform:translateY(-200px)
+    }100%{
+        transform:translateY(20px)
+    }
+}
+
+.closeError{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}

@@ -1,2 +1,1 @@
-// import "./validacionDatosLogin.js";
-import "./login.js";
+import "../errorValidation.js"

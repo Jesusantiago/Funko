@@ -22,7 +22,6 @@ const validateInput = (req,res,next) => {
         
         const valores = req.body;
         const validaciones = errors.array()
-        console.log(validaciones);
 
         if(validaciones.length === 3){
             validaciones.pop()
@@ -31,7 +30,8 @@ const validateInput = (req,res,next) => {
         res.status(400).
         render("../views/about/login", {
             view : {
-                title : "Login - FunkoShop"
+                title : "Login - FunkoShop",
+                script : "/static/modulosJS/login/moduloLogin.js"
             },
             validaciones,
             valores
