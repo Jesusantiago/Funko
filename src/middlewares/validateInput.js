@@ -31,7 +31,8 @@ const validateInput = (req,res,next) => {
         render("../views/about/login", {
             view : {
                 title : "Login - FunkoShop",
-                script : "/static/modulosJS/login/moduloLogin.js"
+                script : "/static/modulosJS/login/moduloLogin.js",
+                isLogged : "undefined"
             },
             validaciones,
             valores
