@@ -37,7 +37,7 @@ app.use("/login", loginRouters);
 app.use("/register", registerRouters);
 app.use("/admin", adminRouters);
 
-// View de ruota no encontrada
+// View de ruta no encontrada
 app.use(error404)
 
 // Puerto a utilizar

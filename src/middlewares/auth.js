@@ -1,10 +1,16 @@
-// const {serverError} = require("../utils/errorHandler.js")
+const isLogged = (req, res, next) => {
 
-// module.exports = {
-//     auth: (req,res,next)=>{
-//         if(false){
-//             next();
-//         }
-//         return serverError(req,res)
-//     }
-// }
+    if(req.session.Islogged){
+
+        return next();      
+       
+    } else {
+
+        return res.status(401).redirect("/login")
+
+    }
+}
+
+module.exports = {
+    isLogged
+}
