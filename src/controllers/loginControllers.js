@@ -32,9 +32,7 @@ const loginDataController = async(req,res) => {
 
     if(userCredentials.admin.email == email && userCredentials.admin.password == password){
         req.session.isLogged = true 
-        console.log(req.session.isLogged);
         req.session.roles = "admin"
-        console.log(req.session.roles);
         res.redirect("/admin")
         
     } else if (userCredentials.user.email == email && userCredentials.user.password == password){
@@ -52,23 +50,6 @@ const loginDataController = async(req,res) => {
             }
         })
     }
-    // const emailValidation = userCredentials.admin.email == email || userCredentials.user.email == email;
-    // const passValidation = userCredentials.admin.password == password || userCredentials.user.password == password;
-    // req.session.Islogged = emailValidation && passValidation ? true : false;
-    
-
-    // if(req.session.Islogged){
-    //     res.redirect("/admin")
-    // }else{
-    //     res.status(401)
-    //     .render("../views/about/login", {
-    //         view : {
-    //             title: "Login - FunkoShop",
-    //             isLogged : req.session.Islogged
-    //         }
-    //     })
-    // }
-
 };
 
 module.exports = {
