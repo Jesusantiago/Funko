@@ -8,7 +8,7 @@ const {productValidation, validateProduct} = require("../middlewares/validateInp
 
 
 // Obtener la vista del admin
-router.get("/", isLogged, adminControllers.getAdmin);
+router.get("/", adminControllers.getAdmin);
 
 // Obtiene la vista del agregar producto
 router.get("/add", isLogged,  adminControllers.getViewAdd);

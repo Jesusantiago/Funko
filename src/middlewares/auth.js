@@ -1,6 +1,6 @@
 const isLogged = (req, res, next) => {
 
-    if(req.session.Islogged){
+    if(req.session.Islogged ){
 
         return next();      
        
