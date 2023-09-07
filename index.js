@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const { initSession } = require("./src/utils/session");
 require("dotenv").config();
@@ -16,7 +17,7 @@ const { localIsLogged, localRoles } = require("./src/middlewares/locals");
 const PORT = process.env.PORT;
 
 // Rutas para archivos estaticos
-app.use('/static', express.static(__dirname + "/public"))
+app.use('/static', express.static(path.resolve(__dirname + "./public")))
 
 // User session
 
@@ -27,7 +28,7 @@ app.use(localRoles);
 
 // Template engine - EJS
 app.set("view engine", "ejs")
-app.set("views", "./src/views")
+app.set("views", path.resolve(__dirname, "./src/views"))
 
 // Manejo de data a enviar 
 app.use(express.urlencoded({extended:true}))
