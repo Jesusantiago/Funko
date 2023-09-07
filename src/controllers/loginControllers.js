@@ -33,6 +33,7 @@ const loginDataController = async(req,res) => {
     if(userCredentials.admin.email == email && userCredentials.admin.password == password){
         req.session.isLogged = true 
         req.session.roles = "admin"
+        console.log(req.session.isLogged);
         res.redirect("/admin")
         
     } else if (userCredentials.user.email == email && userCredentials.user.password == password){
@@ -52,7 +53,13 @@ const loginDataController = async(req,res) => {
     }
 };
 
+const logoutController = (req,res) => {
+    req.session.isLogged = false;
+    res.redirect("/")
+}
+
 module.exports = {
     loginViewController,
-    loginDataController
+    loginDataController,
+    logoutController
 }

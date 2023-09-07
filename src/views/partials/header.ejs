@@ -32,23 +32,66 @@
 
 <body>
 
-    <header class="header" id="header">
-        
-        <a href="/" class="header__a">
-            <div class="header__title"></div>
-        </a>
+    <% if( locals.isLogged && locals.roles == "user" ) { %>
+        <header class="header" id="header">
             
-        <nav class="header__nav" id="nav">
+            <a href="/" class="header__a">
+                <div class="header__title"></div>
+            </a>
+                
+            <nav class="header__nav" id="nav">
                 <li class="nav__li"><a href="/shop">SHOP</a></li>
                 <li class="nav__li"><a href="/contact">CONTACT</a></li>
-                <li class="nav__li"><a href="/login">LOGIN</a></li>
+                <li class="nav__li"><a href="/login/logout">SALIR</a></li>
                 <li class="nav__li">
                     <a href="#">
-        
                         <box-icon name='cart' color='#f96301' class="bx"></box-icon>
                     </a>
                 </li>
             </nav>
-            
+                
             <div class="burger" id="burger"></div>
-    </header>
+        </header>
+    <% }else if (locals.isLogged && locals.roles == "admin") { %>
+        <header class="header" id="header">
+                
+            <a href="/" class="header__a">
+                <div class="header__title"></div>
+            </a>
+                
+            <nav class="header__nav" id="nav">
+                    <li class="nav__li"><a href="/shop">SHOP</a></li>
+                    <li class="nav__li"><a href="/admin">ADMIN</a></li>
+                    <li class="nav__li"><a href="/login/logout">SALIR</a></li>
+                    <li class="nav__li">
+                        <a href="#">
+            
+                            <box-icon name='cart' color='#f96301' class="bx"></box-icon>
+                        </a>
+                    </li>
+                </nav>
+                
+                <div class="burger" id="burger"></div>
+        </header>
+    <% } else { %>
+        <header class="header" id="header">
+                
+            <a href="/" class="header__a">
+                <div class="header__title"></div>
+            </a>
+                
+            <nav class="header__nav" id="nav">
+                    <li class="nav__li"><a href="/shop">SHOP</a></li>
+                    <li class="nav__li"><a href="/contact">CONTACT</a></li>
+                    <li class="nav__li"><a href="/login">LOGIN</a></li>
+                    <li class="nav__li">
+                        <a href="#">
+            
+                            <box-icon name='cart' color='#f96301' class="bx"></box-icon>
+                        </a>
+                    </li>
+                </nav>
+                
+                <div class="burger" id="burger"></div>
+        </header>
+    <% } %>

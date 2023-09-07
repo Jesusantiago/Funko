@@ -1,7 +1,7 @@
 const isLogged = (req, res, next) => {
-
-    if(req.session.Islogged ){
-
+    
+    if(req.session.isLogged){
+        console.log("hola");
         return next();      
        
     } else {

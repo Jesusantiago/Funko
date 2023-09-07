@@ -11,6 +11,7 @@ const loginRouters = require("./src/router/loginRouters.js")
 const registerRouters = require("./src/router/registerRouters.js")
 const adminRouters = require("./src/router/adminRouters.js")
 const {error404} = require("./src/utils/errorHandler.js");
+const { localIsLogged, localRoles } = require("./src/middlewares/locals");
 
 const PORT = process.env.PORT;
 
@@ -20,6 +21,9 @@ app.use('/static', express.static(__dirname + "/public"))
 // User session
 
 app.use(initSession());
+app.use(localIsLogged);
+app.use(localRoles);
+
 
 // Template engine - EJS
 app.set("view engine", "ejs")
