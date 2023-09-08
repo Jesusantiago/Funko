@@ -17,7 +17,7 @@ const { localIsLogged, localRoles } = require("./src/middlewares/locals");
 const PORT = process.env.PORT;
 
 // Rutas para archivos estaticos
-app.use('/static', express.static(path.resolve(__dirname + "./public")))
+app.use('/static', express.static(path.resolve(__dirname, "./public")))
 
 // User session
 
