@@ -2,7 +2,7 @@ const {itemHome} = require("../services/itemsServices")
 
 const getHome = async(req, res)=>{
     let data = await itemHome();
-    res.render("Home", {
+    res.render("home", {
         view: {
             title : "Home - FunkoShop",
             script : "/static/moduloindex.js"
